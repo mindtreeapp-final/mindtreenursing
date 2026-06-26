@@ -1,102 +1,74 @@
 import { MetadataRoute } from "next";
+import { getAllPostSlugs } from "../lib/wordpress/posts.js";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.mindtreenursing.com";
+const BASE_URL = "https://www.mindtreenursing.com";
+const STATIC_LAST_MODIFIED = new Date("2026-06-08");
 
-  return [
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const staticRoutes: MetadataRoute.Sitemap = [
+    { url: BASE_URL, lastModified: STATIC_LAST_MODIFIED },
+    { url: `${BASE_URL}/blog`, lastModified: STATIC_LAST_MODIFIED },
+    { url: `${BASE_URL}/courses`, lastModified: STATIC_LAST_MODIFIED },
     {
-      url: baseUrl,
-      lastModified: new Date("2026-06-08"),
-    },
-    {
-      url: `${baseUrl}/courses`,
-      lastModified: new Date("2026-06-08"),
-    },  {
-      url: `${baseUrl}/courses/best-oet-coaching-centre-in-kerala`,
-      lastModified: new Date("2026-06-08"),
-    },  {
-      url: `${baseUrl}/courses/best-iqn-coaching`,
-      lastModified: new Date("2026-06-08"),
-    },  {
-      url: `${baseUrl}/courses/osce-training-kerala`,
-      lastModified: new Date("2026-06-08"),
-    },
-
-     {
-      url: `${baseUrl}/courses/osce-training-new-zealand`,
-      lastModified: new Date("2026-06-08"),
-    },
-     {
-      url: `${baseUrl}/courses/therapeutic-communication`,
-      lastModified: new Date("2026-06-08"),
+      url: `${BASE_URL}/courses/best-oet-coaching-centre-in-kerala`,
+      lastModified: STATIC_LAST_MODIFIED,
     },
     {
-      url: `${baseUrl}/services`,
-      lastModified: new Date("2026-06-08"),
+      url: `${BASE_URL}/courses/best-iqn-coaching`,
+      lastModified: STATIC_LAST_MODIFIED,
     },
-        {
-      url: `${baseUrl}/services/nursing-registration-in-new-zealand`,
-      lastModified: new Date("2026-06-08"),
+    {
+      url: `${BASE_URL}/courses/osce-training-kerala`,
+      lastModified: STATIC_LAST_MODIFIED,
     },
-        {
-      url: `${baseUrl}/services/nursing-registration-in-new-zealand`,
-      lastModified: new Date("2026-06-08"),
+    {
+      url: `${BASE_URL}/courses/osce-training-new-zealand`,
+      lastModified: STATIC_LAST_MODIFIED,
     },
-        {
-      url: `${baseUrl}/services/pathway-for-registered-nurses-from-the-uk-and-ireland-to-new-zealand`,
-      lastModified: new Date("2026-06-08"),
+    {
+      url: `${BASE_URL}/courses/therapeutic-communication`,
+      lastModified: STATIC_LAST_MODIFIED,
     },
-        {
-      url: `${baseUrl}/services/pathway-for-uk-ireland-nurses-to-australia`,
-      lastModified: new Date("2026-06-08"),
+    { url: `${BASE_URL}/services`, lastModified: STATIC_LAST_MODIFIED },
+    {
+      url: `${BASE_URL}/services/nursing-registration-in-new-zealand`,
+      lastModified: STATIC_LAST_MODIFIED,
     },
-        {
-      url: `${baseUrl}/services/cgfns`,
-      lastModified: new Date("2026-06-08"),
+    {
+      url: `${BASE_URL}/services/pathway-for-registered-nurses-from-the-uk-and-ireland-to-new-zealand`,
+      lastModified: STATIC_LAST_MODIFIED,
     },
-        {
-      url: `${baseUrl}/services/flight-ticketing`,
-      lastModified: new Date("2026-06-08"),
+    {
+      url: `${BASE_URL}/services/pathway-for-uk-ireland-nurses-to-australia`,
+      lastModified: STATIC_LAST_MODIFIED,
     },
-        {
-      url: `${baseUrl}/services/cv-preparation`,
-      lastModified: new Date("2026-06-08"),
+    { url: `${BASE_URL}/services/cgfns`, lastModified: STATIC_LAST_MODIFIED },
+    {
+      url: `${BASE_URL}/services/flight-ticketing`,
+      lastModified: STATIC_LAST_MODIFIED,
     },
-        {
-      url: `${baseUrl}/services/visa`,
-      lastModified: new Date("2026-06-08"),
+    {
+      url: `${BASE_URL}/services/cv-preparation`,
+      lastModified: STATIC_LAST_MODIFIED,
     },
-        {
-      url: `${baseUrl}/services/accommodation-and-transportation`,
-      lastModified: new Date("2026-06-08"),
+    { url: `${BASE_URL}/services/visa`, lastModified: STATIC_LAST_MODIFIED },
+    {
+      url: `${BASE_URL}/services/accommodation-and-transportation`,
+      lastModified: STATIC_LAST_MODIFIED,
     },
-        {
-      url: `${baseUrl}/services/ahpra`,
-      lastModified: new Date("2026-06-08"),
-    },
-     {
-      url: `${baseUrl}/services/about`,
-      lastModified: new Date("2026-06-08"),
-    },
-     {
-      url: `${baseUrl}/services/career`,
-      lastModified: new Date("2026-06-08"),
-    },
-     {
-      url: `${baseUrl}/services/blog`,
-      lastModified: new Date("2026-06-08"),
-    },
-     {
-      url: `${baseUrl}/services/contact`,
-      lastModified: new Date("2026-06-08"),
-    },
-     {
-      url: `${baseUrl}/services/gallery`,
-      lastModified: new Date("2026-06-08"),
-    },
-     {
-      url: `${baseUrl}/services/testimonials`,
-      lastModified: new Date("2026-06-08"),
-    },
+    { url: `${BASE_URL}/services/ahpra`, lastModified: STATIC_LAST_MODIFIED },
+    { url: `${BASE_URL}/about`, lastModified: STATIC_LAST_MODIFIED },
+    { url: `${BASE_URL}/career`, lastModified: STATIC_LAST_MODIFIED },
+    { url: `${BASE_URL}/contact`, lastModified: STATIC_LAST_MODIFIED },
+    { url: `${BASE_URL}/gallery`, lastModified: STATIC_LAST_MODIFIED },
+    { url: `${BASE_URL}/testimonials`, lastModified: STATIC_LAST_MODIFIED },
   ];
+
+  const postSlugs = await getAllPostSlugs();
+  const blogRoutes: MetadataRoute.Sitemap = postSlugs.map(({ slug, modified }) => ({
+    url: `${BASE_URL}/blog/${slug}`,
+    lastModified: modified ? new Date(modified) : STATIC_LAST_MODIFIED,
+  }));
+
+  return [...staticRoutes, ...blogRoutes];
 }
