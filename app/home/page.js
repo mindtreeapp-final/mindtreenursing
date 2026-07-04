@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import "./home.css";
 
@@ -54,6 +54,22 @@ export default function Home() {
   const galleryVisible = GALLERY_ITEMS.slice(galleryIdx, galleryIdx + GALLERY_VISIBLE);
   const testiVisible   = TESTIMONIALS.slice(testiIdx, testiIdx + TESTI_VISIBLE);
 
+  const testiSwipeX = useRef(null);
+  function handleTestiSwipeStart(e) {
+    testiSwipeX.current = e.clientX;
+  }
+  function handleTestiSwipeEnd(e) {
+    if (testiSwipeX.current == null) return;
+    const delta = e.clientX - testiSwipeX.current;
+    testiSwipeX.current = null;
+    const SWIPE_THRESHOLD = 40;
+    if (delta > SWIPE_THRESHOLD) {
+      setTestiIdx((i) => Math.max(0, i - 1));
+    } else if (delta < -SWIPE_THRESHOLD) {
+      setTestiIdx((i) => Math.min(testiMax, i + 1));
+    }
+  }
+
   return (
     <main className="hm">
 
@@ -81,7 +97,7 @@ export default function Home() {
         <div className="hm-hero__img-wrap">
           <div className="hm-hero__img-decoration" aria-hidden="true" />
           <div className="hm-hero__img-frame">
-            <img loading="eager" src="/mindtre.webp" alt="Nursing professional" className="hm-hero__img" />
+            <img loading="eager" src="/Jijo.png" alt="Nursing professional" className="hm-hero__img" />
           </div>
           <div className="hm-badge hm-badge--nz">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></svg>
@@ -162,12 +178,12 @@ export default function Home() {
             <div className="hm-app__glow" />
             <div className="hm-app__phone-video">
               <div className="hm-app__notch" />
-              <iframe
-                src="https://www.youtube.com/embed/QV68Hu4R9Gk?autoplay=1&mute=1&loop=1&playlist=QV68Hu4R9Gk&controls=0"
-                title="Mindtree Nursing App"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-              />
+          <iframe
+  src="https://www.youtube.com/embed/FKgkoA89u2M?autoplay=1&mute=1&loop=1&playlist=FKgkoA89u2M&controls=0"
+  title="Mindtree Nursing App"
+  allow="autoplay; encrypted-media"
+  allowFullScreen
+/>
               <div className="hm-app__phone-sheen" />
             </div>
             <div className="hm-app__rating-badge">
@@ -295,7 +311,11 @@ export default function Home() {
             <button className={`hp-arrow hp-arrow--light hp-arrow--left${testiIdx === 0 ? " hp-arrow--disabled" : ""}`} onClick={() => setTestiIdx((i) => Math.max(0, i - 1))} disabled={testiIdx === 0} aria-label="Previous">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="20" height="20"><path d="M15 18l-6-6 6-6" /></svg>
             </button>
-            <div className="hp-testi-track">
+            <div
+              className="hp-testi-track"
+              onPointerDown={handleTestiSwipeStart}
+              onPointerUp={handleTestiSwipeEnd}
+            >
               {testiVisible.map((t) => (
                 <article key={t.id} className="hp-testi-card">
                   <div className="hp-testi-card__quote-mark">"</div>
@@ -305,7 +325,6 @@ export default function Home() {
                     <div className="hp-testi-card__avatar">{t.initials}</div>
                     <div className="hp-testi-card__author-info">
                       <span className="hp-testi-card__name">{t.name}</span>
-                      <span className="hp-testi-card__role">{t.role}</span>
                     </div>
                   </footer>
                 </article>
@@ -345,7 +364,7 @@ export default function Home() {
                 <span className="hm-cta-contact-btn__value">Quick Response</span>
               </span>
             </a>
-            <a href="https://forms.zohopublic.in/mindtreenursingsolutions/form/ClientDetails1/formperma/76KIBTp9LCYH_lA6B0jGSwAH8FJ4nmjU8ovh7b6l-tQ" className="hm-cta-contact-btn hm-cta-contact-btn--enquiry">
+            <a target="_blank" rel="noopener noreferrer" href="https://forms.zohopublic.in/mindtreenursingsolutions/form/ClientDetails1/formperma/76KIBTp9LCYH_lA6B0jGSwAH8FJ4nmjU8ovh7b6l-tQ" className="hm-cta-contact-btn hm-cta-contact-btn--enquiry">
               <span className="hm-cta-contact-btn__icon">✉️</span>
               <span className="hm-cta-contact-btn__text">
                 <span className="hm-cta-contact-btn__label">Send Enquiry</span>

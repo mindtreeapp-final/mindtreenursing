@@ -328,7 +328,8 @@
   font-size: 12px; font-weight: 700;
   color: var(--c3); letter-spacing: 0.02em;
   text-align: right; line-height: 1.4;
-  max-width: 100px;
+  max-width: 140px;
+  word-break: keep-all;
 }
 .ct-dept__name {
   font-family: 'Playfair Display', Georgia, serif;

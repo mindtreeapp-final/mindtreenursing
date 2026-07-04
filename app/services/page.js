@@ -254,6 +254,18 @@ export default function ServicesPage() {
               href="/services/pathway-for-uk-ireland-nurses-to-australia"
               animDelay={300}
             />
+             <ServiceCard
+              photo="/box-img/img12.jpg"
+              alt="CGFNS certification support"
+              icon={<IconLayers />}
+              abbr="CGFNS Certification"
+              name="Commission on Graduates of Foreign Nursing Schools"
+              para1="Comprehensive support through the CGFNS certification process — a key credential for nurses seeking licensure in the United States and other countries."
+              tags={["CGFNS", "USA", "Certification"]}
+              href="/services/cgfns"
+              animDelay={900}
+            />
+
 
             <ServiceCard
               photo="/box-img/flight-img.jpeg"
@@ -314,18 +326,6 @@ export default function ServicesPage() {
               tags={["AHPRA", "Australia", "Skills Assessment"]}
               href="/services/ahpra"
               animDelay={800}
-            />
-
-            <ServiceCard
-              photo="/box-img/img12.jpg"
-              alt="CGFNS certification support"
-              icon={<IconLayers />}
-              abbr="CGFNS Certification"
-              name="Commission on Graduates of Foreign Nursing Schools"
-              para1="Comprehensive support through the CGFNS certification process — a key credential for nurses seeking licensure in the United States and other countries."
-              tags={["CGFNS", "USA", "Certification"]}
-              href="/services/cgfns"
-              animDelay={900}
             />
 
           </div>
