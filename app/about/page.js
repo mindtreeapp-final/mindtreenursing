@@ -134,7 +134,7 @@ export default function AboutPage(){
  
           <div className="member-card card-leader">
             <div className="member-img-wrap">
-              <img src="/team/jijo.jpeg" alt="CEO" className="member-img" />
+              <img src="/team/jijo-john.jpeg" alt="CEO" className="member-img" />
               <div className="member-placeholder">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
                   <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
@@ -216,7 +216,7 @@ export default function AboutPage(){
  
           <div className="member-card">
             <div className="member-img-wrap">
-              <img src="/team/member4.jpg" alt="Team Member" className="member-img" />
+              <img src="/team/reshma-2.jpeg" alt="Team Member" className="member-img" />
               <div className="member-placeholder">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
                   <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />
@@ -357,20 +357,6 @@ export default function AboutPage(){
             <div className="member-info">
               <h3 className="member-name">Priya Philip</h3>
               <span className="member-role">TL (IQN)</span>
-            </div>
-          </div>
-              <div className="member-card">
-            <div className="member-img-wrap">
-              <img src="/team/rincy.jpg.jpeg" alt="Team Member" className="member-img" />
-              <div className="member-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" /><circle cx="12" cy="7" r="4" />
-                </svg>
-              </div>
-            </div>
-            <div className="member-info">
-              <h3 className="member-name">Rincy</h3>
-              <span className="member-role">Accounts</span>
             </div>
           </div>
 

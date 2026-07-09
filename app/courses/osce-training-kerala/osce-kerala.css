@@ -469,7 +469,7 @@
   height: auto;
   border-radius: 24px;
   box-shadow: 0 20px 60px rgba(46,94,153,0.18), 0 4px 16px rgba(13,36,64,0.10);
-  border: 6px solid var(--white);
+  border: 6px solid var(--c2);
   display: block;
   transition: transform 0.5s ease;
 }

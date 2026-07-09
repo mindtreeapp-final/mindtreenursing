@@ -20,7 +20,7 @@ const DEPARTMENTS = [
   {
     name: "OET",
     desc: "Occupational English Test preparation and guidance.",
-    phone: "+91 8075 255 213",
+    phone: "+91 8075255213",
     href: "tel:+918075255213",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
@@ -87,7 +87,7 @@ const DEPARTMENTS = [
   {
     name: "Flight Ticket",
     desc: "A flight ticket confirms your seat on an airline journey.",
-    phone: "+91 9778 286 707",
+    phone: "+91 9778286707",
     href: "tel:+919778286707",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">

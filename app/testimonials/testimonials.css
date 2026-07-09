@@ -274,8 +274,6 @@ img { display: block; max-width: 100%; }
 
 .t-card--featured .t-quote { color: rgba(231,240,250,.85); font-size: 1.12rem; }
 .t-card--featured .t-author-name { color: #fff; }
-.t-card--featured .t-author-role { color: var(--c2); }
-.t-card--featured .t-author-location { color: rgba(123,164,208,.65); }
 .t-card--featured .t-quote-mark { color: rgba(123,164,208,.18); }
 
 /* ── Quote mark ── */
@@ -407,23 +405,6 @@ img { display: block; max-width: 100%; }
   font-weight: 500;
   color: var(--text-heading);
   line-height: 1.2;
-}
-
-.t-author-role {
-  font-size: .78rem;
-  font-weight: 300;
-  color: var(--text-muted);
-}
-
-.t-author-location {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: .72rem;
-  font-weight: 300;
-  color: var(--c2);
-  opacity: .75;
-  margin-top: 2px;
 }
 
 /* ── Divider (same as gallery) ───────────────────────────────── */

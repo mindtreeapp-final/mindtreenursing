@@ -147,7 +147,7 @@ export default function IQNPage() {
             <div className="iqn-trial__img-glow" />
             <div className="iqn-trial__img-wrap">
               <img
-                src="/box-img/iqn-free.png"
+                src="/demo-iqn.jpeg"
                 alt="IQN App Preview"
                 className="iqn-trial__img"
               />

@@ -1,14 +1,6 @@
 /** @typedef {import('../../../lib/wordpress/content/types.js').RichTextNode} RichTextNode */
 
 /**
- * @param {string} href
- * @returns {boolean}
- */
-function isExternalLink(href) {
-  return /^https?:\/\//i.test(href);
-}
-
-/**
  * @param {RichTextNode[]} nodes
  */
 export default function RichText({ nodes = [] }) {
@@ -22,13 +14,8 @@ export default function RichText({ nodes = [] }) {
     }
 
     if (node.type === "link" && node.href) {
-      const external = isExternalLink(node.href);
       return (
-        <a
-          key={index}
-          href={node.href}
-          {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-        >
+        <a key={index} href={node.href} target="_blank" rel="noopener noreferrer">
           {node.value}
         </a>
       );

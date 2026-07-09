@@ -178,7 +178,7 @@ export default function OSCEPage() {
             </ul>
 
             <div className="osce-trial__actions">
-              <a href="/courses/osce" className="osce-trial__btn">
+              <a href="https://apps.mindtreenursing.com/course/68a58b9715b72700125ec28f" target="_blank" rel="noopener noreferrer" className="osce-trial__btn">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
                   <circle cx="12" cy="12" r="10"/>
                   <polyline points="12 8 16 12 12 16"/>
@@ -201,7 +201,7 @@ export default function OSCEPage() {
             <div className="osce-trial__img-glow" />
             <div className="osce-trial__img-wrap">
               <img
-                src="/box-img/osce-free.png"
+                src="/demo-osce.jpeg"
                 alt="OSCE Training Preview"
                 className="osce-trial__img"
               />

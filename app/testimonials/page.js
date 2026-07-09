@@ -203,13 +203,6 @@ export default function TestimonialsPage() {
                   </div>
                   <div className="t-author-info">
                     <span className="t-author-name">{t.name}</span>
-                    <span className="t-author-role">{t.role}</span>
-                    <span className="t-author-location">
-                      <svg width="10" height="12" viewBox="0 0 10 12" fill="none" aria-hidden="true">
-                        <path d="M5 0C2.24 0 0 2.24 0 5c0 3.75 5 7 5 7s5-3.25 5-7c0-2.76-2.24-5-5-5zm0 6.5A1.5 1.5 0 1 1 5 3.5a1.5 1.5 0 0 1 0 3z" fill="currentColor"/>
-                      </svg>
-                      {t.location}
-                    </span>
                   </div>
                 </footer>
               </article>
