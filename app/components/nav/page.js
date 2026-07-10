@@ -763,6 +763,18 @@ Pathway for UK & Ireland Nurses to Australia
             </button>
             {drawerServices && (
               <ul className="drawer-submenu">
+                   <li>
+                  <Link href="/services/nursing-registration-in-new-zealand">Nursing Registration in New Zealand</Link>
+                </li>
+                   <li>
+                  <Link href="/services/nursing-registration-in-australia">Nursing Registration in Australia</Link>
+                </li>
+                   <li>
+                  <Link href="/services/pathway-for-registered-nurses-from-the-uk-and-ireland-to-new-zealand">Pathway for Registered Nurses from the UK & Ireland to New Zealand</Link>
+                </li>
+                   <li>
+                  <Link href="/services/pathway-for-uk-ireland-nurses-to-australia">Pathway for UK & Ireland Nurses to Australia</Link>
+                </li>
                 <li>
                   <Link href="/services/cgfns">CGFNS</Link>
                 </li>
