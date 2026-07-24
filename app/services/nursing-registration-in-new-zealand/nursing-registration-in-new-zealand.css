@@ -219,131 +219,193 @@
 }
 
 /* ─────────────────────────────
-   SERVICES SECTION
+   SHARED SECTION HEAD
 ───────────────────────────── */
-.nzreg-services-section {
-  background: var(--c1);
-  padding: 86px 48px;
-}
-
-.nzreg-services-inner {
-  max-width: 1160px;
-  margin: 0 auto;
-}
-
-.nzreg-services-header {
-  margin-bottom: 48px;
-}
-
-.nzreg-services-heading {
+.nzreg-head { max-width: 720px; margin-bottom: 44px; }
+.nzreg-head--center { margin-left: auto; margin-right: auto; text-align: center; }
+.nzreg-head-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(22px, 3vw, 36px);
+  font-size: clamp(24px, 3.4vw, 40px);
   font-weight: 700;
   color: var(--c4);
-  line-height: 1.25;
+  line-height: 1.2;
   margin: 0 0 14px;
   letter-spacing: -0.02em;
 }
+.nzreg-head-desc { font-size: 16px; color: var(--text-muted); line-height: 1.75; margin: 0; }
 
-.nzreg-services-sub {
-  font-size: 15px;
-  color: var(--text-muted);
-  line-height: 1.75;
-  margin: 0;
-  max-width: 680px;
+/* ─────────────────────────────
+   WHY NEW ZEALAND
+───────────────────────────── */
+.nzreg-whynz-section { background: var(--c1); padding: 90px 48px; }
+.nzreg-whynz-inner {
+  max-width: 1160px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start;
+}
+.nzreg-whynz-left .nzreg-head-title { margin-bottom: 0; }
+.nzreg-quote-card {
+  background: var(--c4); color: #fff; border-radius: var(--radius);
+  padding: 28px; position: relative; margin-top: 22px;
+}
+.nzreg-quote-card::before {
+  content: "\201C"; font-family: 'Playfair Display', Georgia, serif;
+  font-size: 60px; position: absolute; top: 2px; left: 18px; color: var(--c2); line-height: 1;
+}
+.nzreg-quote-card p { padding-left: 38px; font-size: 16px; line-height: 1.7; margin: 0; }
+.nzreg-check-list { list-style: none; display: grid; gap: 14px; margin: 0; padding: 6px 0 0; }
+.nzreg-check-item {
+  display: flex; gap: 12px; align-items: flex-start;
+  font-size: 16px; color: var(--text-body); line-height: 1.6;
+}
+.nzreg-check-tick {
+  flex: none; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--white); color: var(--c3); display: grid; place-items: center;
+  font-weight: 800; font-size: 13px; margin-top: 2px; box-shadow: var(--shadow-sm);
 }
 
-.nzreg-service-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+/* ─────────────────────────────
+   PATHWAY ROUTE
+───────────────────────────── */
+.nzreg-pathway-section { background: var(--white); padding: 90px 48px; }
+.nzreg-pathway-inner { max-width: 1160px; margin: 0 auto; }
+.nzreg-route { position: relative; margin-top: 8px; }
+.nzreg-route::before {
+  content: ""; position: absolute; left: 27px; top: 16px; bottom: 16px;
+  border-left: 3px dashed var(--border);
 }
+.nzreg-stop { position: relative; padding: 0 0 34px 84px; max-width: 820px; }
+.nzreg-stop:last-child { padding-bottom: 0; }
+.nzreg-marker {
+  position: absolute; left: 0; top: 0; width: 56px; height: 56px; border-radius: 50%;
+  background: var(--c1); border: 2.5px solid var(--c3); display: grid; place-items: center;
+  font-weight: 700; color: var(--c3); font-size: 16px; z-index: 1;
+  transition: background var(--ease), color var(--ease);
+}
+.nzreg-stop:hover .nzreg-marker { background: var(--c3); color: var(--white); }
+.nzreg-marker--icon { font-size: 22px; }
+.nzreg-stop h3 {
+  font-family: 'Playfair Display', Georgia, serif; font-size: 19px; font-weight: 700;
+  color: var(--c4); margin: 0 0 6px; padding-top: 4px;
+}
+.nzreg-stop h3 small {
+  display: block; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--c3); font-weight: 700; margin-bottom: 4px;
+}
+.nzreg-stop p { color: var(--text-body); font-size: 15px; line-height: 1.75; margin: 0; }
+.nzreg-addon {
+  margin-top: 12px; background: var(--c1); border-left: 4px solid var(--c2);
+  border-radius: 0 10px 10px 0; padding: 12px 16px; font-size: 14px; color: var(--text-body); line-height: 1.65;
+}
+.nzreg-addon strong { color: var(--c4); }
+.nzreg-route-cta { margin-top: 34px; }
+.nzreg-route-btn {
+  display: inline-block; background: var(--c3); color: var(--white);
+  font-size: 14px; font-weight: 700; padding: 13px 28px; border-radius: 10px;
+  text-decoration: none; transition: background var(--ease), transform var(--ease);
+}
+.nzreg-route-btn:hover { background: var(--c4); transform: translateY(-2px); }
 
-.nzreg-service-item {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 32px 30px;
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
-  box-shadow: var(--shadow-sm);
+/* ─────────────────────────────
+   WHY MINDTREE (PILLARS)
+───────────────────────────── */
+.nzreg-pillars-section { background: var(--c1); padding: 90px 48px; }
+.nzreg-pillars-inner { max-width: 1160px; margin: 0 auto; }
+.nzreg-pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.nzreg-pillar {
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 26px 24px; box-shadow: var(--shadow-sm);
   transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+}
+.nzreg-pillar:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--c2); }
+.nzreg-pillar-glyph {
+  width: 46px; height: 46px; border-radius: 12px; background: var(--c1);
+  display: grid; place-items: center; font-size: 22px; margin-bottom: 14px;
+}
+.nzreg-pillar h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 17px; font-weight: 700; color: var(--c4); margin: 0 0 6px; }
+.nzreg-pillar p { font-size: 14px; color: var(--text-muted); line-height: 1.65; margin: 0; }
+
+/* ─────────────────────────────
+   SERVICES GRID
+───────────────────────────── */
+.nzreg-svc-section { background: var(--white); padding: 90px 48px; }
+.nzreg-svc-inner { max-width: 1160px; margin: 0 auto; }
+.nzreg-svc-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.nzreg-svc-card {
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 26px; display: flex; flex-direction: column; gap: 8px; box-shadow: var(--shadow-sm);
+  transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+}
+.nzreg-svc-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--c2); }
+.nzreg-svc-num { font-size: 12px; letter-spacing: 0.1em; color: var(--c3); font-weight: 700; }
+.nzreg-svc-card h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 17px; font-weight: 700; color: var(--c4); margin: 0; }
+.nzreg-svc-card p { font-size: 14px; color: var(--text-muted); line-height: 1.65; margin: 0; flex: 1; }
+.nzreg-svc-link { color: var(--c3); font-weight: 700; font-size: 13.5px; text-decoration: none; margin-top: 4px; }
+.nzreg-svc-link:hover { color: var(--c4); text-decoration: underline; }
+
+/* ─────────────────────────────
+   COUNTRIES
+───────────────────────────── */
+.nzreg-countries-section { background: var(--c1); padding: 90px 48px; }
+.nzreg-countries-inner { max-width: 1160px; margin: 0 auto; }
+.nzreg-country-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px; }
+.nzreg-country {
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 22px 16px; text-align: center; box-shadow: var(--shadow-sm);
+  transition: transform var(--ease), box-shadow var(--ease);
+}
+.nzreg-country:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.nzreg-country-flag { font-size: 30px; }
+.nzreg-country h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 15px; font-weight: 700; color: var(--c4); margin: 8px 0 4px; }
+.nzreg-country p { font-size: 12.5px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+/* ─────────────────────────────
+   FAQ
+───────────────────────────── */
+.nzreg-faq-section { background: var(--white); padding: 90px 48px; }
+.nzreg-faq-inner { max-width: 1160px; margin: 0 auto; }
+.nzreg-faq-list { max-width: 820px; margin: 0 auto; }
+.nzreg-faq-list details {
+  background: var(--white); border: 1px solid var(--border); border-radius: 12px;
+  padding: 0 24px; margin-bottom: 12px; box-shadow: var(--shadow-sm);
+}
+.nzreg-faq-list details[open] { border-color: var(--c3); }
+.nzreg-faq-list summary {
+  cursor: pointer; font-weight: 700; font-size: 15.5px; color: var(--c4);
+  padding: 18px 0; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px;
+}
+.nzreg-faq-list summary::-webkit-details-marker { display: none; }
+.nzreg-faq-list summary::after { content: "+"; font-family: 'Playfair Display', Georgia, serif; font-size: 20px; color: var(--c3); flex-shrink: 0; }
+.nzreg-faq-list details[open] summary::after { content: "–"; }
+.nzreg-faq-list details p { font-size: 14.5px; color: var(--text-muted); line-height: 1.8; padding-bottom: 20px; margin: 0; }
+
+/* ─────────────────────────────
+   BLUE DOT PATTERN — white-background sections
+───────────────────────────── */
+.nzreg-intro-section,
+.nzreg-pathway-section,
+.nzreg-svc-section,
+.nzreg-faq-section {
   position: relative;
   overflow: hidden;
 }
-
-.nzreg-service-item::before {
+.nzreg-intro-section::before,
+.nzreg-pathway-section::before,
+.nzreg-svc-section::before,
+.nzreg-faq-section::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; bottom: 0;
-  width: 3px;
-  background: linear-gradient(180deg, var(--c3), var(--c2));
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform var(--ease);
+  inset: 0;
+  background-image: radial-gradient(rgba(46, 94, 153, 0.055) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  pointer-events: none;
 }
-
-.nzreg-service-item:hover::before {
-  transform: scaleY(1);
+.nzreg-intro-inner,
+.nzreg-pathway-inner,
+.nzreg-svc-inner,
+.nzreg-faq-inner {
+  position: relative;
+  z-index: 1;
 }
-
-.nzreg-service-item:hover {
-  transform: translateX(6px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--c2);
-}
-
-.nzreg-service-num {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: var(--c3);
-  color: var(--white);
-  font-size: 15px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: background var(--ease), transform var(--ease);
-}
-
-.nzreg-service-item:hover .nzreg-service-num {
-  background: var(--c4);
-  transform: scale(1.08);
-}
-
-.nzreg-service-content {
-  flex: 1;
-  padding-top: 2px;
-}
-
-.nzreg-service-title {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--c4);
-  margin: 0 0 4px;
-  letter-spacing: -0.01em;
-}
-
-.nzreg-service-subtitle {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--c3);
-  margin: 0 0 12px;
-}
-
-.nzreg-service-desc {
-  font-size: 15px;
-  line-height: 1.8;
-  color: var(--text-body);
-  margin: 0;
-}
-
 
 /* ─────────────────────────────
    CTA
@@ -416,27 +478,49 @@
 /* ─────────────────────────────
    RESPONSIVE
 ───────────────────────────── */
+@media (max-width: 960px) {
+  .nzreg-pillars-grid,
+  .nzreg-svc-grid { grid-template-columns: 1fr 1fr; }
+  .nzreg-country-strip { grid-template-columns: repeat(3, 1fr); }
+}
+
 @media (max-width: 860px) {
   .nzreg-hero { padding: 72px 24px 64px; }
 
   .nzreg-intro-section,
-  .nzreg-services-section,
-  .nzreg-includes-section,
+  .nzreg-whynz-section,
+  .nzreg-pathway-section,
+  .nzreg-pillars-section,
+  .nzreg-svc-section,
+  .nzreg-countries-section,
+  .nzreg-faq-section,
   .nzreg-cta { padding: 64px 24px; }
 
-  .nzreg-intro-grid    { grid-template-columns: 1fr; gap: 36px; }
-  .nzreg-includes-grid { grid-template-columns: 1fr; }
+  .nzreg-intro-grid,
+  .nzreg-whynz-inner { grid-template-columns: 1fr; gap: 36px; }
+}
+
+@media (max-width: 680px) {
+  .nzreg-pillars-grid,
+  .nzreg-svc-grid { grid-template-columns: 1fr; }
+  .nzreg-country-strip { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 520px) {
   .nzreg-hero { padding: 56px 20px; }
 
   .nzreg-intro-section,
-  .nzreg-services-section,
-  .nzreg-includes-section,
+  .nzreg-whynz-section,
+  .nzreg-pathway-section,
+  .nzreg-pillars-section,
+  .nzreg-svc-section,
+  .nzreg-countries-section,
+  .nzreg-faq-section,
   .nzreg-cta { padding: 48px 20px; }
 
-  .nzreg-service-item { flex-direction: column; gap: 14px; }
+  .nzreg-stop { padding-left: 70px; }
+  .nzreg-marker { width: 48px; height: 48px; font-size: 14px; }
+  .nzreg-route::before { left: 23px; }
 }
 
 /* ── Hero entrance ── */

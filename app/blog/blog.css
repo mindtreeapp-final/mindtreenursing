@@ -327,7 +327,9 @@
    POST CONTENT
 ───────────────────────────── */
 .post-content-section {
-  background: var(--white);
+  background-color: var(--white);
+  background-image: radial-gradient(rgba(46, 94, 153, 0.055) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
   padding: 72px 48px 80px;
 }
 

@@ -204,7 +204,7 @@ export default function ServicesPage() {
           <div className="service-grid">
 
             <ServiceCard
-              photo="/box-img/img2.jpeg"
+              photo="/box-img/Ireland to New Zealand.jpeg"
               alt="New Zealand nursing registration"
               icon={<IconNursingRegistrationNZ />}
               abbr="Nursing Registration — New Zealand"
@@ -216,21 +216,10 @@ export default function ServicesPage() {
               animDelay={0}
             />
 
-            <ServiceCard
-              photo="/box-img/img3.jpeg"
-              alt="Australia nursing registration"
-              icon={<IconNursingAustralia />}
-              abbr="Nursing Registration — Australia"
-              name="AHPRA Registration Pathway"
-              badge="Australia"
-              para1="Expert guidance through the Australian Health Practitioner Regulation Agency registration requirements for internationally qualified nurses."
-              tags={["AHPRA", "Registration", "Australia"]}
-              href="/services/nursing-registration-in-australia"
-              animDelay={100}
-            />
+          
 
             <ServiceCard
-              photo="/box-img/img5.jpeg"
+              photo="/box-img/Pathway for Registered.jpeg"
               alt="UK and Ireland nurses pathway to New Zealand"
               icon={<IconUKIrelandToNZ />}
               abbr="UK & Ireland Nurses — New Zealand"
@@ -242,20 +231,9 @@ export default function ServicesPage() {
               animDelay={200}
             />
 
-            <ServiceCard
-              photo="/box-img/img8.jpeg"
-              alt="UK and Ireland nurses pathway to Australia"
-              icon={<IconUKIrelandToAustralia />}
-              abbr="UK & Ireland Nurses — Australia"
-              name="Migration Pathway to Australia"
-              badge="UK & Ireland"
-              para1="Tailored guidance for nurses from the UK and Ireland seeking registration and employment within Australia's world-class health system."
-              tags={["AHPRA", "UK / Ireland", "Migration"]}
-              href="/services/pathway-for-uk-ireland-nurses-to-australia"
-              animDelay={300}
-            />
+        
              <ServiceCard
-              photo="/box-img/img12.jpg"
+              photo="/box-img/CGFNS.jpeg"
               alt="CGFNS certification support"
               icon={<IconLayers />}
               abbr="CGFNS Certification"
@@ -268,7 +246,7 @@ export default function ServicesPage() {
 
 
             <ServiceCard
-              photo="/box-img/flight-img.jpeg"
+              photo="/box-img/Flight Tickets.jpeg"
               alt="International flight booking"
               icon={<IconFlight />}
               abbr="Flight Tickets"
@@ -280,7 +258,7 @@ export default function ServicesPage() {
             />
 
             <ServiceCard
-              photo="/box-img/cvimg.jpg"
+              photo="/box-img/cv.jpeg"
               alt="Professional CV on desk"
               icon={<IconCV />}
               abbr="CV & Cover Letter Preparation"
@@ -292,7 +270,7 @@ export default function ServicesPage() {
             />
 
             <ServiceCard
-              photo="/box-img/visa1.png"
+              photo="/box-img/visa.jpeg"
               alt="Passport and visa documents"
               icon={<IconVisa />}
               abbr="Visa Assistance"
@@ -304,7 +282,7 @@ export default function ServicesPage() {
             />
 
             <ServiceCard
-              photo="/mindtree-img/mindtree-img7.webp"
+              photo="/box-img/Accommodation.jpeg"
               alt="Cozy apartment interior"
               icon={<IconHome />}
               abbr="Accommodation & Transportation"
@@ -316,7 +294,7 @@ export default function ServicesPage() {
             />
 
             <ServiceCard
-              photo="/box-img/img3.jpeg"
+              photo="/box-img/AHPRA.jpeg"
               alt="AHPRA registration support"
               icon={<IconCheck />}
               abbr="AHPRA Registration"

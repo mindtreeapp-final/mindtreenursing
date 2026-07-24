@@ -129,14 +129,14 @@ export default function CvPreparation() {
               <p className="cv-cta-sub">Contact us directly and our team will guide you through the process from start to finish.</p>
             </div>
             <div className="cv-cta-buttons">
-              <a href="tel:9747694573" className="cv-cta-btn cv-cta-btn--call">
+              <a href="tel:8590893711" className="cv-cta-btn cv-cta-btn--call">
                 <span className="cv-btn-icon">📞</span>
                 <span className="cv-btn-text">
                   <span className="cv-btn-label">Call Us Now</span>
-                  <span className="cv-btn-value">9747694573</span>
+                  <span className="cv-btn-value">8590893711</span>
                 </span>
               </a>
-              <a href="https://wa.me/919747694573" className="cv-cta-btn cv-cta-btn--whatsapp" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/918590893711" className="cv-cta-btn cv-cta-btn--whatsapp" target="_blank" rel="noreferrer">
                 <span className="cv-btn-icon">💬</span>
                 <span className="cv-btn-text">
                   <span className="cv-btn-label">WhatsApp Us</span>

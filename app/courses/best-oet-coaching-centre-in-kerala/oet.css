@@ -190,83 +190,305 @@
 .oet-intro-para:last-child { margin-bottom: 0; }
 
 /* ─────────────────────────────
-   INCLUDES SECTION
+   SHARED SECTION HEAD
 ───────────────────────────── */
-.oet-includes-section {
-  background: linear-gradient(145deg, #f0f5fb 0%, #e8f0f9 100%);
-  padding: 86px 48px;
-}
-
-.oet-includes-inner {
-  max-width: 1160px;
-  margin: 0 auto;
-}
-
-.oet-includes-header {
+.oet-section-head {
+  max-width: 660px;
+  margin: 0 auto 48px;
   text-align: center;
-  max-width: 640px;
-  margin: 0 auto 56px;
 }
-
-.oet-includes-heading {
+.oet-section-head--left {
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+.oet-section-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(26px, 4vw, 40px);
+  font-size: clamp(26px, 4vw, 42px);
   font-weight: 700;
   color: var(--c4);
   margin: 0 0 14px;
   letter-spacing: -0.02em;
 }
-
-.oet-includes-sub {
-  font-size: 15.5px;
+.oet-section-desc {
+  font-size: 16px;
   color: var(--text-muted);
   line-height: 1.75;
   margin: 0;
 }
 
-.oet-includes-grid {
+/* ─────────────────────────────
+   ONLINE TRAINING
+───────────────────────────── */
+.oet-online-section {
+  background: var(--c1);
+  padding: 90px 48px;
+}
+.oet-online-inner {
+  max-width: 1160px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.oet-online-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(24px, 3.4vw, 36px);
+  font-weight: 700;
+  color: var(--c4);
+  margin: 0 0 14px;
+  letter-spacing: -0.02em;
+}
+.oet-online-lead {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin: 0 0 18px;
+  max-width: 34em;
+}
+.oet-online-note {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  border-left: 3px solid var(--c2);
+  padding-left: 14px;
+  margin: 0;
+}
+.oet-online-list {
+  list-style: none;
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+.oet-online-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px 16px 48px;
+  position: relative;
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  box-shadow: var(--shadow-sm);
+}
+.oet-online-item b {
+  color: var(--c4);
+  display: block;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 15.5px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+.oet-online-item::before {
+  content: "✓";
+  position: absolute;
+  left: 18px;
+  top: 17px;
+  color: var(--c3);
+  font-weight: 700;
+  font-size: 16px;
 }
 
-.oet-include-card {
+/* ─────────────────────────────
+   WHY MINDTREE
+───────────────────────────── */
+.oet-why-section {
+  background: var(--white);
+  padding: 90px 48px;
+}
+.oet-why-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+.oet-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.oet-why-card {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 28px 24px;
-  transition: background var(--ease), border-color var(--ease), transform var(--ease), box-shadow var(--ease);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
 }
-
-.oet-include-card:hover {
-  background: var(--c1);
-  border-color: rgba(46,94,153,0.25);
-  transform: translateY(-5px);
+.oet-why-card:hover {
+  transform: translateY(-4px);
   box-shadow: var(--shadow-md);
+  border-color: var(--c2);
 }
-
-.oet-include-icon {
-  font-size: 28px;
+.oet-why-ico {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: var(--c1);
+  display: grid;
+  place-items: center;
+  font-size: 22px;
   margin-bottom: 16px;
-  display: block;
-  transition: transform var(--ease);
 }
-.oet-include-card:hover .oet-include-icon { transform: scale(1.2); }
-
-.oet-include-card h3 {
+.oet-why-card h3 {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 16px;
-  font-weight: 600;
+  font-size: 17px;
+  font-weight: 700;
   color: var(--c4);
-  margin: 0 0 10px;
-  line-height: 1.3;
+  margin: 0 0 7px;
+}
+.oet-why-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin: 0;
 }
 
-.oet-include-card p {
-  font-size: 13.5px;
-  line-height: 1.75;
+/* ─────────────────────────────
+   KNOW THE EXAM
+───────────────────────────── */
+.oet-exam-section {
+  background: var(--c1);
+  padding: 90px 48px;
+}
+.oet-exam-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+.oet-mod-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.oet-mod-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--c3);
+  border-radius: var(--radius);
+  padding: 22px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+}
+.oet-mod-chip {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  background: var(--c3);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 17px;
+}
+.oet-mod-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--c4);
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+.oet-mod-card p {
+  font-size: 14px;
   color: var(--text-muted);
+  line-height: 1.6;
   margin: 0;
+}
+.oet-score-note {
+  margin-top: 26px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--c2);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  font-size: 15px;
+  color: var(--text-body);
+  line-height: 1.75;
+  max-width: 860px;
+}
+.oet-score-note b {
+  color: var(--c4);
+}
+
+/* ─────────────────────────────
+   FAQ
+───────────────────────────── */
+.oet-faq-section {
+  background: var(--white);
+  padding: 90px 48px;
+}
+.oet-faq-inner {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+.oet-faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.oet-faq-list details {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0 24px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+}
+.oet-faq-list details[open] { border-color: var(--c3); }
+.oet-faq-list summary {
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15.5px;
+  color: var(--c4);
+  padding: 18px 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.oet-faq-list summary::-webkit-details-marker { display: none; }
+.oet-faq-list summary::after {
+  content: "+";
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  color: var(--c3);
+  flex-shrink: 0;
+}
+.oet-faq-list details[open] summary::after { content: "–"; }
+.oet-faq-list details p {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+/* ─────────────────────────────
+   BLUE DOT PATTERN — white-background sections
+───────────────────────────── */
+.oet-intro-section,
+.oet-why-section,
+.oet-faq-section {
+  position: relative;
+  overflow: hidden;
+}
+.oet-intro-section::before,
+.oet-why-section::before,
+.oet-faq-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(46, 94, 153, 0.055) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+.oet-intro-inner,
+.oet-why-inner,
+.oet-faq-inner {
+  position: relative;
+  z-index: 1;
 }
 
 /* ─────────────────────────────
@@ -373,22 +595,31 @@
    RESPONSIVE
 ───────────────────────────── */
 @media (max-width: 1100px) {
-  .oet-includes-grid { grid-template-columns: repeat(3, 1fr); }
+  .oet-why-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 860px) {
   .oet-hero            { padding: 72px 24px 64px; }
   .oet-intro-section,
-  .oet-includes-section,
+  .oet-online-section,
+  .oet-why-section,
+  .oet-exam-section,
+  .oet-faq-section,
   .oet-cta             { padding: 64px 24px; }
-  .oet-intro-grid      { grid-template-columns: 1fr; gap: 36px; }
-  .oet-includes-grid   { grid-template-columns: repeat(2, 1fr); }
+  .oet-intro-grid,
+  .oet-online-inner,
+  .oet-mod-grid        { grid-template-columns: 1fr; gap: 36px; }
+  .oet-why-grid        { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 520px) {
   .oet-hero            { padding: 56px 20px; }
   .oet-intro-section,
-  .oet-includes-section,
+  .oet-online-section,
+  .oet-why-section,
+  .oet-exam-section,
+  .oet-faq-section,
   .oet-cta             { padding: 48px 20px; }
-  .oet-includes-grid   { grid-template-columns: 1fr; }
+  .oet-why-grid        { grid-template-columns: 1fr; }
+  .oet-online-inner    { gap: 28px; }
 }

@@ -4,16 +4,16 @@ import "./pathway-for-registered-nurses-from-the-uk-and-ireland-to-new-zealand.c
 export const metadata = {
   title: "UK & Ireland Nurses Pathway to New Zealand | Mindtree Nursing Solutions",
   description:
-    "Explore the registration pathway for registered nurses from the UK and Ireland to New Zealand. Mindtree Nursing Solutions provides expert guidance on NZNC requirements, documentation, competency standards, employment opportunities, and the complete transition process.",
+    "UK and Ireland-trained nurses qualify for New Zealand's most streamlined registration pathway — often with no OSCE, no CBT, and no English test. Mindtree Nursing Solutions manages the full process from TruMerit verification to NZ registration.",
   keywords: [
     "UK Nurses to New Zealand",
     "Ireland Nurses to New Zealand",
-    "NZNC Registration",
+    "NCNZ Registration",
     "New Zealand Nursing Pathway",
+    "NMC NMBI New Zealand",
     "Registered Nurses New Zealand",
     "Nursing Registration New Zealand",
-    "UK Nurse Migration NZ",
-    "Mindtree Nursing"
+    "Mindtree Nursing",
   ],
 };
 
@@ -27,7 +27,7 @@ export default function UKIrelandPathwayPage() {
         <span aria-hidden="true">›</span>
         <a href="/services">Services</a>
         <span aria-hidden="true">›</span>
-        <span aria-current="page">Pathway for Registered Nurses from the UK and Ireland to New-zealand</span>
+        <span aria-current="page">Pathway for Registered Nurses from the UK and Ireland to New Zealand</span>
       </nav>
 
       {/* ── HERO ── */}
@@ -35,11 +35,9 @@ export default function UKIrelandPathwayPage() {
         <div className="ukire-hero-shape-1" />
         <div className="ukire-hero-shape-2" />
         <div className="ukire-hero-inner">
-          <span className="ukire-hero-badge">Our Services</span>
+          <span className="ukire-hero-badge">UK &amp; Ireland → New Zealand</span>
           <h1 className="ukire-hero-title">
-            Pathway for Registered Nurses from the{" "}
-            <em className="ukire-hero-em">UK &amp; Ireland</em>
-            {" "}to New Zealand
+            Registered in the UK or Ireland? Your <em className="ukire-hero-em">Fastest Route</em> to Nursing in New Zealand
           </h1>
           <div className="ukire-hero-divider">
             <span className="ukire-divider-line" />
@@ -47,98 +45,140 @@ export default function UKIrelandPathwayPage() {
             <span className="ukire-divider-line" />
           </div>
           <p className="ukire-hero-sub">
-            Tailored support for UK and Ireland nurses — guiding you through every step
-            of the New Zealand nursing registration process with confidence.
+            UK and Ireland-trained nurses qualify for New Zealand's most streamlined registration pathway — often with no OSCE, no CBT, and no English test.
           </p>
         </div>
       </section>
 
-      {/* ── INTRO ── */}
-      <section className="ukire-intro-section">
-        <div className="ukire-intro-inner">
-          <div className="ukire-intro-grid">
-
-            <div className="ukire-intro-left" data-anim="from-left">
-              <span className="ukire-section-label">What We Do</span>
-              <h2 className="ukire-intro-heading">Pathway for Registered Nurses from the UK and Ireland to New Zealand</h2>
-              <div className="ukire-accent-bar" />
-            </div>
-
-            <div className="ukire-intro-right" data-anim="from-right" data-anim-delay="120">
-              <p className="ukire-intro-para">
-                For nurses from the UK and Ireland seeking registration in New Zealand, Axon Careers
-                offers tailored assistance to help you start your journey in Nursing in New Zealand,
-                guiding you through every step of the nursing registration process.
-              </p>
-              <p className="ukire-intro-para">
-                Whether you are newly exploring the move or ready to begin your application, our
-                dedicated team understands the specific pathway that applies to UK and Ireland
-                qualified nurses — and we are here to make it as smooth and straightforward as
-                possible.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* ── SERVICES ── */}
-      <section className="ukire-services-section">
-        <div className="ukire-services-inner">
-
-          <div className="ukire-services-header" data-anim="up">
-            <span className="ukire-section-label">Our Services</span>
-            <h2 className="ukire-services-heading">Here's How We Help</h2>
-            <p className="ukire-services-sub">
-              Two focused services covering every stage of the registration journey for nurses
-              qualified in the UK and Ireland — from exam training to full NCNZ registration.
+      {/* ── SECTION 1 — WHY THIS PATHWAY IS DIFFERENT ── */}
+      <section className="ukire-why-section">
+        <div className="ukire-why-inner">
+          <div className="ukire-head" data-anim="up">
+            <span className="ukire-section-label">Why This Pathway Is Different</span>
+            <h2 className="ukire-head-title">Comparable Education, a Streamlined Route</h2>
+            <p className="ukire-head-desc">
+              New Zealand's Nursing Council recognises the UK and Ireland as comparable nursing education systems. That means nurses who completed their initial training there skip most of the hurdles other internationally qualified nurses face.
             </p>
           </div>
 
-          <div className="ukire-service-list">
-
-            <div className="ukire-service-item" data-anim="up">
-              <div className="ukire-service-num">01</div>
-              <div className="ukire-service-content">
-                <h3 className="ukire-service-title">IQN Theoretical Exam and OSCE Training</h3>
-                <p className="ukire-service-subtitle">Combined Online &amp; Offline Training Method</p>
-                <p className="ukire-service-desc">
-                  We provide specialised training for the IQN Theoretical Exam and OSCE, using
-                  our successful combined online and offline training method. Nurses from the UK
-                  and Ireland can practise the required clinical skills in our hands-on training
-                  sessions, ensuring they are fully prepared for the NCNZ registration process.
-                </p>
-              </div>
+          <div className="ukire-highlight-grid">
+            <div className="ukire-highlight-card" data-anim="scale-up">
+              <span className="ukire-highlight-ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" width="20" height="20"><polyline points="20 6 9 17 4 12" /></svg>
+              </span>
+              <h3>No OSCE or CBT in most cases</h3>
+              <p>The Council usually waives the competence assessment for UK and Ireland-trained nurses.</p>
             </div>
-
-            <div className="ukire-service-item" data-anim="up" data-anim-delay="100">
-              <div className="ukire-service-num">02</div>
-              <div className="ukire-service-content">
-                <h3 className="ukire-service-title">NCNZ Registration Assistance</h3>
-                <p className="ukire-service-subtitle">Nursing Council of New Zealand</p>
-                <p className="ukire-service-desc">
-                  We assist UK and Ireland nurses in completing the Nursing Council of New Zealand
-                  (NCNZ) registration, ensuring all documents are in order and every deadline is
-                  met — so your application is submitted accurately, completely, and without
-                  unnecessary delays.
-                </p>
-              </div>
+            <div className="ukire-highlight-card" data-anim="scale-up" data-anim-delay="80">
+              <span className="ukire-highlight-ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" width="20" height="20"><polyline points="20 6 9 17 4 12" /></svg>
+              </span>
+              <h3>English test exemption available</h3>
+              <p>Your English-medium education or NMC/NMBI registration can count as evidence of English proficiency.</p>
             </div>
-
+            <div className="ukire-highlight-card" data-anim="scale-up" data-anim-delay="160">
+              <span className="ukire-highlight-ico">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" width="20" height="20"><polyline points="20 6 9 17 4 12" /></svg>
+              </span>
+              <h3>Faster overall timeline</h3>
+              <p>No exam booking, prep, or exam travel required — so you reach registration sooner.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section className="ukire-cta">
+      {/* ── SECTION 2 — HOW IT WORKS ── */}
+      <section className="ukire-steps-section">
+        <div className="ukire-steps-inner">
+          <div className="ukire-head" data-anim="up">
+            <span className="ukire-section-label">How It Works</span>
+            <h2 className="ukire-head-title">Four Steps to Registration</h2>
+          </div>
+
+          <div className="ukire-steps-grid">
+            <div className="ukire-step-card" data-anim="scale-up">
+              <div className="ukire-step-num">1</div>
+              <h3>Verify your credentials</h3>
+              <p>Apply through CVS-NCNZ at TruMerit (CGFNS). They verify your identity, education, and work history.</p>
+            </div>
+            <div className="ukire-step-card" data-anim="scale-up" data-anim-delay="80">
+              <div className="ukire-step-num">2</div>
+              <h3>Apply to the Nursing Council</h3>
+              <p>Submit your application via the MyIQN portal.</p>
+            </div>
+            <div className="ukire-step-card" data-anim="scale-up" data-anim-delay="160">
+              <div className="ukire-step-num">3</div>
+              <h3>Council assessment</h3>
+              <p>The Council reviews your file and confirms whether you're exempt from the competence assessment and English test.</p>
+            </div>
+            <div className="ukire-step-card" data-anim="scale-up" data-anim-delay="240">
+              <div className="ukire-step-num">4</div>
+              <h3>Registration granted</h3>
+              <p>Receive your NZ registration and apply for your practising certificate.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 3 — WHAT YOU'LL NEED ── */}
+      <section className="ukire-need-section">
+        <div className="ukire-need-inner">
+          <div className="ukire-head" data-anim="up">
+            <span className="ukire-section-label">What You'll Need</span>
+            <h2 className="ukire-head-title">Your Eligibility Checklist</h2>
+          </div>
+
+          <ul className="ukire-need-list" data-anim="up">
+            <li className="ukire-need-item"><span className="ukire-need-tick">✓</span>Nursing qualification equivalent to a NZ Bachelor of Nursing</li>
+            <li className="ukire-need-item"><span className="ukire-need-tick">✓</span>Current registration with the NMC (UK) or NMBI (Ireland)</li>
+            <li className="ukire-need-item"><span className="ukire-need-tick">✓</span>At least 1,800 hours of nursing practice in the last 5 years</li>
+            <li className="ukire-need-item"><span className="ukire-need-tick">✓</span>Professional references from recent employers</li>
+            <li className="ukire-need-item"><span className="ukire-need-tick">✓</span>International criminal history check</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* ── SECTION 4 — IMPORTANT TO KNOW ── */}
+      <section className="ukire-notes-section">
+        <div className="ukire-notes-inner">
+          <div className="ukire-head" data-anim="up">
+            <span className="ukire-section-label">Important to Know</span>
+            <h2 className="ukire-head-title">The Fine Print</h2>
+          </div>
+
+          <div className="ukire-notes-grid">
+            <div className="ukire-note-card" data-anim="scale-up">
+              <p>Exemptions depend on where your <strong>initial nursing education</strong> was completed — not where you're currently registered. Postgraduate study in the UK/Ireland doesn't qualify on its own.</p>
+            </div>
+            <div className="ukire-note-card" data-anim="scale-up" data-anim-delay="80">
+              <p>All exemptions are at the <strong>Council's discretion</strong> and are confirmed only after your application is assessed.</p>
+            </div>
+            <div className="ukire-note-card" data-anim="scale-up" data-anim-delay="160">
+              <p>If the English exemption is declined, you can still register by passing <strong>OET or IELTS Academic</strong>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 5 — CTA ── */}
+      <section className="ukire-cta" id="contact">
         <div className="ukire-cta-shape" />
         <div className="ukire-cta-inner">
-          <h2 className="ukire-cta-heading" data-anim="up">Ready to Make the Move?</h2>
+          <h2 className="ukire-cta-heading" data-anim="up">Ready to Start?</h2>
           <p className="ukire-cta-sub" data-anim="up" data-anim-delay="130">
-            Contact our team today and let us guide you through every step of your New Zealand
-            nursing registration — from your first question to your first day on the ward.
+            Our team manages the full process — from TruMerit verification to your NZ registration. Get a free eligibility assessment today.
           </p>
-          <Link href="/contact" className="ukire-cta-btn" data-anim="up" data-anim-delay="260">Get in Touch</Link>
+          <div className="ukire-cta-actions" data-anim="up" data-anim-delay="260">
+            <Link href="/contact" className="ukire-cta-btn">Book a Free Consultation</Link>
+            <a
+              href="https://wa.me/919778286707"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ukire-cta-btn ukire-cta-btn--ghost"
+            >
+              WhatsApp Us
+            </a>
+          </div>
         </div>
       </section>
 

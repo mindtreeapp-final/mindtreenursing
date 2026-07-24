@@ -25,6 +25,7 @@
   color: var(--text);
   line-height: 1.65;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* ── BREADCRUMB ────────────────────────────────────────── */
@@ -111,12 +112,18 @@
 
 /* ── SECTION ───────────────────────────────────────────── */
 .vs-section {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 56px 40px;
+  padding: 72px max(40px, calc((100% - 1000px) / 2));
+  position: relative;
 }
-.vs-section--steps      { padding-top: 0; }
-.vs-section--highlights { padding-top: 0; }
+/* alternating full-width section colours */
+.vs-page > section:nth-of-type(even) {
+  background-color: var(--white);
+  background-image: radial-gradient(rgba(46, 94, 153, 0.055) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+}
+.vs-section:nth-of-type(odd) {
+  background: #E7F0FA;
+}
 .vs-section--cta        { padding-top: 0; }
 .vs-section--trust      { padding-top: 0; }
 

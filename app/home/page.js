@@ -87,7 +87,7 @@ export default function Home() {
             <a href="/services" className="hm-btn hm-btn--ghost">Explore Services</a>
           </div>
           <div className="hm-trust">
-            <div className="hm-trust__item"><strong>500+</strong><span>Nurses Placed</span></div>
+            <div className="hm-trust__item"><strong>5000+</strong><span>Nurses Placed</span></div>
             <div className="hm-trust__sep" />
             <div className="hm-trust__item"><strong>98%</strong><span>Success Rate</span></div>
             <div className="hm-trust__sep" />
@@ -122,10 +122,9 @@ export default function Home() {
         </div>
         <div className="hm-pathways__grid">
           {[
-            { title: "Nursing Registration in New Zealand", img: "/box-img/img2.jpeg", href: "/services/nursing-registration-in-new-zealand" },
-            { title: "Nursing Registration in Australia", img: "/box-img/img13.jpg", href: "/services/nursing-registration-in-australia" },
-            { title: "Pathway for Registered Nurses from the UK and Ireland to New Zealand", img: "/box-img/img14.jpg", href: "/services/pathway-for-registered-nurses-from-the-uk-and-ireland-to-new-zealand" },
-            { title: "Pathway for UK & Ireland Nurses to Australia", img: "/box-img/img15.jpg", href: "/services/pathway-for-uk-ireland-nurses-to-australia" },
+            { title: "Nursing Registration in New Zealand", img: "/box-img/Ireland to New Zealand.jpeg", href: "/services/nursing-registration-in-new-zealand" },
+            { title: "Pathway for Registered Nurses from the UK and Ireland to New Zealand", img: "/box-img/Pathway for Registered.jpeg", href: "/services/pathway-for-registered-nurses-from-the-uk-and-ireland-to-new-zealand" },
+            { title: "Flight Tickets", img: "/box-img/Flight Tickets.jpeg", href: "/services/flight-ticketing" },
           ].map((item, i) => (
             <a key={item.title} href={item.href} className="hm-pathway-card" data-anim="scale-up" data-anim-delay={i * 75}>
               <img src={item.img} alt={item.title} className="hm-pathway-card__img" />
@@ -204,10 +203,9 @@ export default function Home() {
         </div>
         <div className="hm-pathways__grid">
           {[
-            { title: "OET preparation (Online & Offline)", img: "/box-img/img14.jpg", href: "/courses/best-oet-coaching-centre-in-kerala" },
-            { title: "OSCE Training (Online & Offline)", img: "/box-img/nurse.png", href: "/courses/osce-training-kerala" },
-            { title: "Professional Communication Courses", img: "/box-img/OSCE_Training.png", href: "/courses/therapeutic-communication" },
-            { title: "IQN Training Program", img: "/box-img/img16.jpg", href: "/courses/best-iqn-coaching" },
+            { title: "OET preparation (Online & Offline)", img: "/box-img/Oet_online.jpeg", href: "/courses/best-oet-coaching-centre-in-kerala" },
+            { title: "OSCE Training (Online & Offline)", img: "/box-img/Osce_training.jpeg", href: "/courses/best-osce-training" },
+            { title: "IQN Training Program", img: "/box-img/Iqn_training.jpeg", href: "/courses/best-iqn-coaching" },
           ].map((item, i) => (
             <a key={item.title} href={item.href} className="hm-pathway-card" data-anim="scale-up" data-anim-delay={i * 75}>
               <img src={item.img} alt={item.title} className="hm-pathway-card__img" />
@@ -354,7 +352,7 @@ export default function Home() {
               <span className="hm-cta-contact-btn__icon">📞</span>
               <span className="hm-cta-contact-btn__text">
                 <span className="hm-cta-contact-btn__label">Call Us Now</span>
-                <span className="hm-cta-contact-btn__value">9747694573</span>
+                <span className="hm-cta-contact-btn__value">9778286707</span>
               </span>
             </a>
             <a href="https://wa.me/919778286707" className="hm-cta-contact-btn hm-cta-contact-btn--wa" target="_blank" rel="noreferrer">

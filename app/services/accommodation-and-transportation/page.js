@@ -286,7 +286,7 @@ export default function AccommodationPage() {
         <span aria-hidden="true">›</span>
         <a href="/services">Services</a>
         <span aria-hidden="true">›</span>
-        <span aria-current="page">Pathway for UK Ireland Nurses to Australia</span>
+        <span aria-current="page">Accommodation and Transportation</span>
       </nav>
       {/* ══════════════════════════════════════
           HERO — matches Blog / About / Services

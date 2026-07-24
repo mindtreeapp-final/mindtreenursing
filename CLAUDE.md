@@ -47,6 +47,49 @@ modules-per-page (not CSS Modules — just `.css` files imported directly).
 H1 sizing: main listing pages use `clamp(36px,6vw,62px)`; sub-pages
 (service/course detail pages, blog posts) use `clamp(28px,5vw,52px)`.
 
+## Section backgrounds & the blue dot texture
+
+Content sections alternate full-width backgrounds — **white** and pale-blue
+(`--c1` / `#E7F0FA`) — so no two adjacent content sections share a colour. The
+navy hero (`--c4`) and blue CTA (`--c3`) are bookend accents. Target a rhythm
+like: hero(navy) → intro(white) → pale → white → pale … → CTA(blue).
+
+**Blue dot texture** — every **white** section carries a subtle dotted overlay;
+pale-blue (`--c1`), navy, and gradient sections do NOT. Canonical pattern
+(site-wide — keep these exact values):
+
+```css
+background-image: radial-gradient(rgba(46, 94, 153, 0.055) 1.5px, transparent 1.5px);
+background-size: 28px 28px;
+```
+
+Apply it one of two ways:
+- **Simplest / always renders** — add the two `background-image` +
+  `background-size` lines directly to the white section's rule (next to its
+  `background-color: var(--white)`). Preferred.
+- **Overlay** — a `::before` with `position:absolute; inset:0` + the dots on a
+  `position:relative; overflow:hidden` section, and the inner wrapper set to
+  `position:relative; z-index:1`.
+
+Do NOT use a full-bleed `::before` with `z-index:-1` — an opaque page/`main`
+background paints over it and the dots disappear. White *cards, buttons,
+breadcrumbs* stay solid white and sit **on top** of the dots — never dot those.
+
+## Two design families
+
+Most pages use the **blue token system** above (`--c1`–`--c4`, white page bg).
+Four service-detail pages — `ahpra`, `visa`, `cv-preparation`,
+`flight-ticketing` — use a **separate palette** (`--navy`, `--sky`,
+`--gold` [defined but unused], `--off #F7F9FC` page bg, `--sans`/`--serif`) with
+`ah/vs/cv/ft` class prefixes, a navy hero, and centred `.xx-section` blocks.
+`accommodation-and-transportation` is intentionally left plain (no dots / bands).
+
+On those four navy pages, the alternating bands are done by making `.xx-section`
+full-width and centring content via padding
+(`padding: 72px max(40px, calc((100% - 1000px) / 2))`), then colouring by
+`:nth-of-type` — `.xx-page > section:nth-of-type(even)` = white + dots,
+`.xx-section:nth-of-type(odd)` = `#E7F0FA`; the hero (section 1) keeps its navy.
+
 ## Animation system
 
 Two layers, both already wired up — reuse them, don't invent new ones:
@@ -91,6 +134,13 @@ Because of this:
 listing page (`app/services/page.js`) must link to all of these — when
 adding a new service folder, also add its `ServiceCard` entry (with an
 accurate `para1`/`tags`/`badge`, not copy-pasted boilerplate).
+
+The nav (`app/components/nav/page.js`) has **two** separate menus — a desktop
+hover dropdown and a mobile drawer — each with its own hardcoded link list.
+Keep both in sync and make sure every label matches its `href` (a past bug had
+the desktop "Pathway…" and "CGFNS" items pointing at the wrong service pages).
+`nursing-registration-in-australia` and `pathway-for-uk-ireland-nurses-to-australia`
+have folders but are **not** linked from either menu.
 
 ## Courses route map
 

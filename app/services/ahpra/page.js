@@ -171,12 +171,7 @@ export default function AhpraPage() {
 
             <li className="ah-includes-item ah-fadein" style={{ animationDelay: "0.4s" }}>
               <span className="ah-includes-bullet">✓</span>
-              <span>Competency Assessment Program (CAP)</span>
-            </li>
-
-            <li className="ah-includes-item ah-fadein" style={{ animationDelay: "0.5s" }}>
-              <span className="ah-includes-bullet">✓</span>
-              <span>Criminal History Check</span>
+              <span>Objective Structured Clinical Examination (OSCE)</span>
             </li>
 
             <li className="ah-includes-item ah-fadein" style={{ animationDelay: "0.6s" }}>
@@ -203,14 +198,14 @@ export default function AhpraPage() {
               <p className="ah-cta-sub">Contact us directly and our experts will guide you through every step of the process.</p>
             </div>
             <div className="ah-cta-buttons">
-              <a href="tel:9778286707" className="ah-cta-btn ah-cta-btn--call">
+              <a href="tel:8921284622" className="ah-cta-btn ah-cta-btn--call">
                 <span className="ah-btn-icon">📞</span>
                 <span className="ah-btn-text">
                   <span className="ah-btn-label">Call Us Now</span>
-                  <span className="ah-btn-value">+91 9778 286 707</span>
+                  <span className="ah-btn-value">+91 8921284622</span>
                 </span>
               </a>
-              <a href="https://wa.me/919778286707" className="ah-cta-btn ah-cta-btn--whatsapp" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/918921284622" className="ah-cta-btn ah-cta-btn--whatsapp" target="_blank" rel="noreferrer">
                 <span className="ah-btn-icon">💬</span>
                 <span className="ah-btn-text">
                   <span className="ah-btn-label">WhatsApp Us</span>

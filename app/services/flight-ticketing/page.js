@@ -127,14 +127,14 @@ export default function FlightTicketing() {
               <p className="ft-cta-sub">Contact us directly and our team will handle everything — fares, booking, and e-ticket delivery.</p>
             </div>
             <div className="ft-cta-buttons">
-              <a href="tel:9747694573" className="ft-cta-btn ft-cta-btn--call">
+              <a href="tel:9744158478" className="ft-cta-btn ft-cta-btn--call">
                 <span className="ft-btn-icon">📞</span>
                 <span className="ft-btn-text">
                   <span className="ft-btn-label">Call Us Now</span>
-                  <span className="ft-btn-value">9747694573</span>
+                  <span className="ft-btn-value">9744158478</span>
                 </span>
               </a>
-              <a href="https://wa.me/919778286707" className="ft-cta-btn ft-cta-btn--whatsapp" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/919744158478" className="ft-cta-btn ft-cta-btn--whatsapp" target="_blank" rel="noreferrer">
                 <span className="ft-btn-icon">💬</span>
                 <span className="ft-btn-text">
                   <span className="ft-btn-label">WhatsApp Us</span>

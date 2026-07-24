@@ -164,7 +164,7 @@ export default function Courses() {
           <div className="course-grid">
 
             <CourseCard
-              photo="/box-img/img12.jpg"
+              photo="/box-img/Iqn_training.jpeg"
               alt="IQN training class"
               icon={<IconLayers />}
               title="IQN Training Program"
@@ -177,43 +177,20 @@ export default function Courses() {
             />
 
             <CourseCard
-              photo="/box-img/img4.jpeg"
+              photo="/box-img/Osce_training.jpeg"
               alt="OSCE clinical training Kerala"
               icon={<IconOSCEKerala />}
-              title="OSCE Training — Kerala"
+              title="OSCE Training"
               subtitle="Objective Structured Clinical Examination"
               para1="Premier clinical exam preparation delivered through our state-of-the-art facilities in Kerala, fully aligned with NCNZ standards."
               tags={["Clinical Skills", "Station Practice", "Mock Exams"]}
-              href="/courses/osce-training-kerala"
+              href="/courses/best-osce-training"
               animDelay={100}
             />
 
-            <CourseCard
-              photo="/box-img/img11.jpg"
-              alt="OSCE training Auckland"
-              icon={<IconOSCEChristchurch />}
-              title="OSCE Training — Auckland"
-              subtitle="Objective Structured Clinical Examination"
-              para1="Hands-on OSCE preparation in Auckland using real hospital simulation scenarios, perfecting your clinical communication and procedural skills."
-              tags={["NZ Standards", "Simulation Lab", "NCNZ Aligned"]}
-              href="/courses/osce-training-new-zealand"
-              animDelay={200}
-            />
 
             <CourseCard
-              photo="/box-img/img1.jpeg"
-              alt="OSCE training Christchurch"
-              icon={<IconOSCEChristchurch />}
-              title="OSCE Training — Christchurch"
-              subtitle="Objective Structured Clinical Examination"
-              para1="Flexible OSCE coaching for South Island nurses — combining in-person simulation with online support to fit your schedule."
-              tags={["South Island", "Flexible Schedule", "Online + In-Person"]}
-              href="/courses/osce-training-new-zealand"
-              animDelay={300}
-            />
-
-            <CourseCard
-              photo="/box-img/img10.jpg"
+              photo="/box-img/Oet_online.jpeg"
               alt="OET English preparation"
               icon={<IconOETPreparation />}
               title="OET Preparation"
@@ -224,17 +201,6 @@ export default function Courses() {
               animDelay={400}
             />
 
-            <CourseCard
-              photo="/box-img/img6.jpeg"
-              alt="Professional Communication Courses"
-              icon={<IconProfessionalCommunication />}
-              title="Professional Communication"
-              subtitle="Confidence & Communication Modules"
-              para1="Specialised modules designed to boost your confidence and maximise your OSCE performance — covering patient handover, clinical documentation, and bedside manner."
-              tags={["Handover Skills", "Patient Communication", "Documentation"]}
-              href="/courses/therapeutic-communication"
-              animDelay={500}
-            />
 
           </div>
         </div>

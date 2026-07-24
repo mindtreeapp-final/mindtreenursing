@@ -230,130 +230,138 @@
   margin-bottom: 0;
 }
 
+/* hero CTA button */
+.ukire-hero-cta-wrap {
+  margin-top: 32px;
+  animation: ukireHeroIn 0.65s cubic-bezier(0.4,0,0.2,1) both 0.68s;
+}
+.ukire-hero-cta {
+  display: inline-block;
+  background: var(--white);
+  color: var(--c3);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 14px 34px;
+  border-radius: 10px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background var(--ease), color var(--ease), transform var(--ease), box-shadow var(--ease);
+}
+.ukire-hero-cta:hover {
+  background: var(--c2);
+  color: var(--c4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
 /* ─────────────────────────────
-   SERVICES SECTION
+   SHARED SECTION HEAD
 ───────────────────────────── */
-.ukire-services-section {
-  background: var(--c1);
-  padding: 86px 48px;
-}
-
-.ukire-services-inner {
-  max-width: 1160px;
-  margin: 0 auto;
-}
-
-.ukire-services-header {
-  margin-bottom: 48px;
-}
-
-.ukire-services-heading {
+.ukire-head { max-width: 720px; margin-bottom: 44px; }
+.ukire-head-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(22px, 3vw, 36px);
+  font-size: clamp(24px, 3.4vw, 40px);
   font-weight: 700;
   color: var(--c4);
-  line-height: 1.25;
+  line-height: 1.2;
   margin: 0 0 14px;
   letter-spacing: -0.02em;
 }
+.ukire-head-desc { font-size: 16px; color: var(--text-muted); line-height: 1.75; margin: 0; }
 
-.ukire-services-sub {
-  font-size: 15px;
-  color: var(--text-muted);
-  line-height: 1.75;
-  margin: 0;
-  max-width: 680px;
-}
-
-.ukire-service-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.ukire-service-item {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 32px 30px;
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
-  box-shadow: var(--shadow-sm);
+/* ─────────────────────────────
+   SECTION 1 — WHY DIFFERENT (highlights)
+───────────────────────────── */
+.ukire-why-section { background: var(--white); padding: 90px 48px; }
+.ukire-why-inner { max-width: 1160px; margin: 0 auto; }
+.ukire-highlight-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.ukire-highlight-card {
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 30px 26px; box-shadow: var(--shadow-sm);
   transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+}
+.ukire-highlight-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--c2); }
+.ukire-highlight-ico {
+  width: 46px; height: 46px; border-radius: 12px; background: var(--c1); color: var(--c3);
+  display: grid; place-items: center; margin-bottom: 16px;
+}
+.ukire-highlight-card h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 18px; font-weight: 700; color: var(--c4); margin: 0 0 8px; }
+.ukire-highlight-card p { font-size: 14.5px; color: var(--text-muted); line-height: 1.65; margin: 0; }
+
+/* ─────────────────────────────
+   SECTION 2 — HOW IT WORKS (steps)
+───────────────────────────── */
+.ukire-steps-section { background: var(--c1); padding: 90px 48px; }
+.ukire-steps-inner { max-width: 1160px; margin: 0 auto; }
+.ukire-steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.ukire-step-card {
+  background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 28px 24px; box-shadow: var(--shadow-sm);
+  transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+}
+.ukire-step-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--c2); }
+.ukire-step-num {
+  width: 40px; height: 40px; border-radius: 11px; background: var(--c3); color: var(--white);
+  font-family: 'Playfair Display', Georgia, serif; font-size: 17px; font-weight: 700;
+  display: grid; place-items: center; margin-bottom: 16px;
+}
+.ukire-step-card h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 17px; font-weight: 700; color: var(--c4); margin: 0 0 8px; line-height: 1.3; }
+.ukire-step-card p { font-size: 14px; color: var(--text-muted); line-height: 1.65; margin: 0; }
+
+/* ─────────────────────────────
+   SECTION 3 — WHAT YOU'LL NEED (checklist)
+───────────────────────────── */
+.ukire-need-section { background: var(--white); padding: 90px 48px; }
+.ukire-need-inner { max-width: 1160px; margin: 0 auto; }
+.ukire-need-list {
+  list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 14px 40px;
+  margin: 0; padding: 0; max-width: 960px;
+}
+.ukire-need-item {
+  display: flex; gap: 14px; align-items: flex-start;
+  font-size: 16px; color: var(--text-body); line-height: 1.6;
+  background: var(--c1); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px;
+}
+.ukire-need-tick {
+  flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--c3); color: var(--white);
+  display: grid; place-items: center; font-weight: 800; font-size: 13px; margin-top: 1px;
+}
+
+/* ─────────────────────────────
+   SECTION 4 — IMPORTANT TO KNOW (notes)
+───────────────────────────── */
+.ukire-notes-section { background: var(--c1); padding: 90px 48px; }
+.ukire-notes-inner { max-width: 1160px; margin: 0 auto; }
+.ukire-notes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.ukire-note-card {
+  background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--c2);
+  border-radius: 0 var(--radius) var(--radius) 0; padding: 24px 26px; box-shadow: var(--shadow-sm);
+}
+.ukire-note-card p { font-size: 14.5px; color: var(--text-body); line-height: 1.7; margin: 0; }
+.ukire-note-card strong { color: var(--c4); }
+
+/* ─────────────────────────────
+   BLUE DOT PATTERN — white-background sections
+───────────────────────────── */
+.ukire-why-section,
+.ukire-need-section {
   position: relative;
   overflow: hidden;
 }
-
-.ukire-service-item::before {
+.ukire-why-section::before,
+.ukire-need-section::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; bottom: 0;
-  width: 3px;
-  background: linear-gradient(180deg, var(--c3), var(--c2));
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform var(--ease);
+  inset: 0;
+  background-image: radial-gradient(rgba(46, 94, 153, 0.055) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  pointer-events: none;
 }
-
-.ukire-service-item:hover::before {
-  transform: scaleY(1);
-}
-
-.ukire-service-item:hover {
-  transform: translateX(6px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--c2);
-}
-
-.ukire-service-num {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: var(--c3);
-  color: var(--white);
-  font-size: 15px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: background var(--ease), transform var(--ease);
-}
-
-.ukire-service-item:hover .ukire-service-num {
-  background: var(--c4);
-  transform: scale(1.08);
-}
-
-.ukire-service-content {
-  flex: 1;
-  padding-top: 2px;
-}
-
-.ukire-service-title {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--c4);
-  margin: 0 0 4px;
-  letter-spacing: -0.01em;
-}
-
-.ukire-service-subtitle {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--c3);
-  margin: 0 0 12px;
-}
-
-.ukire-service-desc {
-  font-size: 15px;
-  line-height: 1.8;
-  color: var(--text-body);
-  margin: 0;
+.ukire-why-inner,
+.ukire-need-inner {
+  position: relative;
+  z-index: 1;
 }
 
 /* ─────────────────────────────
@@ -424,27 +432,60 @@
   box-shadow: 0 8px 24px rgba(13, 36, 64, 0.35);
 }
 
+.ukire-cta-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ukire-cta-btn--ghost {
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  color: var(--white);
+  padding: 14px 34px;
+}
+.ukire-cta-btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--white);
+  color: var(--white);
+  box-shadow: none;
+}
+
 /* ─────────────────────────────
    RESPONSIVE
 ───────────────────────────── */
+@media (max-width: 960px) {
+  .ukire-highlight-grid,
+  .ukire-notes-grid { grid-template-columns: 1fr; }
+  .ukire-steps-grid { grid-template-columns: 1fr 1fr; }
+}
+
 @media (max-width: 860px) {
   .ukire-hero { padding: 72px 24px 64px; }
 
   .ukire-intro-section,
-  .ukire-services-section,
+  .ukire-why-section,
+  .ukire-steps-section,
+  .ukire-need-section,
+  .ukire-notes-section,
   .ukire-cta { padding: 64px 24px; }
 
   .ukire-intro-grid { grid-template-columns: 1fr; gap: 36px; }
+  .ukire-need-list { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px) {
   .ukire-hero { padding: 56px 20px; }
 
   .ukire-intro-section,
-  .ukire-services-section,
+  .ukire-why-section,
+  .ukire-steps-section,
+  .ukire-need-section,
+  .ukire-notes-section,
   .ukire-cta { padding: 48px 20px; }
 
-  .ukire-service-item { flex-direction: column; gap: 14px; }
+  .ukire-steps-grid { grid-template-columns: 1fr; }
 }
 
 /* ── Hero entrance ── */

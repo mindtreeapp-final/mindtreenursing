@@ -56,8 +56,8 @@ const steps = [
   {
     num: "4",
     icon: "✅",
-    title: "Visa Approval Within 3 Weeks",
-    desc: "Once all required documents are submitted correctly and the application is processed, visa approval is expected within approximately 3 weeks, subject to immigration authority processing timelines and approval conditions.",
+    title: "Visa Approval Within 4 Weeks",
+    desc: "Once all required documents are submitted correctly and the application is processed, visa approval is expected within approximately 4 weeks, subject to immigration authority processing timelines and approval conditions.",
     delay: "0.3s",
   },
 ];
@@ -167,7 +167,7 @@ export default function VisaPage() {
           <ul className="vs-highlights-list">
             {[
               "Valid passport with at least 6 months validity from your travel date",
-              "Completed and updated CV / resume",
+              "Completed and updated CV ",
               "Educational and professional qualification certificates",
               "Work experience certificates from previous employers",
               "Recent passport-size photographs",
@@ -193,14 +193,14 @@ export default function VisaPage() {
               <p className="vs-cta-sub">Contact us directly and our immigration advisors will guide you through every step — from profile assessment to visa approval.</p>
             </div>
             <div className="vs-cta-buttons">
-              <a href="tel:9747694573" className="vs-cta-btn vs-cta-btn--call">
+              <a href="tel:8921491752" className="vs-cta-btn vs-cta-btn--call">
                 <span className="vs-btn-icon">📞</span>
                 <span className="vs-btn-text">
                   <span className="vs-btn-label">Call Us Now</span>
-                  <span className="vs-btn-value">9747694573</span>
+                  <span className="vs-btn-value">8921491752</span>
                 </span>
               </a>
-              <a href="https://wa.me/919747694573" className="vs-cta-btn vs-cta-btn--whatsapp" target="_blank" rel="noreferrer">
+              <a href="https://wa.me/918921491752" className="vs-cta-btn vs-cta-btn--whatsapp" target="_blank" rel="noreferrer">
                 <span className="vs-btn-icon">💬</span>
                 <span className="vs-btn-text">
                   <span className="vs-btn-label">WhatsApp Us</span>

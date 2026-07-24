@@ -22,7 +22,12 @@ html  { scroll-behavior: smooth; }
 body  { font-family: var(--font-body); color: var(--c-text); background: var(--c-bg); }
 a     { text-decoration: none; color: inherit; }
 img   { display: block; max-width: 100%; }
-.hm   { overflow-x: hidden; }
+.hm   {
+  overflow-x: hidden;
+  background-color: var(--c-bg);
+  background-image: radial-gradient(rgba(46, 94, 153, 0.055) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+}
 
 /* ── Eyebrow ── */
 .hm-eyebrow {
@@ -243,7 +248,7 @@ img   { display: block; max-width: 100%; }
 .hm-app::before {
   content: '';
   position: absolute; inset: 0;
-  background-image: radial-gradient(circle at 1px 1px, rgba(46,94,153,0.035) 1px, transparent 0);
+  background-image: radial-gradient(rgba(46, 94, 153, 0.055) 1.5px, transparent 1.5px);
   background-size: 28px 28px;
   pointer-events: none;
 }
@@ -483,6 +488,13 @@ img   { display: block; max-width: 100%; }
   position: relative;
   z-index: 1;
 }
+/* only 3 courses / 3 services — center them in a narrower 3-up grid
+   (the shared .hm-pathways__grid is a 4-column layout) */
+.hm-courses .hm-pathways__grid,
+.hm-pathways .hm-pathways__grid {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 940px;
+}
 
 /* "Most Popular" badge on image card */
 .hm-course-tag {
@@ -506,7 +518,7 @@ img   { display: block; max-width: 100%; }
 /* ============================================================
    GALLERY  (section 5 — WHITE)
    ============================================================ */
-.hm-gallery-preview { position: relative; padding: var(--pad-section); background: var(--c-white); overflow: hidden; }
+.hm-gallery-preview { position: relative; padding: var(--pad-section); background-color: var(--c-white); background-image: radial-gradient(rgba(46, 94, 153, 0.055) 1.5px, transparent 1.5px); background-size: 28px 28px; overflow: hidden; }
 .hm-gp-blob { position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(46,94,153,0.06) 0%, transparent 70%); top: -120px; right: -100px; filter: blur(90px); pointer-events: none; }
 .hm-gp-inner { max-width: var(--max-w); margin: 0 auto; position: relative; z-index: 1; }
 
@@ -719,6 +731,8 @@ img   { display: block; max-width: 100%; }
 
 @media (max-width: 600px) {
   .hm-pathways__grid { grid-template-columns: 1fr; }
+  .hm-courses .hm-pathways__grid,
+  .hm-pathways .hm-pathways__grid { grid-template-columns: 1fr; max-width: 380px; }
   .hm-pathway-card   { aspect-ratio: 16/9; }
 }
 

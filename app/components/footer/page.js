@@ -32,13 +32,13 @@ export default function Footer(){
             <a href="mailto:wilonpedbin@gmail.com">info@mindtreenursing.com</a>
           </div>
           <div className="footer-socials">
-            <a href="https://www.instagram.com/mindtreenursingsolutions?igsh=MWtibTF5YXN5dGR6MQ%3D%3D" aria-label="Instagram" className="footer-social-btn">
+            <a href="https://www.instagram.com/mindtreenursingsolutions?igsh=MWtibTF5YXN5dGR6MQ%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="footer-social-btn">
               <FaInstagram />
             </a>
-            <a href="https://www.facebook.com/MindtreeNursingSolutions" aria-label="Facebook" className="footer-social-btn">
+            <a href="https://www.facebook.com/MindtreeNursingSolutions" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="footer-social-btn">
               <FaFacebook />
             </a>
-            <a href="https://youtube.com/@mindtreenursingsolutions5958?si=kopEIDqFHiT3jcW4" aria-label="YouTube" className="footer-social-btn">
+            <a href="https://youtube.com/@mindtreenursingsolutions5958?si=kopEIDqFHiT3jcW4" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="footer-social-btn">
               <FaYoutube />
             </a>
           </div>
@@ -54,11 +54,12 @@ export default function Footer(){
             <ul className="footer-link-list">
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/courses">Courses</Link></li>
               <li><Link href="/services">Service</Link></li>
               <li><Link href="/gallery">Gallery</Link></li>
               <li><Link href="/testimonials">Testimonials</Link></li>
               <li><Link href="/contact">Contact</Link></li>
+              
+              <li><Link href="/career">Career</Link></li>
             </ul>
           </div>
 
@@ -67,10 +68,8 @@ export default function Footer(){
             <ul className="footer-link-list">
               <li><Link href="/courses/best-iqn-coaching">IQN</Link></li>
               <li><Link href="/courses/best-oet-coaching-centre-in-kerala">OET</Link></li>
-              <li><Link href="/courses/osce-training-kerala">OSCE Kerala</Link></li>
-              <li><Link href="/courses/osce-training-new-zealand">OSCE Auckland</Link></li>
-              <li><Link href="/courses/osce-training-new-zealand">OSCE Christchurch</Link></li>
-              <li><Link href="/courses/therapeutic-communication">Therapeutic Communication</Link></li>
+              <li><Link href="/courses/best-osce-training">OSCE</Link></li>
+  
             
             </ul>
           </div>

@@ -206,6 +206,14 @@ export default function ContactPage() {
 
             {/* Auckland */}
             <div className="ct-loc-card" data-anim="scale-up">
+              <div className="ct-loc-card__mapbg" aria-hidden="true">
+                <div className="ct-loc-card__maptiles">
+                  <img src="https://tile.openstreetmap.org/14/16142/10001.png" alt="" />
+                  <img src="https://tile.openstreetmap.org/14/16143/10001.png" alt="" />
+                  <img src="https://tile.openstreetmap.org/14/16142/10002.png" alt="" />
+                  <img src="https://tile.openstreetmap.org/14/16143/10002.png" alt="" />
+                </div>
+              </div>
               <div className="ct-loc-card__flag">🇳🇿</div>
               <div className="ct-loc-card__top">
                 <div className="ct-loc-card__icon">
@@ -236,6 +244,14 @@ export default function ContactPage() {
 
             {/* Christchurch */}
             <div className="ct-loc-card" data-anim="scale-up" data-anim-delay="75">
+              <div className="ct-loc-card__mapbg" aria-hidden="true">
+                <div className="ct-loc-card__maptiles">
+                  <img src="https://tile.openstreetmap.org/14/16048/10396.png" alt="" />
+                  <img src="https://tile.openstreetmap.org/14/16049/10396.png" alt="" />
+                  <img src="https://tile.openstreetmap.org/14/16048/10397.png" alt="" />
+                  <img src="https://tile.openstreetmap.org/14/16049/10397.png" alt="" />
+                </div>
+              </div>
               <div className="ct-loc-card__flag">🇳🇿</div>
               <div className="ct-loc-card__top">
                 <div className="ct-loc-card__icon">
@@ -266,6 +282,14 @@ export default function ContactPage() {
 
             {/* India */}
             <div className="ct-loc-card" data-anim="scale-up" data-anim-delay="150">
+              <div className="ct-loc-card__mapbg" aria-hidden="true">
+                <div className="ct-loc-card__maptiles">
+                  <img src="https://tile.openstreetmap.org/14/11685/7780.png" alt="" />
+                  <img src="https://tile.openstreetmap.org/14/11686/7780.png" alt="" />
+                  <img src="https://tile.openstreetmap.org/14/11685/7781.png" alt="" />
+                  <img src="https://tile.openstreetmap.org/14/11686/7781.png" alt="" />
+                </div>
+              </div>
               <div className="ct-loc-card__flag">🇮🇳</div>
               <div className="ct-loc-card__top">
                 <div className="ct-loc-card__icon">
@@ -295,6 +319,8 @@ export default function ContactPage() {
             </div>
 
           </div>
+
+          <p className="ct-locations__attrib">Map imagery © OpenStreetMap contributors</p>
         </div>
       </section>
 
@@ -310,17 +336,39 @@ export default function ContactPage() {
           <div className="ct-dept__grid">
             {DEPARTMENTS.map((dept, i) => (
               <a key={dept.name} href={dept.href} className="ct-dept__card" data-anim="scale-up" data-anim-delay={i * 60}>
-                <div className="ct-dept__card-top">
-                  <div className="ct-dept__icon">{dept.icon}</div>
-                  <span className="ct-dept__num">{dept.phone}</span>
-                </div>
+                <div className="ct-dept__icon">{dept.icon}</div>
                 <h3 className="ct-dept__name">{dept.name}</h3>
                 <p className="ct-dept__desc">{dept.desc}</p>
-                <span className="ct-dept__call">
-                  <PhoneIcon /> Call Now
-                </span>
+                <div className="ct-dept__foot">
+                  <span className="ct-dept__num">{dept.phone}</span>
+                  <span className="ct-dept__call">
+                    <PhoneIcon /> Call
+                  </span>
+                </div>
               </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ── */}
+      <section className="ct-cta">
+        <div className="ct-cta__shape" />
+        <div className="ct-cta__inner" data-anim="scale-up">
+          <h2 className="ct-cta__title">Ready to take the next step?</h2>
+          <p className="ct-cta__sub">
+            Book a free consultation and let our advisors map your route to nursing abroad.
+          </p>
+          <div className="ct-cta__btns">
+            <a href="https://wa.me/919778286707" target="_blank" rel="noreferrer" className="ct-btn ct-btn--light">
+              Book a Free Consultation
+            </a>
+            <a href="tel:+919778286707" className="ct-btn ct-btn--ghost-light">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+              </svg>
+              +91 9778 286 707
+            </a>
           </div>
         </div>
       </section>
