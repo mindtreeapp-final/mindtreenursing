@@ -280,14 +280,13 @@
   gap: 28px;
 }
 
-/* ── Single job card — now TWO COLUMNS: poster + body ── */
+/* ── Single job card — poster + body ── */
 .career-job-card {
   display: grid;
-  /* poster is fixed 260px, body takes the rest */
-  grid-template-columns: 460px 1fr;
+  grid-template-columns: 400px 1fr;
   background: var(--white);
   border: 1px solid rgba(123, 164, 208, 0.22);
-  border-radius: 20px;
+  border-radius: 22px;
   overflow: hidden;
   box-shadow: 0 2px 14px rgba(13, 36, 64, 0.07);
   transition:
@@ -296,33 +295,25 @@
     border-color var(--ease);
 }
 .career-job-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 44px rgba(13, 36, 64, 0.13);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 48px rgba(13, 36, 64, 0.14);
   border-color: var(--c2);
 }
 
 /* ── Poster column ── */
 .career-job-poster {
   position: relative;
-  min-height: 300px;
-  background: var(--c1);
+  min-height: 340px;
+  background: var(--c4);
   overflow: hidden;
   flex-shrink: 0;
 }
-/* Slide-right reveal on hover */
-.career-job-card:hover .career-job-poster::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(46, 94, 153, 0.12);
-  transition: background var(--ease);
-}
 .career-poster-img {
-  object-fit: cover;
-  transition: transform var(--ease);
+  object-fit: contain;
+  transition: transform 0.5s ease;
 }
 .career-job-card:hover .career-poster-img {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 .career-poster-svg {
   width: 100%;
@@ -330,73 +321,94 @@
   display: block;
 }
 
-/* ── Body column ── */
-.career-job-body {
-  padding: 32px 36px 28px;
-  display: flex;
-  flex-direction: column;
+/* "Now Hiring" badge on the poster */
+.career-job-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--c4);
+  box-shadow: 0 4px 14px rgba(13, 36, 64, 0.16);
+}
+.career-job-badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #16a34a;
+  animation: careerPulse 1.8s ease-out infinite;
+}
+@keyframes careerPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.5); }
+  70%  { box-shadow: 0 0 0 7px rgba(22, 163, 74, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
 }
 
-/* Top row: title + tags */
-.career-job-top {
+/* ── Body column ── */
+.career-job-body {
+  padding: 34px 38px 30px;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 18px;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 .career-job-title-wrap {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+.career-job-dept {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c3);
 }
 .career-job-title {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--c4);
   margin: 0;
   line-height: 1.2;
 }
-.career-job-dept {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--c3);
-}
+
+/* meta chips row */
 .career-job-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  align-items: center;
-  flex-shrink: 0;
+  gap: 9px;
+  margin-bottom: 22px;
 }
 .career-job-tag {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding: 5px 13px;
+  gap: 6px;
+  padding: 6px 14px;
   border-radius: 100px;
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 600;
   white-space: nowrap;
-}
-.career-job-tag--type {
-  background: rgba(46, 94, 153, 0.1);
-  color: var(--c3);
-  border: 1px solid rgba(46, 94, 153, 0.2);
-}
-.career-job-tag--loc {
-  background: rgba(123, 164, 208, 0.12);
-  color: var(--text-muted);
-  border: 1px solid rgba(123, 164, 208, 0.22);
-}
-.career-job-tag--exp {
   background: var(--c1);
-  color: var(--text-muted);
-  border: 1px solid rgba(123, 164, 208, 0.2);
+  color: var(--text-body);
+  border: 1px solid rgba(123, 164, 208, 0.28);
+  transition: border-color var(--ease), background var(--ease);
+}
+.career-job-tag svg {
+  color: var(--c3);
+  flex-shrink: 0;
+}
+.career-job-card:hover .career-job-tag {
+  border-color: rgba(123, 164, 208, 0.45);
 }
 
 /* Description */
@@ -404,14 +416,14 @@
   font-size: 15px;
   line-height: 1.8;
   color: var(--text-body);
-  margin: 0 0 22px;
-  padding-bottom: 22px;
-  border-bottom: 1px solid rgba(123, 164, 208, 0.15);
+  margin: 0 0 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(123, 164, 208, 0.18);
 }
 
 /* Requirements */
 .career-job-reqs {
-  margin-bottom: 26px;
+  margin-bottom: 28px;
   flex: 1;
 }
 .career-job-reqs-label {
@@ -421,7 +433,7 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--c3);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 .career-job-req-list {
   list-style: none;
@@ -429,25 +441,40 @@
   margin: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 8px 20px;
+  gap: 13px 24px;
 }
 .career-job-req-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
   font-size: 14px;
   color: var(--text-body);
   line-height: 1.55;
-  padding-left: 18px;
-  position: relative;
 }
-.career-job-req-list li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: var(--c2);
-  font-size: 12px;
+.career-job-req-check {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: rgba(46, 94, 153, 0.1);
+  color: var(--c3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  transition: background var(--ease), color var(--ease);
+}
+.career-job-card:hover .career-job-req-check {
+  background: var(--c3);
+  color: var(--white);
 }
 
-/* Apply button */
+/* Footer: apply + note */
 .career-job-footer {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
   padding-top: 4px;
 }
 .career-apply-btn {
@@ -475,6 +502,10 @@
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(13, 36, 64, 0.3);
   gap: 12px;
+}
+.career-job-foot-note {
+  font-size: 12.5px;
+  color: var(--text-muted);
 }
 
 /* ─────────────────────────────
@@ -660,10 +691,13 @@
 ───────────────────────────── */
 @media (max-width: 1024px) {
   .career-job-card {
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 260px 1fr;
   }
   .career-job-req-list {
     grid-template-columns: 1fr;
+  }
+  .career-job-body {
+    padding: 30px 30px 26px;
   }
 }
 
@@ -696,15 +730,11 @@
     grid-template-columns: 1fr;
   }
   .career-job-poster {
-    min-height: 220px;
-    max-height: 240px;
+    min-height: 240px;
+    max-height: 280px;
   }
   .career-job-body {
-    padding: 24px 24px 22px;
-  }
-  .career-job-top {
-    flex-direction: column;
-    gap: 14px;
+    padding: 26px 24px 24px;
   }
 
   .career-open-apply {

@@ -360,6 +360,36 @@
   border-color: var(--c2);
 }
 
+/* ── department background image ── */
+.ct-dept__bg {
+  position: absolute; inset: 0;
+  z-index: 0; pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(1.02);
+  transition: transform 0.6s ease;
+}
+/* white wash keeps text readable; image peeks through at the top */
+.ct-dept__bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg,
+    rgba(255,255,255,0.70) 0%,
+    rgba(255,255,255,0.88) 42%,
+    rgba(255,255,255,0.95) 100%);
+  transition: opacity var(--ease);
+}
+.ct-dept__card:hover .ct-dept__bg { transform: scale(1.06); }
+.ct-dept__card:hover .ct-dept__bg::after { opacity: 0.82; }
+/* content above the image layer */
+.ct-dept__icon,
+.ct-dept__name,
+.ct-dept__desc,
+.ct-dept__foot { position: relative; z-index: 1; }
+.ct-dept__card::before { z-index: 1; }
+.ct-dept__card::after { z-index: 2; }
+
 .ct-dept__icon {
   width: 54px; height: 54px; border-radius: 15px;
   background: linear-gradient(135deg, var(--c3), var(--c2));

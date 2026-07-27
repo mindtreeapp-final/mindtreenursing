@@ -121,9 +121,9 @@ export default function Nav() {
         <div className="topbar-right">
           <a
             className="social-btn"
-            href="https://www.instagram.com/mindtreenursingsolutions?igsh=MWtibTF5YXN5dGR6MQ%3D%3D"
-            target="_blank"
-            rel="noopener noreferrer"
+      href="https://www.instagram.com/mindtreenursingsolutions/"
+  target="_blank"
+  rel="noopener noreferrer"
             aria-label="Instagram"
           >
             <svg viewBox="0 0 24 24">

@@ -120,6 +120,17 @@ const MapIcon = () => (
   </svg>
 );
 
+const DEPT_IMAGES = {
+  OET: "/box-img/Oet_online.jpeg",
+  OSCE: "/box-img/Osce_training.jpeg",
+  IQN: "/box-img/Iqn_training.jpeg",
+  Communication: "/box-img/img15.jpg",
+  Visa: "/box-img/Visa.jpeg",
+  AHPRA: "/box-img/AHPRA.jpeg",
+  "Flight Ticket": "/box-img/Flight%20Tickets.jpeg",
+  TruMerit: "/box-img/CGFNS.jpeg",
+};
+
 export default function ContactPage() {
   return (
     <main className="ct-page">
@@ -336,6 +347,13 @@ export default function ContactPage() {
           <div className="ct-dept__grid">
             {DEPARTMENTS.map((dept, i) => (
               <a key={dept.name} href={dept.href} className="ct-dept__card" data-anim="scale-up" data-anim-delay={i * 60}>
+                {DEPT_IMAGES[dept.name] && (
+                  <div
+                    className="ct-dept__bg"
+                    aria-hidden="true"
+                    style={{ backgroundImage: `url("${DEPT_IMAGES[dept.name]}")` }}
+                  />
+                )}
                 <div className="ct-dept__icon">{dept.icon}</div>
                 <h3 className="ct-dept__name">{dept.name}</h3>
                 <p className="ct-dept__desc">{dept.desc}</p>

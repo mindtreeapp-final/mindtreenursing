@@ -17,72 +17,24 @@ export const metadata = {
 const vacancies = [
   {
     id: 1,
-    title: 'OET Trainer',
-    department: 'Academic',
+    title: 'Operations Executive',
+    department: 'OPERATIONS',
     location: 'Kollam, Kerala',
     type: 'Full-Time',
     experience: '2+ Years',
     poster: '/hiring.jpeg', // e.g. "/jobs/oet-trainer-poster.jpg"
     description:
-      'We are looking for a passionate OET Trainer to coach nursing professionals in achieving their target band scores. You will design lesson plans, conduct mock tests, and provide personalised feedback.',
+      'We are looking for a proactive Operations Executive to support and streamline our day-to-day business processes. You will coordinate across teams, manage schedules and documentation, and help ensure smooth, efficient operations throughout the organization.',
     requirements: [
-      "Bachelor's or Master's degree in English / Linguistics",
-      'Minimum 2 years of OET / IELTS training experience',
-      'Excellent spoken and written English',
-      'Ability to mentor and motivate healthcare professionals',
+      "Bachelor's degree in any discipline",
+      'Strong organizational and multitasking skills',
+      'Minimum 2 year of experience in operations, administration, or coordination',
+      'Excellent verbal and written communication skills',
     ],
   },
-  {
-    id: 2,
-    title: 'IQN Document Specialist',
-    department: 'Operations',
-    location: 'Kollam, Kerala',
-    type: 'Full-Time',
-    experience: '1+ Years',
-    poster: null,
-    description:
-      'You will manage and verify all documentation required for International Qualification of Nurses (IQN) applications, liaise with regulatory bodies, and guide candidates through the paperwork process.',
-    requirements: [
-      'Knowledge of NCNZ / IQN registration processes',
-      'Strong attention to detail and organisational skills',
-      'Experience handling official document verification',
-      'Good communication skills in English and Malayalam',
-    ],
-  },
-  {
-    id: 3,
-    title: 'Marketing & Social Media Executive',
-    department: 'Marketing',
-    location: 'Kollam, Kerala / Remote',
-    type: 'Full-Time',
-    experience: '1+ Years',
-    poster: null,
-    description:
-      "Drive Mindtree's digital presence through compelling content, targeted campaigns, and community engagement across Instagram, YouTube, Facebook, and LinkedIn.",
-    requirements: [
-      'Proven experience in social media management',
-      'Proficiency in Canva, Adobe suite or similar tools',
-      'Strong copywriting skills in English and Malayalam',
-      'Data-driven approach with knowledge of Meta / Google Ads',
-    ],
-  },
-  {
-    id: 4,
-    title: 'Student Counsellor',
-    department: 'Admissions',
-    location: 'Kollam, Kerala',
-    type: 'Full-Time',
-    experience: 'Fresher / 1+ Years',
-    poster: null,
-    description:
-      'Guide prospective nursing candidates through course options, registration pathways, and fees. Convert leads into enrolments by building trust and clearly explaining our programmes.',
-    requirements: [
-      'Excellent interpersonal and communication skills',
-      'Basic understanding of nursing registration processes is a plus',
-      'Target-oriented with a genuine desire to help others',
-      'Proficiency in English and Malayalam',
-    ],
-  },
+
+ 
+
 ];
 
 // Department → gradient used in the SVG placeholder
@@ -225,6 +177,28 @@ function PosterPlaceholder({ department, title }) {
   );
 }
 
+// ─── Small inline icons for job meta / requirements ──────────────
+const IconBriefcase = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
+    <rect x="2" y="7" width="20" height="14" rx="2" /><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+  </svg>
+);
+const IconPin = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
+    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" />
+  </svg>
+);
+const IconClock = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14">
+    <circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" />
+  </svg>
+);
+const IconCheck = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" width="13" height="13" aria-hidden="true">
+    <polyline points="20 6 9 17 4 12" />
+  </svg>
+);
+
 // ─── Page ────────────────────────────────────────────────────────
 export default function CareerPage() {
   return (
@@ -337,7 +311,7 @@ export default function CareerPage() {
                           alt={`${job.title} poster`}
                           fill
                           className="career-poster-img"
-                          sizes="280px"
+                          sizes="400px"
                         />
                       ) : (
                         <PosterPlaceholder
@@ -345,39 +319,45 @@ export default function CareerPage() {
                           title={job.title}
                         />
                       )}
+                      <span className="career-job-badge">
+                        <span className="career-job-badge-dot" />
+                        Now Hiring
+                      </span>
                     </div>
 
                     {/* ── CONTENT COLUMN ── */}
                     <div className="career-job-body">
-                      <div className="career-job-top">
-                        <div className="career-job-title-wrap">
-                          <h3 className="career-job-title">{job.title}</h3>
-                          <span className="career-job-dept">
-                            {job.department}
-                          </span>
-                        </div>
-                        <div className="career-job-meta">
-                          <span className="career-job-tag career-job-tag--type">
-                            {job.type}
-                          </span>
-                          <span className="career-job-tag career-job-tag--loc">
-                            📍 {job.location}
-                          </span>
-                          <span className="career-job-tag career-job-tag--exp">
-                            ⏱ {job.experience}
-                          </span>
-                        </div>
+                      <div className="career-job-title-wrap">
+                        <span className="career-job-dept">{job.department}</span>
+                        <h3 className="career-job-title">{job.title}</h3>
+                      </div>
+
+                      <div className="career-job-meta">
+                        <span className="career-job-tag">
+                          <IconBriefcase /> {job.type}
+                        </span>
+                        <span className="career-job-tag">
+                          <IconPin /> {job.location}
+                        </span>
+                        <span className="career-job-tag">
+                          <IconClock /> {job.experience}
+                        </span>
                       </div>
 
                       <p className="career-job-desc">{job.description}</p>
 
                       <div className="career-job-reqs">
                         <span className="career-job-reqs-label">
-                          Requirements
+                          What we&apos;re looking for
                         </span>
                         <ul className="career-job-req-list">
                           {job.requirements.map((req, i) => (
-                            <li key={i}>{req}</li>
+                            <li key={i}>
+                              <span className="career-job-req-check">
+                                <IconCheck />
+                              </span>
+                              <span>{req}</span>
+                            </li>
                           ))}
                         </ul>
                       </div>
@@ -399,6 +379,9 @@ export default function CareerPage() {
                             <path d="M5 12h14M12 5l7 7-7 7" />
                           </svg>
                         </Link>
+                        <span className="career-job-foot-note">
+                          We usually reply within 3–5 working days
+                        </span>
                       </div>
                     </div>
                   </div>
