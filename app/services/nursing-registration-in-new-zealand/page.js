@@ -141,6 +141,11 @@ export default function NZRegistrationPage() {
               <p>We help you with visa processing through our immigration advisers, with a high success rate — including options for bringing your spouse and children.</p>
             </div>
             <div className="nzreg-stop" data-anim="from-left" data-anim-delay="420">
+              <div className="nzreg-marker">08</div>
+              <h3><small>Settling In</small>Accommodation &amp; Transportation</h3>
+              <p>We arrange comfortable accommodation and reliable local transport for your arrival, so you can settle into New Zealand smoothly and focus on starting your new role.</p>
+            </div>
+            <div className="nzreg-stop" data-anim="from-left" data-anim-delay="480">
               <div className="nzreg-marker nzreg-marker--icon">🌿</div>
               <h3><small>Ready to Work</small>Annual Practising Certificate (APC)</h3>
               <p>We assist with your APC application so you're legally ready to work in New Zealand.</p>

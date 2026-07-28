@@ -148,21 +148,6 @@ export default function AboutPage(){
             </div>
           </div>
  
-          <div className="member-card card-leader">
-            <div className="member-img-wrap">
-              <img src="/team/melvin.jpg.jpeg" alt="Director" className="member-img" />
-              <div className="member-placeholder">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
-                  <circle cx="12" cy="7" r="4" />
-                </svg>
-              </div>
-            </div>
-            <div className="member-info">
-              <h3 className="member-name">Melvin Mathew</h3>
-              <span className="member-role">Director (Academic & Operations)</span>
-            </div>
-          </div>
  
         </div>
  
