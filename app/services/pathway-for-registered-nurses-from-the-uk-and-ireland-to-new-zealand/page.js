@@ -57,7 +57,7 @@ export default function UKIrelandPathwayPage() {
             <span className="ukire-section-label">Why This Pathway Is Different</span>
             <h2 className="ukire-head-title">Comparable Education, a Streamlined Route</h2>
             <p className="ukire-head-desc">
-              New Zealand's Nursing Council recognises the UK and Ireland as comparable nursing education systems. That means nurses who completed their initial training there skip most of the hurdles other internationally qualified nurses face.
+              New Zealand's Nursing Council may waive the standard competence assessment (CBT/OSCE) for nurses whose initial nursing education was completed in the UK or Ireland. This isn't automatic — it's assessed on a case-by-case basis after you apply — but it means many UK/Ireland-trained nurses face a shorter path than nurses trained elsewhere.
             </p>
           </div>
 

@@ -12,7 +12,7 @@ const defaultOffers = [
     desc: "Expert preparation for OSCE success.",
     link: "https://forms.zohopublic.in/mindtreenursingsolutions/form/ClientDetails1/formperma/76KIBTp9LCYH_lA6B0jGSwAH8FJ4nmjU8ovh7b6l-tQ",
   },
-  {
+  /*{
     id: 2,
     badge: "FREE",
     badgeClass: "amber",
@@ -28,6 +28,7 @@ const defaultOffers = [
     desc: "Courses, updates, and support in one app.",
     link: "https://forms.zohopublic.in/mindtreenursingsolutions/form/ClientDetails1/formperma/76KIBTp9LCYH_lA6B0jGSwAH8FJ4nmjU8ovh7b6l-tQ",
   },
+  */
 ];
 
 export default function OffersButton({ offers = defaultOffers }) {

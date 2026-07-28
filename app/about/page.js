@@ -147,15 +147,13 @@ export default function AboutPage(){
               <span className="member-role">CEO</span>
             </div>
           </div>
- 
- 
+
         </div>
  
         {/* Rest of team — 4 per row */}
         <div className="team-grid" data-anim="up" data-anim-delay="200">
  
 
- 
           <div className="member-card">
             <div className="member-img-wrap">
               <img src="/team/reshma-2.jpeg" alt="Team Member" className="member-img" />
