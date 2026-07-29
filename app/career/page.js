@@ -15,6 +15,7 @@ export const metadata = {
 // Add poster: "/path/to/your-image.jpg" to each job to show a poster image.
 // Leave poster: null to show the default illustrated placeholder.
 const vacancies = [
+  /*
   {
     id: 1,
     title: 'Operations Executive',
@@ -32,8 +33,24 @@ const vacancies = [
       'Excellent verbal and written communication skills',
     ],
   },
-
- 
+*/
+   {
+    id: 2,
+    title: 'Ticketing & Booking Coordinator',
+    department: 'OPERATIONS',
+    location: 'Kollam, Kerala',
+    type: 'Full-Time',
+      experience: 'No Experience Needed',
+    poster: '/box-img/hiring-ticket.jpeg', // e.g. "/jobs/oet-trainer-poster.jpg"
+    description:
+      'We are looking for a proactive Ticketing & Booking Coordinator to manage travel arrangements for our candidates and staff. You will coordinate flight bookings, liaise with airlines and travel platforms, and ensure smooth, timely, and cost-effective travel planning across the organization.',
+    requirements: [
+      "Any Bachelor's degree",
+      'IATA experience preferred',
+      'Good communication skills',
+    
+    ],
+  },
 
 ];
 
@@ -310,6 +327,7 @@ export default function CareerPage() {
                           src={job.poster}
                           alt={`${job.title} poster`}
                           fill
+                          priority
                           className="career-poster-img"
                           sizes="400px"
                         />

@@ -345,10 +345,10 @@ a.topbar-item:hover { opacity: 1; }
 .drawer-close:hover { background: #c8d8f0; }
 
 .drawer-logo {
-  height: 44px;
+  height: 84px;
   width: auto;
   object-fit: contain;
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   align-self: flex-start;
 }
 

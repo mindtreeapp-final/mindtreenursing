@@ -124,31 +124,72 @@ Because of this:
   since they're now anchor elements.
 - Both cards accept an `animDelay` prop → `data-anim="up" data-anim-delay={animDelay}`.
 
+## Image & map techniques
+
+- **Full posters must use `object-fit: contain`, not `cover`.** Poster/flyer
+  images that carry text to their edges (e.g. the career "We Are Hiring" flyer,
+  a 1600×1600 square) get cropped by `cover` inside a differently-shaped box.
+  Use `contain` and give the container a background colour that matches the
+  image's border so the letterbox blends in (career job poster → `var(--c4)`
+  navy bg). Keep any hover zoom tiny (`scale(1.02)`) so it doesn't re-crop.
+- **Blurred city-map card backgrounds** (contact location cards,
+  `.ct-loc-card__mapbg`): OpenStreetMap serves 256px square tiles, so a single
+  stretched tile turns to mush. Stitch a **2×2 grid of adjacent zoom-14 tiles**
+  (`tile.openstreetmap.org/14/<x>/<y>.png`, consecutive x/y) kept square and
+  centred to cover the card, `filter: grayscale(1) brightness(1.18)
+  contrast(1.45)`, under a white gradient wash for text legibility. Requires the
+  "© OpenStreetMap contributors" credit near the grid. Keyless/free — fine at
+  this scale; swap for a keyed static-map API if traffic grows.
+- **Card background images via a name→path lookup** (contact department cards):
+  keep a `const XXX_IMAGES = { <name>: "/box-img/…" }` map instead of editing
+  each data object; render an absolutely-positioned `background-image` layer
+  (`z-index:0`) under a white gradient wash, and lift card content with
+  `position:relative; z-index:1`. URL-encode spaces in filenames
+  (`/box-img/Flight%20Tickets.jpeg`). Images live in `public/box-img/`.
+
+## Home page listing grids (3-up gotcha)
+
+`.hm-pathways__grid` (home Services **and** Courses sections) is a base
+**4-column** grid, but both sections now show only **3** cards. A
+`.hm-courses .hm-pathways__grid, .hm-pathways .hm-pathways__grid` override sets
+`repeat(3, 1fr); max-width: 940px` so the 3 cards centre instead of left-aligning
+with an empty 4th column. **Specificity caveat:** that override (0,2,0) beats the
+generic responsive `.hm-pathways__grid` media rules (0,1,0), so the same scoped
+selector must be repeated inside the mobile `@media (max-width: 600px)` block to
+collapse to a single column — otherwise it stays 3-up on phones.
+
 ## Services route map (keep in sync with `/services` listing cards)
 
 `app/services/` subfolders: `accommodation-and-transportation`, `ahpra`,
 `cgfns`, `cv-preparation`, `flight-ticketing`,
-`nursing-registration-in-australia`, `nursing-registration-in-new-zealand`,
-`pathway-for-registered-nurses-from-the-uk-and-ireland-to-new-zealand`,
-`pathway-for-uk-ireland-nurses-to-australia`, `visa`. The `/services`
+`nursing-registration-in-new-zealand`,
+`pathway-for-registered-nurses-from-the-uk-and-ireland-to-new-zealand`, `visa`
+(the two Australia folders — `nursing-registration-in-australia` and
+`pathway-for-uk-ireland-nurses-to-australia` — were removed). The `/services`
 listing page (`app/services/page.js`) must link to all of these — when
 adding a new service folder, also add its `ServiceCard` entry (with an
 accurate `para1`/`tags`/`badge`, not copy-pasted boilerplate).
 
 The nav (`app/components/nav/page.js`) has **two** separate menus — a desktop
 hover dropdown and a mobile drawer — each with its own hardcoded link list.
-Keep both in sync and make sure every label matches its `href` (a past bug had
-the desktop "Pathway…" and "CGFNS" items pointing at the wrong service pages).
-`nursing-registration-in-australia` and `pathway-for-uk-ireland-nurses-to-australia`
-have folders but are **not** linked from either menu.
+Keep both in sync. Two recurring copy-paste bugs to watch for:
+- **Label ↔ href mismatch** — every item's visible label must match its `href`
+  (a past bug had the desktop "Pathway…" and "CGFNS" items pointing at the
+  wrong service pages).
+- **`isActive()` argument ↔ href mismatch** — each desktop dropdown item sets
+  `className={isActive('<path>') ? 'active' : ''}`; the `<path>` must equal the
+  item's own `href` (a past bug had AHPRA testing `isActive('/services/osce-training-new-zealand')`,
+  a deleted path, so it never highlighted). Desktop dropdown items only mount
+  while the dropdown is open (hover), so verify active state with the menu open.
 
 ## Courses route map
 
 `app/courses/` subfolders: `best-iqn-coaching`,
-`best-oet-coaching-centre-in-kerala`, `osce-training-kerala`,
-`osce-training-new-zealand`, `therapeutic-communication`. `/courses`
-(`app/courses/page.js`) lists 6 `CourseCard`s (Auckland & Christchurch OSCE
-both currently link to `osce-training-new-zealand`).
+`best-oet-coaching-centre-in-kerala`, `best-osce-training` (the old
+`osce-training-kerala`, `osce-training-new-zealand`, and
+`therapeutic-communication` folders were removed). `/courses`
+(`app/courses/page.js`) lists 3 `CourseCard`s: IQN, OSCE (→ `best-osce-training`),
+and OET.
 
 ## Conventions when adding/editing pages
 

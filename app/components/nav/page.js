@@ -513,9 +513,7 @@ export default function Nav() {
                       href="/services/ahpra"
                       onClick={closeAll}
                       className={
-                        isActive('/services/osce-training-new-zealand')
-                          ? 'active'
-                          : ''
+                        isActive('/services/ahpra') ? 'active' : ''
                       }
                     >
 
