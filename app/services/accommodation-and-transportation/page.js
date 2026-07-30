@@ -8,6 +8,29 @@ import "./accommodation.css";
    DATA  — no prices shown
 ───────────────────────────────────────────── */
 const locations = [
+    {
+    id: "christchurch",
+    city: "Christchurch",
+    country: "New Zealand",
+    flag: "🇳🇿",
+    tag: "NZ",
+    tagTheme: "nz",
+    reverse: true,
+    details: [
+      { icon: "room",      text: "Single accommodation not available — available at extra charges if required" },
+      { icon: "group",     text: "Sharing accommodation for 2 & 3 members" },
+      { icon: "kitchen",   text: "Food materials will be available — candidates can cook" },
+      { icon: "transport", text: "Pick-up and drop-off facilities available" },
+    ],
+    packages: ["1 Week"],
+    packageLabel: "Food, Accommodation & Transportation",
+    images: [
+        { src: "/accommodation-gallery/chc.jpeg",         alt: "Christchurch accommodation" },
+      { src: "/accommodation-gallery/akl-2.jpeg",         alt: "Christchurch accommodation" },
+      { src: "/accommodation-gallery/akl-3.jpeg",         alt: "Christchurch room" },
+    ],
+  },
+  
   {
     id: "auckland",
     city: "Auckland",
@@ -29,27 +52,7 @@ const locations = [
       { src: "/accommodation-gallery/akl-3.jpeg",         alt: "Auckland shared living" },
     ],
   },
-  {
-    id: "christchurch",
-    city: "Christchurch",
-    country: "New Zealand",
-    flag: "🇳🇿",
-    tag: "NZ",
-    tagTheme: "nz",
-    reverse: true,
-    details: [
-      { icon: "room",      text: "Single accommodation not available — available at extra charges if required" },
-      { icon: "group",     text: "Sharing accommodation for 2 & 3 members" },
-      { icon: "kitchen",   text: "Food materials will be available — candidates can cook" },
-      { icon: "transport", text: "Pick-up and drop-off facilities available" },
-    ],
-    packages: ["1 Week"],
-    packageLabel: "Food, Accommodation & Transportation",
-    images: [
-      { src: "/accommodation-gallery/akl-2.jpeg",         alt: "Christchurch accommodation" },
-      { src: "/accommodation-gallery/akl-3.jpeg",         alt: "Christchurch room" },
-    ],
-  },
+
   {
     id: "kerala",
     city: "Kerala",
@@ -57,7 +60,7 @@ const locations = [
     flag: "🇮🇳",
     tag: "India",
     tagTheme: "india",
-    reverse: false,
+    reverse: true,
     details: [
       { icon: "room",      text: "No single accommodation available" },
       { icon: "group",     text: "Sharing accommodation for 3 members" },

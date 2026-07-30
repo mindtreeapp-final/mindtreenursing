@@ -107,7 +107,7 @@ export default function NZRegistrationPage() {
             <div className="nzreg-stop" data-anim="from-left">
               <div className="nzreg-marker">01</div>
               <h3><small>Language</small>English Proficiency (IELTS / OET)</h3>
-              <p>Achieve the Nursing Council's required scores — IELTS 7 in each band or OET Grade B. We advise on test choice, timelines, and prep resources.</p>
+              <p>Achieve the Nursing Council's required scores — OET 350 in Reading, Listening & Speaking; 300 in Writing or IELTS Academic  7.0 in Reading, Listening & Speaking; 6.5 in Writing. We advise on test choice, timelines, and prep resources.</p>
               <div className="nzreg-addon">🗣️ <strong>Therapeutic Communication Classes</strong> — dedicated sessions for nurses who need extra support with spoken English, building fluency and clinical conversation skills.</div>
             </div>
             <div className="nzreg-stop" data-anim="from-left" data-anim-delay="60">

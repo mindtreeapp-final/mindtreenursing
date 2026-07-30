@@ -273,19 +273,15 @@ export default function CareerPage() {
               </p>
               <div className="career-perks-grid">
                 <div className="career-perk">
-                  <span className="career-perk-icon">🌱</span>
                   <span className="career-perk-label">Career Growth</span>
                 </div>
                 <div className="career-perk">
-                  <span className="career-perk-icon">🤝</span>
                   <span className="career-perk-label">Team Culture</span>
                 </div>
                 <div className="career-perk">
-                  <span className="career-perk-icon">📚</span>
                   <span className="career-perk-label">Learning & Dev</span>
                 </div>
                 <div className="career-perk">
-                  <span className="career-perk-icon">💡</span>
                   <span className="career-perk-label">Innovation</span>
                 </div>
               </div>
@@ -382,7 +378,9 @@ export default function CareerPage() {
 
                       <div className="career-job-footer">
                         <Link
-                          href={`/contact?role=${encodeURIComponent(job.title)}`}
+                          href="https://zfrmz.in/l8t4YT4pvSUuZcpRx1M4"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="career-apply-btn"
                         >
                           Apply Now
@@ -421,7 +419,7 @@ export default function CareerPage() {
                 may be just around the corner.
               </p>
             </div>
-            <Link href="/contact" className="career-open-btn" data-anim="from-right" data-anim-delay="150">
+            <Link href="https://zfrmz.in/l8t4YT4pvSUuZcpRx1M4" target="_blank" rel="noopener noreferrer" className="career-open-btn" data-anim="from-right" data-anim-delay="150">
               Send Your CV
             </Link>
           </div>
