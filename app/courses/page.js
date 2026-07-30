@@ -143,11 +143,11 @@ export default function Courses() {
             </p>
             <div className="course-stats-bar" data-anim="up" data-anim-delay="240">
               <div className="course-stat">
-                <span className="course-stat-num">6</span>
+                <span className="course-stat-num">3</span>
                 <span className="course-stat-label">Programmes</span>
               </div>
               <div className="course-stat">
-                <span className="course-stat-num">500+</span>
+                <span className="course-stat-num">5000+</span>
                 <span className="course-stat-label">Nurses Trained</span>
               </div>
               <div className="course-stat">
@@ -169,7 +169,7 @@ export default function Courses() {
               icon={<IconLayers />}
               title="IQN Training Program"
               subtitle="International Qualifications in Nursing"
-              badge="Featured"
+              badge="IQN"
               para1="Top-tier preparation featuring mock tests, live and recorded classes, and a dedicated mobile app available on both iOS and Android."
               tags={["Mock Tests", "Live Classes", "Mobile App"]}
               href="/courses/best-iqn-coaching"
@@ -182,6 +182,7 @@ export default function Courses() {
               icon={<IconOSCEKerala />}
               title="OSCE Training"
               subtitle="Objective Structured Clinical Examination"
+              badge="OSCE"
               para1="Premier clinical exam preparation delivered through our state-of-the-art facilities in Kerala, fully aligned with NCNZ standards."
               tags={["Clinical Skills", "Station Practice", "Mock Exams"]}
               href="/courses/best-osce-training"
@@ -194,6 +195,7 @@ export default function Courses() {
               alt="OET English preparation"
               icon={<IconOETPreparation />}
               title="OET Preparation"
+              badge="OET"
               subtitle="Occupational English Test — Online & Offline"
               para1="Tailored Occupational English Test coaching to meet your language proficiency requirements with confidence — across reading, writing, listening, and speaking."
               tags={["Writing", "Speaking", "Healthcare English"]}

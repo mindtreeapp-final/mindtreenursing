@@ -183,11 +183,11 @@ export default function ServicesPage() {
             </p>
             <div className="service-stats-bar" data-anim="up" data-anim-delay="240">
               <div className="service-stat">
-                <span className="service-stat-num">10+</span>
+                <span className="service-stat-num">8+</span>
                 <span className="service-stat-label">Services</span>
               </div>
               <div className="service-stat">
-                <span className="service-stat-num">500+</span>
+                <span className="service-stat-num">5000+</span>
                 <span className="service-stat-label">Nurses Helped</span>
               </div>
               <div className="service-stat">
@@ -238,6 +238,7 @@ export default function ServicesPage() {
               icon={<IconLayers />}
               abbr="CGFNS Certification"
               name="Commission on Graduates of Foreign Nursing Schools"
+              badge="TruMerit"
               para1="Comprehensive support through the CGFNS certification process — a key credential for nurses seeking licensure in the United States and other countries."
               tags={["CGFNS", "USA", "Certification"]}
               href="/services/cgfns"
@@ -251,6 +252,7 @@ export default function ServicesPage() {
               icon={<IconFlight />}
               abbr="Flight Tickets"
               name="International Travel Booking"
+               badge="Ticket"
               para1="Relocating for work should not add to your stress. We assist in booking cost-effective international flights aligned with your joining dates and visa requirements."
               tags={["Travel Planning", "Visa-Aligned Dates", "Departure Support"]}
               href="/services/flight-ticketing"
@@ -263,6 +265,7 @@ export default function ServicesPage() {
               icon={<IconCV />}
               abbr="CV & Cover Letter Preparation"
               name="Professional Resume Building"
+               badge="CV"
               para1="We craft professional, ATS-friendly CVs and cover letters tailored precisely to your target job description and the standards of your destination country."
               tags={["NZ Format", "Clinical Highlight", "ATS Friendly"]}
               href="/services/cv-preparation"
@@ -275,6 +278,7 @@ export default function ServicesPage() {
               icon={<IconVisa />}
               abbr="Visa Assistance"
               name="Work Visa Application Support"
+               badge="Visa"
               para1="Navigating immigration paperwork can be overwhelming. We guide you through the correct visa category for your nursing role and provide full documentation checklists."
               tags={["Documentation", "Work Visa", "Application Support"]}
               href="/services/visa"
@@ -287,6 +291,7 @@ export default function ServicesPage() {
               icon={<IconHome />}
               abbr="Accommodation & Transportation"
               name="Housing & Travel Arrangements"
+              badge="Accommodation"
               para1="Finding a safe and comfortable place to stay when you first arrive is critical. We help nurses secure short-term and long-term accommodation close to their workplace."
               tags={["Short-term", "Long-term", "Near Hospital"]}
               href="/services/accommodation-and-transportation"
@@ -299,7 +304,7 @@ export default function ServicesPage() {
               icon={<IconCheck />}
               abbr="AHPRA Registration"
               name="Australian Health Practitioner"
-              badge="Australia"
+              badge="AHPRA"
               para1="Step-by-step guidance through the AHPRA registration process for internationally qualified nurses — covering all documentation, English requirements, and skills assessment."
               tags={["AHPRA", "Australia", "Skills Assessment"]}
               href="/services/ahpra"

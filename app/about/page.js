@@ -76,7 +76,7 @@ export default function AboutPage(){
  
             <div className="stats-row">
               <div className="stat-item">
-                <span className="stat-num">500+</span>
+                <span className="stat-num">5000+</span>
                 <span className="stat-lbl">Nurses Guided</span>
               </div>
               <div className="stat-sep" />
