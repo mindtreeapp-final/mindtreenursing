@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { getAllPostSlugs } from "../lib/wordpress/posts.js";
 
 const BASE_URL = "https://www.mindtreenursing.com";
-const STATIC_LAST_MODIFIED = new Date("2026-06-08");
+const STATIC_LAST_MODIFIED = new Date("2026-07-31");
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -18,15 +18,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: STATIC_LAST_MODIFIED,
     },
     {
-      url: `${BASE_URL}/courses/osce-training-kerala`,
-      lastModified: STATIC_LAST_MODIFIED,
-    },
-    {
-      url: `${BASE_URL}/courses/osce-training-new-zealand`,
-      lastModified: STATIC_LAST_MODIFIED,
-    },
-    {
-      url: `${BASE_URL}/courses/therapeutic-communication`,
+      url: `${BASE_URL}/courses/best-osce-training`,
       lastModified: STATIC_LAST_MODIFIED,
     },
     { url: `${BASE_URL}/services`, lastModified: STATIC_LAST_MODIFIED },
@@ -36,10 +28,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     {
       url: `${BASE_URL}/services/pathway-for-registered-nurses-from-the-uk-and-ireland-to-new-zealand`,
-      lastModified: STATIC_LAST_MODIFIED,
-    },
-    {
-      url: `${BASE_URL}/services/pathway-for-uk-ireland-nurses-to-australia`,
       lastModified: STATIC_LAST_MODIFIED,
     },
     { url: `${BASE_URL}/services/cgfns`, lastModified: STATIC_LAST_MODIFIED },
