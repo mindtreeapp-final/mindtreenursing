@@ -27,7 +27,7 @@
   --shadow-card:  0 4px 24px rgba(13,36,64,.10), 0 1px 4px rgba(13,36,64,.06);
   --shadow-hover: 0 16px 48px rgba(13,36,64,.20), 0 4px 12px rgba(13,36,64,.10);
   --t:            0.38s cubic-bezier(0.4,0,0.2,1);
-  --font-display: "Playfair Display", Georgia, serif;
+  --font-display: "Manrope", sans-serif;
   --font-body:    "DM Sans", system-ui, sans-serif;
 }
 

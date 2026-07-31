@@ -84,7 +84,7 @@
 }
 
 .oet-hero-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(28px, 5vw, 52px);
   font-weight: 700;
   color: var(--white);
@@ -164,7 +164,7 @@
 }
 
 .oet-intro-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(22px, 3vw, 36px);
   font-weight: 700;
   color: var(--c4);
@@ -203,7 +203,7 @@
   text-align: left;
 }
 .oet-section-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(26px, 4vw, 42px);
   font-weight: 700;
   color: var(--c4);
@@ -233,7 +233,7 @@
   align-items: center;
 }
 .oet-online-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(24px, 3.4vw, 36px);
   font-weight: 700;
   color: var(--c4);
@@ -275,7 +275,7 @@
 .oet-online-item b {
   color: var(--c4);
   display: block;
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 15.5px;
   font-weight: 700;
   margin-bottom: 3px;
@@ -330,7 +330,7 @@
   margin-bottom: 16px;
 }
 .oet-why-card h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 17px;
   font-weight: 700;
   color: var(--c4);
@@ -379,12 +379,12 @@
   color: var(--white);
   display: grid;
   place-items: center;
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-weight: 700;
   font-size: 17px;
 }
 .oet-mod-card h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   color: var(--c4);
   font-size: 16px;
   font-weight: 700;
@@ -451,7 +451,7 @@
 .oet-faq-list summary::-webkit-details-marker { display: none; }
 .oet-faq-list summary::after {
   content: "+";
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 20px;
   color: var(--c3);
   flex-shrink: 0;
@@ -520,7 +520,7 @@
 }
 
 .oet-cta-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(24px, 4vw, 38px);
   font-weight: 700;
   color: var(--white);

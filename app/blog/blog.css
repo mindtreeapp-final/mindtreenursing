@@ -86,7 +86,7 @@
 }
 
 .blog-hero-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(36px, 6vw, 62px);
   font-weight: 700;
   color: var(--white);
@@ -213,7 +213,7 @@
 }
 
 .blog-card-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: var(--c4);
@@ -314,7 +314,7 @@
 }
 
 .post-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(26px, 4vw, 46px);
   font-weight: 700;
   color: var(--white);
@@ -512,7 +512,7 @@
 }
 
 .post-body__heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   color: var(--c4);
   line-height: 1.35;
   letter-spacing: -0.02em;

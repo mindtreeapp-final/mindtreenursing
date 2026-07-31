@@ -84,7 +84,7 @@
   margin-bottom: 28px;
 }
 .career-hero-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(36px, 6vw, 62px);
   font-weight: 700;
   color: var(--white);
@@ -154,7 +154,7 @@
   color: var(--c2);
 }
 .career-content-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(26px, 3.5vw, 40px);
   font-weight: 700;
   color: var(--c4);
@@ -231,7 +231,7 @@
   margin-bottom: 56px;
 }
 .career-vacancies-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(28px, 4vw, 44px);
   font-weight: 700;
   color: var(--c4);
@@ -260,7 +260,7 @@
   margin-bottom: 20px;
 }
 .career-no-vacancies h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 24px;
   color: var(--c4);
   margin: 0 0 12px;
@@ -374,7 +374,7 @@
   color: var(--c3);
 }
 .career-job-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: var(--c4);
@@ -578,7 +578,7 @@
   margin-bottom: 12px;
 }
 .career-open-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(24px, 3.5vw, 36px);
   font-weight: 700;
   color: var(--c4);
@@ -651,7 +651,7 @@
   margin: 0 auto;
 }
 .career-cta-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(26px, 4vw, 40px);
   font-weight: 700;
   color: var(--white);

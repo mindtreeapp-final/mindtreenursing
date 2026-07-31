@@ -108,7 +108,7 @@
 }
 
 .cgfns-hero-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(28px, 5vw, 52px);
   font-weight: 700;
   color: var(--white);
@@ -193,7 +193,7 @@
 }
 
 .cgfns-intro-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(22px, 3vw, 36px);
   font-weight: 700;
   color: var(--c4);
@@ -245,7 +245,7 @@
 }
 
 .cgfns-docs-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(22px, 3vw, 36px);
   font-weight: 700;
   color: var(--c4);               /* dark text on light bg */
@@ -319,7 +319,7 @@
 }
 
 .cgfns-links-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 20px;
   font-weight: 600;
   color: var(--c4);               /* dark title */
@@ -385,7 +385,7 @@
 }
 
 .cgfns-includes-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(26px, 4vw, 42px);
   font-weight: 700;
   color: var(--c4);
@@ -477,7 +477,7 @@
 }
 
 .cgfns-cta-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(24px, 4vw, 38px);
   font-weight: 700;
   color: var(--white);

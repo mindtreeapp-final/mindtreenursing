@@ -101,7 +101,7 @@
 }
 
 .osce-hero-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(28px, 5vw, 52px);
   font-weight: 700;
   color: var(--white);
@@ -230,7 +230,7 @@
 }
 
 .osce-consult-card h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 22px;
   font-weight: 700;
   color: var(--c4);
@@ -321,7 +321,7 @@
 }
 
 .osce-stat b {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(22px, 2.6vw, 30px);
   font-weight: 700;
   color: var(--white);
@@ -373,7 +373,7 @@
 }
 
 .osce-intro-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(22px, 3vw, 36px);
   font-weight: 700;
   color: var(--c4);
@@ -423,7 +423,7 @@
 }
 
 .osce-about-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(26px, 4vw, 42px);
   font-weight: 700;
   color: var(--c4);
@@ -489,7 +489,7 @@
 }
 
 .osce-timing-panel h4 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 17px;
   font-weight: 600;
   color: var(--c4);
@@ -514,7 +514,7 @@
 
 .osce-timing b {
   display: block;
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 20px;
 }
 
@@ -537,7 +537,7 @@
 }
 
 .osce-stations-header h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(20px, 2.6vw, 26px);
   font-weight: 700;
   color: var(--c4);
@@ -654,7 +654,7 @@
 }
 
 .osce-includes-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(26px, 4vw, 42px);
   font-weight: 700;
   color: var(--c4);
@@ -770,7 +770,7 @@
 .osce-trial__badge svg { color: var(--c3); flex-shrink: 0; }
 
 .osce-trial__title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(28px, 3.5vw, 46px);
   font-weight: 700;
   color: var(--c4);
@@ -1098,7 +1098,7 @@
 }
 
 .osce-track h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 22px;
   font-weight: 700;
   color: var(--c4);
@@ -1156,7 +1156,7 @@
 }
 
 .osce-fee-line b {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 18px;
   color: var(--c4);
 }
@@ -1253,7 +1253,7 @@
 }
 
 .osce-format-inner h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 19px;
   font-weight: 700;
   color: var(--white);
@@ -1316,7 +1316,7 @@
 }
 
 .osce-comm-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(22px, 3vw, 32px);
   font-weight: 700;
   color: var(--c4);
@@ -1387,7 +1387,7 @@
 }
 
 .osce-online-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(24px, 3.4vw, 36px);
   font-weight: 700;
   color: var(--c4);
@@ -1476,7 +1476,7 @@
 }
 
 .osce-phone-card h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 19px;
   color: var(--white);
   margin: 8px 0 20px;
@@ -1574,7 +1574,7 @@
 }
 
 .osce-campus-primary h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(24px, 3vw, 32px);
   font-weight: 700;
   margin: 0 0 12px;
@@ -1634,7 +1634,7 @@
 }
 
 .osce-campus-card h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 21px;
   font-weight: 700;
   color: var(--c4);
@@ -1811,7 +1811,7 @@
 
 .osce-faq-list summary::after {
   content: "+";
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 20px;
   color: var(--c3);
   flex-shrink: 0;
@@ -1850,7 +1850,7 @@
 }
 
 .osce-docs-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(22px, 3vw, 36px);
   font-weight: 700;
   color: var(--c4);
@@ -1921,7 +1921,7 @@
 }
 
 .osce-links-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 20px;
   font-weight: 600;
   color: var(--c4);
@@ -1996,7 +1996,7 @@
 }
 
 .osce-cta-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(24px, 4vw, 38px);
   font-weight: 700;
   color: var(--white);

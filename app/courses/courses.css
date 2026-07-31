@@ -112,7 +112,7 @@
 }
 
 .course-hero-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(36px,6vw,62px); font-weight: 700;
   color: var(--white); line-height: 1.12;
   letter-spacing: -0.025em; margin: 0 0 28px;
@@ -180,7 +180,7 @@
   background: var(--c3); opacity: 0.5;
 }
 .course-section-intro-title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(26px, 4vw, 40px); font-weight: 700;
   color: var(--c4); line-height: 1.2;
   letter-spacing: -0.02em; margin: 0 0 16px;
@@ -202,7 +202,7 @@
   border-left: 1px solid var(--border);
 }
 .course-stat-num {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 26px; font-weight: 700; color: var(--c3);
   line-height: 1;
 }
@@ -297,7 +297,7 @@
 .crs-card-title-row { display: flex; flex-direction: column; gap: 4px; }
 
 .crs-card-abbr {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: 20px; font-weight: 700;
   color: var(--c4); line-height: 1.2; margin: 0;
   letter-spacing: -0.02em;
@@ -394,7 +394,7 @@
   max-width: 620px; margin: 0 auto;
 }
 .course-cta-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Manrope', sans-serif;
   font-size: clamp(26px,4.5vw,42px); font-weight: 700;
   color: var(--white); margin: 0 0 16px; letter-spacing: -0.02em;
 }
