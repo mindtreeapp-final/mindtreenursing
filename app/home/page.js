@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import "./home.css";
 
@@ -47,12 +47,33 @@ export default function Home() {
   const GALLERY_VISIBLE = 3;
   const galleryMax = GALLERY_ITEMS.length - GALLERY_VISIBLE;
   const [galleryIdx, setGalleryIdx] = useState(0);
+  const [galleryPaused, setGalleryPaused] = useState(false);
   const [activeVideo, setActiveVideo] = useState(null);
   const TESTI_VISIBLE = 3;
   const testiMax = TESTIMONIALS.length - TESTI_VISIBLE;
   const [testiIdx, setTestiIdx] = useState(0);
+  const [testiPaused, setTestiPaused] = useState(false);
   const galleryVisible = GALLERY_ITEMS.slice(galleryIdx, galleryIdx + GALLERY_VISIBLE);
   const testiVisible   = TESTIMONIALS.slice(testiIdx, testiIdx + TESTI_VISIBLE);
+
+  // Auto-advance the gallery to the right; loop back at the end.
+  // Pauses on hover and while a video is playing in the modal.
+  useEffect(() => {
+    if (galleryPaused || activeVideo) return;
+    const id = setInterval(() => {
+      setGalleryIdx((i) => (i >= galleryMax ? 0 : i + 1));
+    }, 3500);
+    return () => clearInterval(id);
+  }, [galleryPaused, activeVideo, galleryMax]);
+
+  // Auto-advance the testimonials to the right; loop back at the end.
+  useEffect(() => {
+    if (testiPaused) return;
+    const id = setInterval(() => {
+      setTestiIdx((i) => (i >= testiMax ? 0 : i + 1));
+    }, 5000);
+    return () => clearInterval(id);
+  }, [testiPaused, testiMax]);
 
   const testiSwipeX = useRef(null);
   function handleTestiSwipeStart(e) {
@@ -231,7 +252,7 @@ export default function Home() {
             <h2 className="hm-section-h2" data-anim="up" data-anim-delay="110">Gallery</h2>
             <p className="hm-section-sub" data-anim="up" data-anim-delay="220">A glimpse into our work, our team, and the lives we touch every day.</p>
           </div>
-          <div className="hp-slider-wrap">
+          <div className="hp-slider-wrap" onMouseEnter={() => setGalleryPaused(true)} onMouseLeave={() => setGalleryPaused(false)}>
             <button className={`hp-arrow hp-arrow--left${galleryIdx === 0 ? " hp-arrow--disabled" : ""}`} onClick={() => setGalleryIdx((i) => Math.max(0, i - 1))} disabled={galleryIdx === 0} aria-label="Previous">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="20" height="20"><path d="M15 18l-6-6 6-6" /></svg>
             </button>
@@ -305,7 +326,7 @@ export default function Home() {
             <span className="hm-testi-summary__stars">★★★★★</span>
             <span>Rated <strong>4.9 / 5</strong> by 500+ nurses placed</span>
           </div>
-          <div className="hp-slider-wrap">
+          <div className="hp-slider-wrap" onMouseEnter={() => setTestiPaused(true)} onMouseLeave={() => setTestiPaused(false)}>
             <button className={`hp-arrow hp-arrow--light hp-arrow--left${testiIdx === 0 ? " hp-arrow--disabled" : ""}`} onClick={() => setTestiIdx((i) => Math.max(0, i - 1))} disabled={testiIdx === 0} aria-label="Previous">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="20" height="20"><path d="M15 18l-6-6 6-6" /></svg>
             </button>

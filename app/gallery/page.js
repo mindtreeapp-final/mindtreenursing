@@ -5,27 +5,27 @@ import "./gallery.css";
 
 // ─── Sample Data ─────────────────────────────────────────────────
 const IMAGES = [
-  { id: "photo-1", src: "/mindtree-img/mindtree-img1.webp", alt: "Success Story", caption: "Celebrating Success", category: "Highlights" },
-  { id: "photo-2", src: "/mindtree-img/mindtree-img2.webp", alt: "Mindtree Nursing Solution", caption: "Mindtree Nursing Solutions", category: "Healthcare" },
-  { id: "photo-3", src: "/mindtree-img/mindtree-img6.webp", alt: "Our Team", caption: "Our Dedicated Team", category: "Team" },
-  { id: "photo-4", src: "/mindtree-img/mindtree-img4.webp", alt: "Care at Home", caption: "Compassionate Home Care", category: "Healthcare" },
-  { id: "photo-5", src: "/mindtree-img/mindtree-img5.webp", alt: "Community", caption: "Building Community", category: "Highlights" },
-  { id: "photo-6", src: "/mindtree-img/mindtree-img3.webp", alt: "Wellness Program", caption: "Wellness Programs", category: "Healthcare" },
-  { id: "photo-7", src: "/mindtree-img/mindtree-img7.webp", alt: "Wellness Program", caption: "Wellness Programs", category: "Healthcare" },
-  { id: "photo-8", src: "/mindtree-img/mindtree-img9.webp", alt: "Wellness Program", caption: "Wellness Programs", category: "Healthcare" },
-  { id: "photo-9", src: "/mindtree-img/mindtree-img10.webp", alt: "Wellness Program", caption: "Wellness Programs", category: "Healthcare" },
-  { id: "photo-10", src: "/mindtree-img/mindtree-img8.webp", alt: "Wellness Program", caption: "Wellness Programs", category: "Healthcare" },
+  { id: "photo-1", src: "/mindtree-img/mindtree-img1.webp", alt: "Mindtree Nursing Solutions Images", caption: "Mindtree Nursing Solutions", category: "KL" },
+  { id: "photo-2", src: "/mindtree-img/mindtree-img2.webp", alt: "Mindtree Nursing Solutions Images", caption: "Mindtree Nursing Solutions", category: "KL" },
+  { id: "photo-3", src: "/mindtree-img/mindtree-img6.webp", alt: "Mindtree Nursing Solutions Images", caption: "Auckland", category: "AKL" },
+  { id: "photo-4", src: "/accommodation-gallery/chc.jpeg", alt: "Mindtree Nursing Solutions Images", caption: "christchurch", category: "CHC" },
+  { id: "photo-5", src: "/mindtree-img/mindtree-img4.webp", alt: "Mindtree Nursing Solutions Images", caption: "Kerala", category: "KL" },
+  { id: "photo-6", src: "/mindtree-img/mindtree-img5.webp", alt: "Mindtree Nursing Solutions Images", caption: "Building", category: "KL" },
+  { id: "photo-7", src: "/mindtree-img/mindtree-img3.webp", alt: "Mindtree Nursing Solutions Images", caption: "Building", category: "KL" },
+  { id: "photo-8", src: "/mindtree-img/mindtree-img7.webp", alt: "Mindtree Nursing Solutions Images", caption: "Building", category: "AKL" },
+  { id: "photo-9", src: "/mindtree-img/mindtree-img9.webp", alt: "Mindtree Nursing Solutions Images", caption: "Auckland", category: "AKL" },
+  { id: "photo-10", src: "/mindtree-img/mindtree-img10.webp", alt: "Mindtree Nursing Solutions Images", caption: "Auckland", category: "AKL" },
+  { id: "photo-11", src: "/mindtree-img/mindtree-img8.webp", alt: "Mindtree Nursing Solutions Images", caption: "Auckland", category: "AKL" },
 ];
 
 const VIDEOS = [
-  { id: "video-1", youtubeId: "qxlnO0sc18M", title: "Introduction to Mindtree", description: "Learn what Mindtree is all about and how we serve communities.", duration: "3:45" },
-  { id: "video-2", youtubeId: "sedbxmvvRio", title: "Nursing Solutions Explained", description: "A complete guide to our nursing care offerings.", duration: "5:12" },
-  { id: "video-3", youtubeId:"4T4KSbaXZTo", title: "Patient Success Stories", description: "Real stories from families we have helped.", duration: "4:30" },
-  { id: "video-4", youtubeId: "26ixXF60H94", title: "Meet Our Care Team", description: "Get to know the professionals behind our service.", duration: "2:58" },
-  { id: "video-5", youtubeId: "7npWMm9akiE", title: "Home Care Best Practices", description: "Tips and insights from our expert caregivers.", duration: "6:20" },
-  { id: "video-6", youtubeId: "OXf-9Z68jyQ", title: "Community Wellness Events", description: "Highlights from our recent community outreach programs.", duration: "3:15" },
-  { id: "video-7", youtubeId: "y2UWqq8CSqo", title: "Community Wellness Events", description: "Highlights from our recent community outreach programs.", duration: "3:15" },
-  { id: "video-8", youtubeId: "_vB9PLim9Dc", title: "Community Wellness Events", description: "Highlights from our recent community outreach programs.", duration: "3:15" },
+  { id: "video-1", youtubeId: "qxlnO0sc18M", title: "Introduction to Mindtree", description: "Learn what Mindtree is all about and how we serve communities."},
+  { id: "video-2", youtubeId: "sedbxmvvRio", title: "Nursing Solutions Explained", description: "A Complete Guide to Our Christchurch Building." },
+  { id: "video-3", youtubeId:"4T4KSbaXZTo", title: "Urgent OSCE EXAM Updates", description: "Exam Updates for our nurses." },
+  { id: "video-4", youtubeId: "26ixXF60H94", title: "Success Stories", description: "Get to Know the Man Behind Mindtree Nursing solutions Achievements" },
+  { id: "video-5", youtubeId: "OXf-9Z68jyQ", title: "CHRISTCHURCH New Future OSCE Training Centre", description: "Christchurch new building" },
+  { id: "video-6", youtubeId: "y2UWqq8CSqo", title: "Christchurch Accomodation", description: "Accomodation in our chrictchurch institution." },
+  { id: "video-7", youtubeId: "_vB9PLim9Dc", title: "Patient-Centered Care in Nursing", description: "This video demonstrates effective patient centered care, where the nurse combines communication..." },
 ];
 
 function getYoutubeThumbnail(videoId) {

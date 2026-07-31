@@ -276,7 +276,7 @@ export default function Nav() {
                         <polyline points="2 12 12 17 22 12" />
                       </svg>
                       OSCE 
-  <span className="menu-tag">India, NZ</span>
+  <span className="menu-tag">NZ & India</span>
                     </Link>
                     
                   </li>
