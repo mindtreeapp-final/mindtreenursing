@@ -232,7 +232,7 @@ export default function NZRegistrationPage() {
               <span className="nzreg-svc-num">S·04</span>
               <h3>OSCE Training &amp; Mock Tests</h3>
               <p>Online learning plus offline simulation labs in Christchurch, Auckland, and Kerala.</p>
-              <Link href="/courses/osce-training-kerala" className="nzreg-svc-link">Learn More →</Link>
+              <Link href="/courses/best-osce-training" className="nzreg-svc-link">Learn More →</Link>
             </div>
             <div className="nzreg-svc-card" data-anim="scale-up" data-anim-delay="240">
               <span className="nzreg-svc-num">S·05</span>

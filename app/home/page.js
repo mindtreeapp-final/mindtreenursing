@@ -5,13 +5,12 @@ import Image from "next/image";
 import "./home.css";
 
 const GALLERY_ITEMS = [
-  { id: "g1", type: "image", src: "/mindtree-img/mindtree-img1.webp", alt: "Celebrating Success", caption: "Celebrating Success", category: "Highlights" },
+  { id: "g1", type: "image", src: "/accommodation-gallery/chc.jpeg", alt: "chc", caption: "Christchurch", category: "Institution" },
   { id: "g2", type: "video", youtubeId: "qxlnO0sc18M", alt: "Introduction to Mindtree", caption: "Introduction to Mindtree", category: "Videos" },
-  { id: "g3", type: "image", src: "/mindtree-img/mindtree-img2.webp", alt: "Mindtree Nursing Solutions", caption: "Mindtree Nursing Solutions", category: "Healthcare" },
-  { id: "g4", type: "video", youtubeId: "4T4KSbaXZTo", alt: "Nursing Solutions Explained", caption: "Nursing Solutions Explained", category: "Videos" },
-  { id: "g5", type: "image", src: "/mindtree-img/mindtree-img3.webp", alt: "Our Dedicated Team", caption: "Our Dedicated Team", category: "Team" },
+  { id: "g3", type: "image", src: "/mindtree-img/mindtree-img1.webp", alt: "Mindtree Nursing Solutions", caption: "Mindtree Nursing Solutions", category: "Institution" },
+  { id: "g4", type: "video", youtubeId: "4T4KSbaXZTo", alt: "Mindttree Nursing Solutions", caption: "Mindttree Nursing Solutions", category: "Videos" },
+  { id: "g5", type: "image", src: "/mindtree-img/mindtree-img3.webp", alt: "Our Dedicated Team", caption: "Mindtree Nursing Solutions", category: "Kerala" },
   { id: "g6", type: "video", youtubeId: "26ixXF60H94", alt: "Patient Success Stories", caption: "Patient Success Stories", category: "Videos" },
-  { id: "g7", type: "image", src: "/mindtree-img/mindtree-img4.webp", alt: "Compassionate Home Care", caption: "Compassionate Home Care", category: "Healthcare" },
 ];
 
 const TESTIMONIALS = [
@@ -178,14 +177,14 @@ export default function Home() {
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" width="18" height="18"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>Direct chat support with mentors</li>
             </ul>
             <div className="hm-app__btns">
-              <a href="https://apps.apple.com/in/app/mindtree-academy/id6753161418" className="hm-app-store-btn">
+              <a href="https://apps.apple.com/in/app/mindtree-academy/id6753161418" target="_blank" rel="noopener noreferrer" className="hm-app-store-btn">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" /></svg>
                 <span className="hm-app-store-btn__text">
                   <span className="hm-app-store-btn__label">Download on the</span>
                   <span className="hm-app-store-btn__store">App Store</span>
                 </span>
               </a>
-              <a href="https://play.google.com/store/apps/details?id=com.mindtree.learning" className="hm-app-store-btn">
+              <a href="https://play.google.com/store/apps/details?id=com.mindtree.learning" target="_blank" rel="noopener noreferrer" className="hm-app-store-btn">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M3.18 23.76c.3.17.64.22.97.15l10.85-10.85-2.97-2.97L3.18 23.76zm16.26-13.38L16.9 8.84l-2.47 2.46 2.47 2.47 2.57-1.56c.73-.44.73-1.5-.03-1.83zM1.97.49C1.65.81 1.5 1.29 1.5 1.91v20.18c0 .62.15 1.1.48 1.42l.07.07L13.13 12.5v-.26L2.04.42l-.07.07zm9.56 9.56l2.47-2.47L3.17.28C2.84.11 2.5.07 2.17.23L11.53 10.05z" /></svg>
                 <span className="hm-app-store-btn__text">
                   <span className="hm-app-store-btn__label">Get it on</span>

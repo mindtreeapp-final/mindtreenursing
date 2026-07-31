@@ -374,7 +374,7 @@ export default function OSCEPage() {
                 Communication runs through every OSCE station — from explaining a procedure to reassuring a distressed patient and handing over to the team. If English isn't your first language, or ward-style conversation doesn't come naturally yet, this course closes that gap alongside your OSCE program.
               </p>
               <div className="osce-comm-note">✓&nbsp; Available with both the 2-week and 3-week Christchurch programs, the Kerala 1-week program, and through online classes in the Mindtree Academy app.</div>
-              <Link href="/courses/therapeutic-communication" className="osce-track-btn osce-track-btn--primary osce-comm-cta">Add Communication Support</Link>
+              <Link href="/contact" className="osce-track-btn osce-track-btn--primary osce-comm-cta">Add Communication Support</Link>
             </div>
             <ul className="osce-comm-list" data-anim="from-right" data-anim-delay="100">
               <li>Patient-centred conversation — empathy, active listening, reassurance</li>
