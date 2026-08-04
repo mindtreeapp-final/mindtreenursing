@@ -42,7 +42,7 @@ export default function BlogPage() {
           <div className="blog-grid">
  
             {/* Card 1 */}
-            <Link href="/blogs/the-success-stories-of-nurses-who-have-chosen-mindtree-nursing-solution-for-their-careers" className="blog-card" data-anim="scale-up">
+            <Link href="/blog/the-success-stories-of-nurses-who-have-chosen-mindtree-nursing-solution-for-their-careers" className="blog-card" data-anim="scale-up">
               <div className="blog-card-img-wrap">
                 <img src="\blogimg\Internationally Qualified Nurses.png" alt="Success Stories" className="blog-card-img" />
                 <div className="blog-card-img-placeholder">
@@ -64,7 +64,7 @@ Mindtree Nursing Solution has witnessed numerous success stories of nurses who h
             </Link>
  
             {/* Card 2 — duplicate, change later */}
-            <Link href="/blogs/why-is-mindtree-nursing-solution-the-best-choice-for-your-career" className="blog-card" data-anim="scale-up" data-anim-delay="75">
+            <Link href="/blog/why-is-mindtree-nursing-solution-the-best-choice-for-your-career" className="blog-card" data-anim="scale-up" data-anim-delay="75">
               <div className="blog-card-img-wrap">
                 <img src="\blogimg\The Success Stories of Nurses Who Have Chosen Mindtree Nursing Solution for Their Careers.jpeg" alt="Blog Post" className="blog-card-img" />
                 <div className="blog-card-img-placeholder">
@@ -86,7 +86,7 @@ their unparalleled commitment to your professional growth and success. They offe
             </Link>
  
             {/* Card 3 — duplicate, change later */}
-            <Link href="/blogs/what-is-mindtree-nursing-solution-and-what-it-offers" className="blog-card" data-anim="scale-up" data-anim-delay="150">
+            <Link href="/blog/what-is-mindtree-nursing-solution-and-what-it-offers" className="blog-card" data-anim="scale-up" data-anim-delay="150">
               <div className="blog-card-img-wrap">
                 <img src="/blogimg/Why is Mindtree Nursing Solution the Best Choice for Your Career.png" alt="Blog Post" className="blog-card-img" />
                 <div className="blog-card-img-placeholder">
