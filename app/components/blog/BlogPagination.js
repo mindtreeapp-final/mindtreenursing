@@ -16,14 +16,15 @@ function getPageNumbers(current, total) {
 
 /**
  * @param {number} page
+ * @param {string} basePath
  * @returns {string}
  */
-function pageHref(page) {
-  return page <= 1 ? "/blog" : `/blog?page=${page}`;
+function pageHref(page, basePath) {
+  return page <= 1 ? basePath : `${basePath}?page=${page}`;
 }
 
-/** @param {{ page: number, totalPages: number }} props */
-export default function BlogPagination({ page, totalPages }) {
+/** @param {{ page: number, totalPages: number, basePath?: string }} props */
+export default function BlogPagination({ page, totalPages, basePath = "/blog" }) {
   if (totalPages <= 1) return null;
 
   const pages = getPageNumbers(page, totalPages);
@@ -31,7 +32,7 @@ export default function BlogPagination({ page, totalPages }) {
   return (
     <nav className="blog-pagination" aria-label="Blog pagination">
       {page > 1 ? (
-        <Link href={pageHref(page - 1)} className="blog-pagination__btn">
+        <Link href={pageHref(page - 1, basePath)} className="blog-pagination__btn">
           ← Previous
         </Link>
       ) : (
@@ -47,7 +48,7 @@ export default function BlogPagination({ page, totalPages }) {
             <span key={pageNumber} className="blog-pagination__page-group">
               {showEllipsis ? <span className="blog-pagination__ellipsis">…</span> : null}
               <Link
-                href={pageHref(pageNumber)}
+                href={pageHref(pageNumber, basePath)}
                 className={`blog-pagination__page${pageNumber === page ? " blog-pagination__page--active" : ""}`}
                 aria-current={pageNumber === page ? "page" : undefined}
               >
@@ -59,7 +60,7 @@ export default function BlogPagination({ page, totalPages }) {
       </div>
 
       {page < totalPages ? (
-        <Link href={pageHref(page + 1)} className="blog-pagination__btn">
+        <Link href={pageHref(page + 1, basePath)} className="blog-pagination__btn">
           Next →
         </Link>
       ) : (

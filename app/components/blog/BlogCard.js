@@ -11,13 +11,13 @@ function ImagePlaceholder() {
   );
 }
 
-/** @param {{ post: import('../../lib/wordpress/content/types.js').PostSummary, animDelay?: number }} props */
-export default function BlogCard({ post, animDelay = 0 }) {
+/** @param {{ post: import('../../lib/wordpress/content/types.js').PostSummary, animDelay?: number, basePath?: string }} props */
+export default function BlogCard({ post, animDelay = 0, basePath = "/blog" }) {
   const badge = post.category ?? "Blog";
 
   return (
     <Link
-      href={`/blog/${post.slug}`}
+      href={`${basePath}/${post.slug}`}
       className="blog-card"
       data-anim="scale-up"
       data-anim-delay={animDelay || undefined}

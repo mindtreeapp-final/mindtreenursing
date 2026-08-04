@@ -6,10 +6,10 @@ import "./offers.css";
 const defaultOffers = [
   {
     id: 1,
-    badge: "20%\nOFF",
+    badge: "15%\nOFF",
     badgeClass: "green",
-    title: "OSCE Training",
-    desc: "Expert preparation for OSCE success.",
+    title: " Onam Special Offer",
+    desc: "15% Off on OSCE and IQN Courses",
     link: "https://forms.zohopublic.in/mindtreenursingsolutions/form/ClientDetails1/formperma/76KIBTp9LCYH_lA6B0jGSwAH8FJ4nmjU8ovh7b6l-tQ",
   },
   /*{

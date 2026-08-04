@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { getAllPostSlugs } from "../lib/wordpress/posts.js";
+
 
 const BASE_URL = "https://www.mindtreenursing.com";
 const STATIC_LAST_MODIFIED = new Date("2026-07-31");
@@ -52,11 +52,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${BASE_URL}/testimonials`, lastModified: STATIC_LAST_MODIFIED },
   ];
 
-  const postSlugs = await getAllPostSlugs();
-  const blogRoutes: MetadataRoute.Sitemap = postSlugs.map(({ slug, modified }) => ({
-    url: `${BASE_URL}/blog/${slug}`,
-    lastModified: modified ? new Date(modified) : STATIC_LAST_MODIFIED,
-  }));
 
-  return [...staticRoutes, ...blogRoutes];
+
+  return [...staticRoutes];
 }

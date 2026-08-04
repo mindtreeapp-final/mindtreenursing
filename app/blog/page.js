@@ -1,45 +1,26 @@
-import { redirect } from "next/navigation";
-import { getPosts } from "../../lib/wordpress/posts.js";
-import BlogCard from "../components/blog/BlogCard.js";
-import BlogPagination from "../components/blog/BlogPagination.js";
-import "./blog.css";
+import "./blogs.css"
+import { DM_Sans } from 'next/font/google'
+import Link from "next/link";
+
+
+
 
 export const metadata = {
   title: "Blogs | Mindtree Nursing Solutions",
   description:
     "Mindtree Nursing is your all-in-one premium consultant for OET, CGFNS, IQN & OSCE, plus visa, ticket, and accommodation in NZ.",
-  keywords: ["New Zealand Nursing", "Mindtree Nursing Solutions"],
+  keywords: [
+    "New Zealand Nursing",
+    "Mindtree Nursing Sloutions",
+  ],
 };
 
-/**
- * @param {string | string[] | undefined} value
- * @returns {number}
- */
-function parsePageParam(value) {
-  const raw = Array.isArray(value) ? value[0] : value;
-  const parsed = Number(raw);
-  if (!Number.isFinite(parsed) || parsed < 1) return 1;
-  return Math.floor(parsed);
-}
-
-/** @param {{ searchParams: Promise<{ page?: string }> }} props */
-export default async function BlogPage({ searchParams }) {
-  const params = await searchParams;
-  const requestedPage = parsePageParam(params.page);
-  const result = await getPosts({ page: requestedPage });
-
-  if (
-    !result.error &&
-    result.totalPages > 0 &&
-    requestedPage > result.totalPages
-  ) {
-    redirect(requestedPage === 1 ? "/blog" : `/blog?page=${result.totalPages}`);
-  }
-
-  const page = result.page;
-
+export default function BlogPage() {
   return (
-    <main className="blog-page">
+  
+              <main className="blog-page">
+ 
+      {/* ── HERO ── */}
       <section className="blog-hero">
         <div className="blog-hero-shape-1" />
         <div className="blog-hero-shape-2" />
@@ -53,25 +34,84 @@ export default async function BlogPage({ searchParams }) {
           </p>
         </div>
       </section>
-
+ 
+      {/* ── BLOG GRID ── */}
       <section className="blog-section">
         <div className="blog-inner">
-          {result.error ? (
-            <p className="blog-empty-state">{result.error}</p>
-          ) : result.posts.length === 0 ? (
-            <p className="blog-empty-state">No posts published yet.</p>
-          ) : (
-            <>
-              <div className="blog-grid">
-                {result.posts.map((post, index) => (
-                  <BlogCard key={post.id} post={post} animDelay={index * 75} />
-                ))}
+ 
+          <div className="blog-grid">
+ 
+            {/* Card 1 */}
+            <Link href="/blogs/the-success-stories-of-nurses-who-have-chosen-mindtree-nursing-solution-for-their-careers" className="blog-card" data-anim="scale-up">
+              <div className="blog-card-img-wrap">
+                <img src="\blogimg\Internationally Qualified Nurses.png" alt="Success Stories" className="blog-card-img" />
+                <div className="blog-card-img-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="40" height="40">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+                  </svg>
+                </div>
+                <span className="blog-card-tag">Success Stories</span>
               </div>
-              <BlogPagination page={page} totalPages={result.totalPages} />
-            </>
-          )}
+              <div className="blog-card-body">
+                <h2 className="blog-card-title">
+                  The Success Stories of Nurses Who Have Chosen Mindtree Nursing Solution for Their Careers
+                </h2>
+                <p className="blog-card-excerpt">
+Mindtree Nursing Solution has witnessed numerous success stories of nurses who have chosen their services for their careers. From securing prestigious job placements in countries like New Zealand and Australia to successfully navigating the CGFNS and nursing council processes, nurses have achieved their goals with Mindtree's support.
+                </p>
+                <span className="blog-card-read">Read more →</span>
+              </div>
+            </Link>
+ 
+            {/* Card 2 — duplicate, change later */}
+            <Link href="/blogs/why-is-mindtree-nursing-solution-the-best-choice-for-your-career" className="blog-card" data-anim="scale-up" data-anim-delay="75">
+              <div className="blog-card-img-wrap">
+                <img src="\blogimg\The Success Stories of Nurses Who Have Chosen Mindtree Nursing Solution for Their Careers.jpeg" alt="Blog Post" className="blog-card-img" />
+                <div className="blog-card-img-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="40" height="40">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+                  </svg>
+                </div>
+                <span className="blog-card-tag">Your Career</span>
+              </div>
+              <div className="blog-card-body">
+                <h2 className="blog-card-title">
+                 Why is Mindtree Nursing Solution the Best Choice for Your Career?
+                </h2>
+                <p className="blog-card-excerpt">
+their unparalleled commitment to your professional growth and success. They offer a wide range of global study opportunities, job placements in prestigious healthcare systems like New Zealand and Australia, and specialised services for CGFNS and nursing council requirements. Their 24/7 helpline ensures round-the-clock support, while their free OSCE and OET training programs enhance your skills and chances of success.
+                </p>
+                <span className="blog-card-read">Read more →</span>
+              </div>
+            </Link>
+ 
+            {/* Card 3 — duplicate, change later */}
+            <Link href="/blogs/what-is-mindtree-nursing-solution-and-what-it-offers" className="blog-card" data-anim="scale-up" data-anim-delay="150">
+              <div className="blog-card-img-wrap">
+                <img src="/blogimg/Why is Mindtree Nursing Solution the Best Choice for Your Career.png" alt="Blog Post" className="blog-card-img" />
+                <div className="blog-card-img-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="40" height="40">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+                  </svg>
+                </div>
+                <span className="blog-card-tag">Mindtree Nursing Solutions</span>
+              </div>
+              <div className="blog-card-body">
+                <h2 className="blog-card-title">
+                What is Mindtree Nursing Solution and what it offers
+                </h2>
+                <p className="blog-card-excerpt">
+Mindtree Nursing Solutions is a comprehensive platform dedicated to empowering nursing professionals worldwide. It offers a wide array of services, including global study opportunities, job placements in countries like New Zealand and Australia, specialised support for CGFNS and nursing council requirements, a 24/7 helpline, and free training programs for OSCE and OET. 
+                </p>
+                <span className="blog-card-read">Read more →</span>
+              </div>
+            </Link>
+ 
+          </div>
         </div>
       </section>
+ 
     </main>
+    
   );
 }

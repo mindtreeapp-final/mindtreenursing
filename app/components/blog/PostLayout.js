@@ -13,14 +13,14 @@ function FeaturedPlaceholder() {
   );
 }
 
-/** @param {{ post: import('../../lib/wordpress/content/types.js').PostDetail }} props */
-export default function PostLayout({ post }) {
+/** @param {{ post: import('../../lib/wordpress/content/types.js').PostDetail, basePath?: string }} props */
+export default function PostLayout({ post, basePath = "/blog" }) {
   const badge = post.category ?? "Blog";
 
   return (
     <>
       <div className="blog-back-wrap">
-        <Link href="/blog" className="blog-back-link">
+        <Link href={basePath} className="blog-back-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16">
             <path d="M19 12H5M12 5l-7 7 7 7" />
           </svg>
@@ -56,7 +56,7 @@ export default function PostLayout({ post }) {
           <PostBody blocks={post.blocks} />
 
           <div className="post-back-row">
-            <Link href="/blog" className="post-back-btn">
+            <Link href={basePath} className="post-back-btn">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="15" height="15">
                 <path d="M19 12H5M12 5l-7 7 7 7" />
               </svg>
