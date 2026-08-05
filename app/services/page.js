@@ -260,7 +260,7 @@ export default function ServicesPage() {
             />
 
             <ServiceCard
-              photo="/box-img/cv.jpeg"
+              photo="/box-img/CV.jpeg"
               alt="Professional CV on desk"
               icon={<IconCV />}
               abbr="CV & Cover Letter Preparation"
@@ -273,7 +273,7 @@ export default function ServicesPage() {
             />
 
             <ServiceCard
-              photo="/box-img/visa.jpeg"
+              photo="/box-img/Visa.jpeg"
               alt="Passport and visa documents"
               icon={<IconVisa />}
               abbr="Visa Assistance"
