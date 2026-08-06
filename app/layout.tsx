@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleTagManager } from "@next/third-parties/google";
 import { Geist, Geist_Mono } from "next/font/google";
 import Nav from "./components/nav/page.js";
 import WhatsAppButton from "./components/whatsapp/page.js"
@@ -30,7 +31,17 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+       <GoogleTagManager gtmId="GTM-532PQV5D" />
 <body className="min-h-full flex flex-col">
+          <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-532PQV5D"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+
       <ScrollAnimations />
       <Nav />
   
