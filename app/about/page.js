@@ -213,7 +213,7 @@ export default function AboutPage(){
             
             <div className="member-info">
               <h3 className="member-name">Sreeja S</h3>
-              <span className="member-role">Advise</span>
+              <span className="member-role">Adviser</span>
             </div>
           </div>
               <div className="member-card">
@@ -257,7 +257,7 @@ export default function AboutPage(){
             </div>
             <div className="member-info">
               <h3 className="member-name">Priya Philip</h3>
-              <span className="member-role">Advise</span>
+              <span className="member-role">Adviser</span>
             </div>
           </div>
 
@@ -272,7 +272,7 @@ export default function AboutPage(){
             </div>
             <div className="member-info">
               <h3 className="member-name">Anuja</h3>
-              <span className="member-role">Advise</span>
+              <span className="member-role">Adviser</span>
             </div>
             
           </div>
