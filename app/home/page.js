@@ -117,7 +117,7 @@ export default function Home() {
         <div className="hm-hero__img-wrap">
           <div className="hm-hero__img-decoration" aria-hidden="true" />
           <div className="hm-hero__img-frame">
-            <img loading="eager" src="/Jijo.png" alt="Nursing professional" className="hm-hero__img" />
+            <img loading="eager" src="/team/JijoCEO.webp" alt="Nursing professional" className="hm-hero__img" />
           </div>
           <div className="hm-badge hm-badge--nz">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></svg>
