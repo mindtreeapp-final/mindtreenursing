@@ -79,7 +79,7 @@ Mindtree Nursing Solution has witnessed numerous success stories of nurses who h
                  Why is Mindtree Nursing Solution the Best Choice for Your Career?
                 </h2>
                 <p className="blog-card-excerpt">
-their unparalleled commitment to your professional growth and success. They offer a wide range of global study opportunities, job placements in prestigious healthcare systems like New Zealand and Australia, and specialised services for CGFNS and nursing council requirements. Their 24/7 helpline ensures round-the-clock support, while their free OSCE and OET training programs enhance your skills and chances of success.
+Mindtree Nursing Solution is the best choice for your career due to their unparalleled commitment to your professional growth and success. They offer a wide range of global study opportunities, job placements in prestigious healthcare systems like New Zealand and Australia, and specialised services for CGFNS and nursing council requirements. 
                 </p>
                 <span className="blog-card-read">Read more →</span>
               </div>
