@@ -62,6 +62,27 @@ Mindtree Nursing Solution has witnessed numerous success stories of nurses who h
                 <span className="blog-card-read">Read more →</span>
               </div>
             </Link>
+
+                         {/* Card 3 — duplicate, change later */}
+            <Link href="/blog/osce-simulation-tools-resources" className="blog-card" data-anim="scale-up" data-anim-delay="150">
+              <div className="blog-card-img-wrap">
+                <img src="/blogimg/oscesimulation.jpg" alt="What is Mindtree Nursing Solution and what it offers" className="blog-card-img" />
+                <div className="blog-card-img-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="40" height="40">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+                  </svg>
+                </div>
+                <span className="blog-card-tag">Mindtree Nursing Solutions</span>
+              </div>
+              <div className="blog-card-body">
+                <h2 className="blog-card-title">
+                OSCE Simulation Tools and Resources Every Nurse Should Use
+                </h2>
+                <p className="blog-card-excerpt">
+Preparing for the OSCE can feel like climbing Mount Everest. It's daunting, demanding, and you know you need the right gear to reach the summit. Many nurses find themselves overwhelmed, unsure where to start, or how to effectively practice. That's where OSCE simulation tools become your lifeline. </p>
+                <span className="blog-card-read">Read more →</span>
+              </div>
+            </Link>
  
             {/* Card 2 — duplicate, change later */}
             <Link href="/blog/why-is-mindtree-nursing-solution-the-best-choice-for-your-career" className="blog-card" data-anim="scale-up" data-anim-delay="75">
@@ -106,6 +127,7 @@ Mindtree Nursing Solutions is a comprehensive platform dedicated to empowering n
                 <span className="blog-card-read">Read more →</span>
               </div>
             </Link>
+
  
           </div>
         </div>

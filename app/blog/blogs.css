@@ -323,6 +323,46 @@
   margin: 20px 0 0;
 }
 
+/* ── In-article headings (h2/h3/h4) ── */
+.post-title-h2,
+.post-article h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(24px, 3.2vw, 32px);
+  font-weight: 700;
+  color: var(--c4);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  margin: 44px 0 16px;
+}
+
+.post-title-h3,
+.post-article h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(20px, 2.6vw, 25px);
+  font-weight: 700;
+  color: var(--c4);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin: 36px 0 12px;
+}
+
+.post-title-h4,
+.post-article h4 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(17px, 2vw, 19px);
+  font-weight: 700;
+  color: var(--c3);
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  margin: 28px 0 10px;
+}
+
+/* First heading right after the article top border shouldn't push too far */
+.post-article > :first-child {
+  margin-top: 0;
+}
+
 /* ─────────────────────────────
    POST CONTENT
 ───────────────────────────── */
@@ -386,6 +426,80 @@
 }
 
 .post-para:last-child {
+  margin-bottom: 0;
+}
+
+/* Inline links inside the article */
+.post-article a {
+  color: var(--c3);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color var(--ease);
+}
+.post-article a:hover {
+  color: var(--c4);
+}
+
+/* ── Article lists (ul / ol) ── */
+.post-list,
+.post-article ul,
+.post-article ol {
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.post-article li {
+  position: relative;
+  padding-left: 30px;
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--text-body);
+}
+
+/* bullet for unordered lists */
+.post-article ul li::before,
+.post-list li::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--c3);
+}
+
+/* numbered marker for ordered lists */
+.post-article ol {
+  counter-reset: post-ol;
+}
+.post-article ol li {
+  counter-increment: post-ol;
+}
+.post-article ol li::before {
+  content: counter(post-ol);
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--c1);
+  color: var(--c3);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-article li:last-child {
   margin-bottom: 0;
 }
 
