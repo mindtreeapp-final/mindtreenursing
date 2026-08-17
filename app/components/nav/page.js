@@ -53,20 +53,21 @@ export default function Nav() {
       {/* ── TOP BAR ── */}
       <div className="topbar">
         <div className="topbar-left">
-          <a className="topbar-item" href="tel:+919778286707">
-            <svg
-              className="topbar-icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-            >
+          <a className="topbar-item" href="https://wa.me/64212178770" target="_blank" rel="noopener noreferrer">
+            <svg className="topbar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+            </svg>
+            +64 21 217 8770
+          </a>
+          <div className="topbar-sep" />
+          <a className="topbar-item" href="https://wa.me/919778286707" target="_blank" rel="noopener noreferrer">
+            <svg className="topbar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
             </svg>
             +91 9778 286 707
           </a>
           <div className="topbar-sep" />
-          <a className="topbar-item" href="tel:+64221230023">
+          <a className="topbar-item" href="https://wa.me/64221230023" target="_blank" rel="noopener noreferrer">
             <svg
               className="topbar-icon"
               viewBox="0 0 24 24"
@@ -74,9 +75,17 @@ export default function Nav() {
               stroke="currentColor"
               strokeWidth="2"
             >
+              
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
             </svg>
             +64 22 123 0023
+          </a>
+          <div className="topbar-sep" />
+          <a className="topbar-item" href="https://wa.me/971568186980" target="_blank" rel="noopener noreferrer">
+            <svg className="topbar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+            </svg>
+            +971 56 818 6980
           </a>
           <div className="topbar-sep" />
           <a

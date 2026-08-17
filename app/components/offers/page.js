@@ -1,3 +1,5 @@
+
+
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -108,7 +110,7 @@ export default function OffersButton({ offers = defaultOffers }) {
         <div className="offers-panel__footer">Offers updated regularly</div>
       </div>
 
-      <button
+    <button
         className="offers-fab"
         onClick={() => setOpen((v) => !v)}
         aria-label="View offers"
@@ -119,16 +121,17 @@ export default function OffersButton({ offers = defaultOffers }) {
         <span className="offers-fab__icon-wrap">
           <img
             className="offers-fab__icon"
-            src="/favicon-16x16.png"
+            src="/maveli.png"
             alt=""
             width="20"
             height="20"
           />
+        
         </span>
         {offers.length > 0 && (
           <span className="offers-fab__dot">{offers.length}</span>
         )}
-        <span className="offers-fab__tooltip">View offers</span>
+        <span className="offers-fab__tooltip">Onam offers</span>
       </button>
     </>
   );

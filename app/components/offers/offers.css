@@ -8,12 +8,12 @@
   right: 28px;
   z-index: 9999;
 
-  width: 58px;
-  height: 58px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--c2, #7BA4D0), var(--c3, #2E5E99));
-  border: 2px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 0 8px 26px rgba(46, 94, 153, 0.45), 0 2px 6px rgba(13, 36, 64, 0.12);
+  background: radial-gradient(circle at 50% 30%, #FFF6DE 0%, #F7CE6B 55%, #E7A537 100%);
+  border: 2px solid #FFE8AE;
+  box-shadow: 0 8px 26px rgba(224, 150, 40, 0.5), 0 2px 7px rgba(120, 70, 10, 0.2);
 
   display: flex;
   align-items: center;
@@ -28,7 +28,7 @@
 
 .offers-fab:hover {
   transform: scale(1.1) rotate(-4deg);
-  box-shadow: 0 12px 34px rgba(46, 94, 153, 0.55), 0 2px 6px rgba(13, 36, 64, 0.14);
+  box-shadow: 0 12px 34px rgba(224, 150, 40, 0.6), 0 2px 6px rgba(120, 70, 10, 0.22);
 }
 
 .offers-fab:active {
@@ -45,7 +45,7 @@
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: var(--c3, #2E5E99);
+  background: #E7A537;
   opacity: 0;
   animation: offersRipple 2.8s ease-out infinite;
   pointer-events: none;
@@ -60,27 +60,27 @@
   100% { opacity: 0;    transform: scale(1.9); }
 }
 
-/* ── Icon ── */
+/* ── Full Maveli inside the gold circle ── */
 .offers-fab__icon-wrap {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 1;
-  flex-shrink: 0;
-  width: 28px;
-  height: 28px;
   border-radius: 50%;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   animation: offersFloat 3s ease-in-out infinite;
 }
 
 .offers-fab__icon {
-  width: 20px;
-  height: 20px;
+  height: 100%;
+  width: auto;
+  max-width: 92%;
   object-fit: contain;
+  object-position: center bottom;
   display: block;
+  filter: drop-shadow(0 2px 2px rgba(120, 70, 10, 0.28));
 }
 
 @keyframes offersFloat {
