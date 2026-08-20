@@ -1,0 +1,183 @@
+.onam-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(13, 36, 64, 0.72);
+  backdrop-filter: blur(4px);
+  animation: onamFade 0.3s ease both;
+}
+
+@keyframes onamFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Backdrop fades out while the image flies into the offers icon */
+.onam-popup--closing {
+  animation: onamFadeOut 0.5s ease 0.1s both;
+}
+
+@keyframes onamFadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+.onam-popup__box {
+  position: relative;
+  max-width: min(92vw, 460px);
+  max-height: 90vh;
+  animation: onamPop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes onamPop {
+  from { opacity: 0; transform: scale(0.85) translateY(20px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Suck the image into the offers (Maveli) icon: a tiny anticipation pull-back,
+   then a fast dive to the measured --onam-dx/--onam-dy offset, shrinking to a
+   point right on the icon. Stays opaque most of the way so the eye follows it
+   INTO the icon, then blinks out at the very end as the icon "catches" it. */
+.onam-popup__box--closing {
+  animation: onamSuckIn 0.66s cubic-bezier(0.55, 0, 0.85, 0.35) forwards;
+  transform-origin: center center;
+  pointer-events: none;
+}
+
+@keyframes onamSuckIn {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  16% {
+    opacity: 1;
+    transform:
+      translate(calc(var(--onam-dx, 40vw) * -0.05), calc(var(--onam-dy, 40vh) * -0.05))
+      scale(1.05)
+      rotate(3deg);
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform:
+      translate(var(--onam-dx, 40vw), var(--onam-dy, 40vh))
+      scale(0.02)
+      rotate(-16deg);
+  }
+}
+
+.onam-popup__box--closing .onam-popup__close {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+/* ─────────────────────────────
+   SPOTLIGHT THE OFFERS ICON
+   While the popup is open the offers (Maveli) button is lifted ABOVE the
+   backdrop and made to glow/pulse, so the visitor sees exactly where the
+   image is going. `.offers-fab` styles are global (not CSS modules).
+───────────────────────────── */
+body.onam-active .offers-fab {
+  z-index: 100001 !important;
+  animation: onamIconGlow 1.25s ease-in-out infinite !important;
+}
+
+@keyframes onamIconGlow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow:
+      0 0 0 3px rgba(255, 224, 150, 0.55),
+      0 0 22px 4px rgba(247, 206, 107, 0.55),
+      0 10px 30px rgba(224, 150, 40, 0.6);
+  }
+  50% {
+    transform: scale(1.14);
+    box-shadow:
+      0 0 0 12px rgba(255, 224, 150, 0),
+      0 0 40px 10px rgba(255, 210, 110, 0.85),
+      0 12px 36px rgba(224, 150, 40, 0.85);
+  }
+}
+
+/* The moment the flying image reaches the icon, the icon pops to "catch" it. */
+body.onam-catching .offers-fab {
+  z-index: 100001 !important;
+  animation: onamIconCatch 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+@keyframes onamIconCatch {
+  0%   { transform: scale(1); }
+  32%  {
+    transform: scale(1.55);
+    box-shadow:
+      0 0 0 16px rgba(255, 224, 150, 0.5),
+      0 0 55px 16px rgba(255, 210, 110, 0.95),
+      0 14px 40px rgba(224, 150, 40, 0.9);
+  }
+  60%  { transform: scale(0.92); }
+  100% { transform: scale(1); }
+}
+
+/* Respect reduced-motion: no flight, just a gentle fade out. */
+@media (prefers-reduced-motion: reduce) {
+  .onam-popup__box--closing {
+    animation: onamFadeOut 0.35s ease forwards;
+  }
+  body.onam-active .offers-fab,
+  body.onam-catching .offers-fab {
+    animation: none !important;
+    z-index: 100001 !important;
+    box-shadow: 0 0 0 3px rgba(255, 224, 150, 0.6), 0 10px 30px rgba(224, 150, 40, 0.7) !important;
+  }
+}
+
+.onam-popup__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+}
+
+.onam-popup__close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background: #0D2440;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.onam-popup__close:hover {
+  transform: scale(1.1) rotate(90deg);
+  background: #2E5E99;
+}
+
+@media (max-width: 520px) {
+  .onam-popup__close {
+    top: -10px;
+    right: -10px;
+    width: 32px;
+    height: 32px;
+  }
+}
