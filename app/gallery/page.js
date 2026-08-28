@@ -16,6 +16,7 @@ const IMAGES = [
   { id: "photo-9", src: "/mindtree-img/mindtree-img9.webp", alt: "Mindtree Nursing Solutions Images", caption: "Auckland", category: "AKL" },
   { id: "photo-10", src: "/mindtree-img/mindtree-img10.webp", alt: "Mindtree Nursing Solutions Images", caption: "Auckland", category: "AKL" },
   { id: "photo-11", src: "/mindtree-img/mindtree-img8.webp", alt: "Mindtree Nursing Solutions Images", caption: "Auckland", category: "AKL" },
+  { id: "photo-12", src: "/mindtree-img/CHC1.JPEG", alt: "Mindtree Nursing Solutions CHC", caption: "CHC", category: "AKL" },
 ];
 
 const VIDEOS = [

@@ -27,7 +27,7 @@ const locations = [
     images: [
         { src: "/accommodation-gallery/chc.jpeg",         alt: "Christchurch accommodation" },
       { src: "/accommodation-gallery/akl-2.jpeg",         alt: "Christchurch accommodation" },
-      { src: "/accommodation-gallery/akl-3.jpeg",         alt: "Christchurch room" },
+      { src: "/mindtree-img/CHC1.jpeg",         alt: "Christchurch room" },
     ],
   },
   
