@@ -14,37 +14,12 @@ export const metadata = {
   ],
 };
 
-const QUICK_FACTS = [
-  { num: "16+", label: "Years Experience" },
-  { num: "3", label: "Countries — India · UAE · NZ" },
-  { num: "CEO", label: "Founder, Mindtree Nursing Solution" },
-];
-
-const EXPERTISE = [
-  {
-    icon: "◈",
-    title: "Clinical Practice",
-    body:
-      "Extensive frontline experience in critical care, surgical, orthopaedic, aged care and cardiac / catheterisation laboratory services.",
-  },
-  {
-    icon: "◉",
-    title: "Leadership & Governance",
-    body:
-      "Senior nursing and Charge Nurse responsibilities in the UAE, with deep exposure to international quality standards and JCI-aligned clinical governance.",
-  },
-  {
-    icon: "◆",
-    title: "Clinical Education",
-    body:
-      "A recognised OSCE instructor, guiding internationally qualified nurses to meet New Zealand’s clinical, communication and cultural safety standards.",
-  },
-  {
-    icon: "✚",
-    title: "Professional Regulation",
-    body:
-      "Former Board Member of the Nursing Council of New Zealand — professional regulation, governance, cultural safety, public protection and accountability.",
-  },
+const CREDENTIALS = [
+  { label: "Founder & CEO", sub: "Mindtree Nursing Solutions" },
+  { label: "Registered Nurse", sub: "New Zealand" },
+  { label: "OSCE Instructor", sub: "For internationally qualified nurses" },
+  { label: "Former Board Member", sub: "Nursing Council of New Zealand" },
+  { label: "BSc Nursing", sub: "NTR University, India" },
 ];
 
 const HONOURS = [
@@ -112,14 +87,21 @@ export default function JijoJohnPage() {
             </h2>
             <div className="jj-accent-bar" />
 
-            <div className="jj-facts">
-              {QUICK_FACTS.map((f) => (
-                <div className="jj-fact" key={f.label}>
-                  <span className="jj-fact-num">{f.num}</span>
-                  <span className="jj-fact-lbl">{f.label}</span>
-                </div>
+            <ul className="jj-creds">
+              {CREDENTIALS.map((c) => (
+                <li className="jj-cred" key={c.label}>
+                  <span className="jj-cred-ico" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M20 6L9 17l-5-5" />
+                    </svg>
+                  </span>
+                  <span className="jj-cred-text">
+                    <span className="jj-cred-main">{c.label}</span>
+                    <span className="jj-cred-sub">{c.sub}</span>
+                  </span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
           <div className="jj-bio-body" data-anim="from-right" data-anim-delay="120">
@@ -158,38 +140,7 @@ export default function JijoJohnPage() {
               regulation, governance, cultural safety, public protection and
               accountability.
             </p>
-
-            <div className="jj-edu">
-              <span className="jj-edu-icon" aria-hidden="true">🎓</span>
-              <div>
-                <span className="jj-edu-degree">Bachelor of Science in Nursing</span>
-                <span className="jj-edu-school">NTR University, India</span>
-              </div>
-            </div>
           </div>
-        </div>
-      </section>
-
-      {/* ── EXPERTISE ── */}
-      <section className="jj-expertise">
-        <div className="jj-exp-head" data-anim="up">
-          <span className="jj-label light">Areas of Expertise</span>
-          <h2 className="jj-exp-heading">Expertise &amp; Experience</h2>
-        </div>
-
-        <div className="jj-exp-grid">
-          {EXPERTISE.map((e, i) => (
-            <div
-              className="jj-exp-card"
-              key={e.title}
-              data-anim="scale-up"
-              data-anim-delay={i * 90}
-            >
-              <span className="jj-exp-icon">{e.icon}</span>
-              <h3>{e.title}</h3>
-              <p>{e.body}</p>
-            </div>
-          ))}
         </div>
       </section>
 

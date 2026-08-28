@@ -353,8 +353,77 @@
 
 /* Leader card — fixed width so both sit side by side centred */
 .card-leader {
-  width: 260px;
+  width: 320px;
   flex-shrink: 0;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Always-visible "View Full Profile" CTA button on the CEO card */
+.member-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 10px 22px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--white);
+  background: var(--c3);
+  border-radius: 100px;
+  box-shadow: 0 4px 14px rgba(46, 94, 153, 0.32);
+  transition: background var(--ease), transform var(--ease), box-shadow var(--ease);
+}
+
+.member-more-arrow {
+  display: inline-block;
+  transition: transform var(--ease);
+}
+
+.card-leader:hover .member-more {
+  background: var(--c4);
+  box-shadow: 0 8px 22px rgba(13, 36, 64, 0.32);
+}
+
+.card-leader:hover .member-more-arrow {
+  transform: translateX(4px);
+}
+
+/* Corner "Profile" tag on the CEO photo */
+.leader-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px 6px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c4);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  border-radius: 100px;
+  box-shadow: 0 4px 12px rgba(13, 36, 64, 0.22);
+}
+
+.leader-tag-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--c3);
+  box-shadow: 0 0 0 3px rgba(46, 94, 153, 0.22);
+  animation: leaderPulse 2s ease-in-out infinite;
+}
+
+@keyframes leaderPulse {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(46, 94, 153, 0.28); }
+  50%      { box-shadow: 0 0 0 5px rgba(46, 94, 153, 0); }
 }
 
 /* Square image area */
@@ -554,7 +623,7 @@
   }
 
   .card-leader {
-    width: 210px;
+    width: 260px;
   }
 
   .team-grid {
@@ -577,7 +646,7 @@
   }
 
   .card-leader {
-    width: 160px;
+    width: 210px;
   }
 
   .team-grid {

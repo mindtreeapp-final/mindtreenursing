@@ -245,40 +245,79 @@
   background: linear-gradient(90deg, var(--c3), var(--c2));
 }
 
-/* Quick facts */
-.jj-facts {
-  margin-top: 34px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.jj-fact {
-  display: flex;
-  align-items: baseline;
-  gap: 14px;
-  background: var(--c1);
+/* Credentials panel */
+.jj-creds {
+  list-style: none;
+  margin: 32px 0 0;
+  padding: 0;
+  background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 16px 20px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
 }
 
-.jj-fact-num {
-  font-family: 'Manrope', sans-serif;
-  font-size: 26px;
-  font-weight: 800;
+.jj-cred {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 18px;
+  border-bottom: 1px solid var(--border);
+  transition: background var(--ease);
+}
+
+.jj-cred:last-child { border-bottom: none; }
+
+.jj-cred:hover { background: var(--c1); }
+
+.jj-cred-ico {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--c1);
   color: var(--c3);
-  line-height: 1;
-  min-width: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--ease), color var(--ease);
 }
 
-.jj-fact-lbl {
-  font-size: 12px;
+.jj-cred-ico svg {
+  width: 15px;
+  height: 15px;
+}
+
+.jj-cred:hover .jj-cred-ico {
+  background: var(--c3);
+  color: var(--white);
+}
+
+.jj-cred-text { min-width: 0; }
+
+.jj-cred-main {
+  display: block;
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  color: var(--c4);
+  line-height: 1.25;
+}
+
+.jj-cred-sub {
+  display: block;
+  font-size: 12.5px;
   color: var(--text-muted);
   line-height: 1.4;
+  margin-top: 1px;
+}
+
+/* Keep the profile panel in view while reading the biography */
+@media (min-width: 961px) {
+  .jj-bio-head {
+    position: sticky;
+    top: 96px;
+  }
 }
 
 /* Bio body */
@@ -393,9 +432,7 @@
 ───────────────────────────── */
 .jj-honours {
   padding: 88px 48px;
-  background-color: var(--white);
-  background-image: radial-gradient(rgba(46, 94, 153, 0.055) 1.5px, transparent 1.5px);
-  background-size: 28px 28px;
+  background: var(--c1);
 }
 
 .jj-hon-head {

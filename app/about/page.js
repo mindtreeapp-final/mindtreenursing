@@ -132,8 +132,12 @@ export default function AboutPage(){
         {/* CEO & Director — top row of 2 */}
         <div className="team-top-row" data-anim="up" data-anim-delay="110">
  
-          <div className="member-card card-leader">
+          <Link href="/about/jijo-john" className="member-card card-leader">
             <div className="member-img-wrap">
+              <span className="leader-tag">
+                <span className="leader-tag-dot" />
+                Profile
+              </span>
               <img src="/team/jijo-john.jpeg" alt="CEO" className="member-img" />
               <div className="member-placeholder">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
@@ -144,9 +148,13 @@ export default function AboutPage(){
             </div>
             <div className="member-info">
               <h3 className="member-name">Jijo John</h3>
-              <span className="member-role">CEO</span>
+              <span className="member-role">Founder &amp; CEO</span>
+              <span className="member-more">
+                View Full Profile
+                <span className="member-more-arrow" aria-hidden="true">→</span>
+              </span>
             </div>
-          </div>
+          </Link>
 
         </div>
  
