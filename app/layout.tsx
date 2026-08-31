@@ -5,7 +5,7 @@ import Nav from "./components/nav/page.js";
 import WhatsAppButton from "./components/whatsapp/page.js"
 import Footer from "./components/footer/page.js"
 import OffersButton from "./components/offers/page.js";
-import OnamPopup from "./components/onam/OnamPopup.js";
+
 import ScrollAnimations from "./components/ScrollAnimations";
 import "./globals.css";
 
@@ -44,7 +44,7 @@ export default function RootLayout({
         </noscript>
 
       <ScrollAnimations />
-      <OnamPopup />
+      
       <Nav />
   
         {children}       

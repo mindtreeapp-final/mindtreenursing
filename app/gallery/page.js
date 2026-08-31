@@ -5,22 +5,19 @@ import "./gallery.css";
 
 // ─── Sample Data ─────────────────────────────────────────────────
 const IMAGES = [
-  { id: "photo-1", src: "/mindtree-img/mindtree-img1.webp", alt: "Mindtree Nursing Solutions Images", caption: "Mindtree Nursing Solutions", category: "KL" },
   { id: "photo-2", src: "/mindtree-img/mindtree-img2.webp", alt: "Mindtree Nursing Solutions Images", caption: "Mindtree Nursing Solutions", category: "KL" },
   { id: "photo-3", src: "/mindtree-img/mindtree-img6.webp", alt: "Mindtree Nursing Solutions Images", caption: "Auckland", category: "AKL" },
   { id: "photo-4", src: "/accommodation-gallery/chc.jpeg", alt: "Mindtree Nursing Solutions Images", caption: "christchurch", category: "CHC" },
   { id: "photo-5", src: "/mindtree-img/mindtree-img4.webp", alt: "Mindtree Nursing Solutions Images", caption: "Kerala", category: "KL" },
   { id: "photo-6", src: "/mindtree-img/mindtree-img5.webp", alt: "Mindtree Nursing Solutions Images", caption: "Building", category: "KL" },
-  { id: "photo-7", src: "/mindtree-img/mindtree-img3.webp", alt: "Mindtree Nursing Solutions Images", caption: "Building", category: "KL" },
   { id: "photo-8", src: "/mindtree-img/mindtree-img7.webp", alt: "Mindtree Nursing Solutions Images", caption: "Building", category: "AKL" },
   { id: "photo-9", src: "/mindtree-img/mindtree-img9.webp", alt: "Mindtree Nursing Solutions Images", caption: "Auckland", category: "AKL" },
   { id: "photo-10", src: "/mindtree-img/mindtree-img10.webp", alt: "Mindtree Nursing Solutions Images", caption: "Auckland", category: "AKL" },
   { id: "photo-11", src: "/mindtree-img/mindtree-img8.webp", alt: "Mindtree Nursing Solutions Images", caption: "Auckland", category: "AKL" },
-  { id: "photo-12", src: "/mindtree-img/CHC1.JPEG", alt: "Mindtree Nursing Solutions CHC", caption: "CHC", category: "AKL" },
+  { id: "photo-12", src: "/mindtree-img/CHC1.jpeg", alt: "Mindtree Nursing Solutions CHC", caption: "CHC", category: "AKL" },
 ];
 
 const VIDEOS = [
-  { id: "video-1", youtubeId: "qxlnO0sc18M", title: "Introduction to Mindtree", description: "Learn what Mindtree is all about and how we serve communities."},
   { id: "video-2", youtubeId: "sedbxmvvRio", title: "Nursing Solutions Explained", description: "A Complete Guide to Our Christchurch Building." },
   { id: "video-3", youtubeId:"4T4KSbaXZTo", title: "Urgent OSCE EXAM Updates", description: "Exam Updates for our nurses." },
   { id: "video-4", youtubeId: "26ixXF60H94", title: "Success Stories", description: "Get to Know the Man Behind Mindtree Nursing solutions Achievements" },

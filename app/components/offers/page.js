@@ -8,10 +8,10 @@ import "./offers.css";
 const defaultOffers = [
   {
     id: 1,
-    badge: "15%\nOFF",
+    badge: "5%\nOFF",
     badgeClass: "green",
-    title: " Onam Special Offer",
-    desc: "15% Off on OSCE and IQN Courses",
+    title: "Special Offer",
+    desc: "5% Off on OSCE and IQN Courses",
     link: "https://forms.zohopublic.in/mindtreenursingsolutions/form/ClientDetails1/formperma/76KIBTp9LCYH_lA6B0jGSwAH8FJ4nmjU8ovh7b6l-tQ",
   },
   /*{
@@ -121,7 +121,7 @@ export default function OffersButton({ offers = defaultOffers }) {
         <span className="offers-fab__icon-wrap">
           <img
             className="offers-fab__icon"
-            src="/maveli.png"
+            src="/logo-1.png"
             alt=""
             width="20"
             height="20"
