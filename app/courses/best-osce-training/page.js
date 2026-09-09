@@ -2,7 +2,7 @@ import Link from "next/link";
 import "./osce-kerala.css";
 
 export const metadata = {
-  title: "OSCE Training in Kerala | Mindtree Nursing Solutions",
+  title: "Best OSCE Training | Mindtree Nursing Solutions",
   description:
     "Expert-led OSCE training for New Zealand nursing registration. Train in Christchurch — the city where the NZ OSCE is held. 1-week & 2-week residential programs, weekly live classes, and therapeutic communication support.",
   keywords: [

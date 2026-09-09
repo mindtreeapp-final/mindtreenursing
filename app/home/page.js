@@ -7,9 +7,9 @@ import "./home.css";
 const GALLERY_ITEMS = [
   { id: "g1", type: "image", src: "/accommodation-gallery/chc.jpeg", alt: "chc", caption: "Christchurch", category: "Institution" },
   { id: "g2", type: "video", youtubeId: "qxlnO0sc18M", alt: "Introduction to Mindtree", caption: "Introduction to Mindtree", category: "Videos" },
-  { id: "g3", type: "image", src: "/mindtree-img/mindtree-img1.webp", alt: "Mindtree Nursing Solutions", caption: "Mindtree Nursing Solutions", category: "Institution" },
+  { id: "g3", type: "image", src: "/mindtree-img/mindtree-img2.webp", alt: "Mindtree Nursing Solutions", caption: "Mindtree Nursing Solutions", category: "Institution" },
   { id: "g4", type: "video", youtubeId: "4T4KSbaXZTo", alt: "Mindttree Nursing Solutions", caption: "Mindttree Nursing Solutions", category: "Videos" },
-  { id: "g5", type: "image", src: "/mindtree-img/mindtree-img3.webp", alt: "Our Dedicated Team", caption: "Mindtree Nursing Solutions", category: "Kerala" },
+  { id: "g5", type: "image", src: "/mindtree-img/mindtree-img5.webp", alt: "Our Dedicated Team", caption: "Mindtree Nursing Solutions", category: "Kerala" },
   { id: "g6", type: "video", youtubeId: "26ixXF60H94", alt: "Patient Success Stories", caption: "Patient Success Stories", category: "Videos" },
 ];
 
@@ -18,7 +18,7 @@ const TESTIMONIALS = [
   { id: "t2", name: "Sethu Ajay", role: "Post-Surgery Patient · Thrissur", initials: "S", rating: 5, quote: "I would like to express my sincere gratitude to all MindTree team for making my dream real with your excellent team work. Thank you jijo brother , Rimy Mam,Rency mam for your support throughout my journey.. I strongly recommend MindTree Team to those who are planning to migrate New Zealand.." },
   { id: "t3", name: "Sandra Roy", role: "Referring Physician · Thiruvananthapuram", initials: "S", rating: 5, quote: "By the grace of God🙏 I have passed OSCE examination with the help of mindtree family . Heartfelt thanks to jijo brother,anju mam, Melvin sir, jeljo brother for their incredible support and guidance through out the journey 🥰...I strongly suggest mindtree for all phases of new Zealand processing.... thank you so much mindtree nursing solutions 🤗...." },
   { id: "t4", name: "Babitha Bibin", role: "Caregiver & Son · Ernakulam", initials: "B", rating: 5, quote: "Finally, I received my NZ APC today. I would like to express my sincere gratitude to the entire family of Mindtree for the support and guidance throughout the process. Special thanks to Jijo bro, Rincy Mam and Rimy Mam. I recommend Mindtree agency for everyone who would receive a sincere service." },
-  { id: "t5", name: "Alphonsa Johnson", role: "New Mother · Kozhikode", initials: "A", rating: 5, quote: "Hi, by the grace of God I have received my E visa today. I would like to express my sincere gratitude to Jijo brother and entire Mindtree family. All of you were approachable to clear all my doubts without any hesitation. A great thanks to Gokula mam and Pathvista team for making my visa process smooth and easier.I would definitely recommend mindtree nursing solutions to those who wish to migrate to Newzealand." },
+  { id: "t5", name: "Josna Joseph", role: "New Mother · Kozhikode", initials: "J", rating: 5, quote: "First and foremost , I give all glory and thanks to our jesus christ. I passed my osce in my first attempt. I sincerely express my heartfelt gratitude to all trainers for their support and guidance especially Jijo brother,Renz brother, Dency chechi, binu bro,anju ma’am,leema ma’am,melvin bro and Smrithi chechi for constant motivation." },
   { id: "t6", name: "Rithu Tresaben", role: "Chronic Care Patient · Kannur", initials: "R", rating: 5, quote: "By god's grace I have passed osce examination.Thank you so much to Mindtree family for your valuable support throughout the journey.special thanks to Anju mam,Melvin sir,Jijo Chettan ,jeljo Chettan,neenu,Jishi for your great support in all ups and downs.once again thank you so much .may god bless the whole team😊😊" },
 ];
 
