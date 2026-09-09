@@ -20,16 +20,27 @@ const PRIZES = [
   {
     amount: "1000",
     unit: "NZD",
-    label: "OFF",
+    label: "Off on Service Charge",
     winners: "5 Lucky Winners",
+    variant: "gold",
     featured: true,
+    termsTitle: "How to redeem",
+    items: ["1000 NZD off on our service charge"],
   },
   {
     amount: "100",
     unit: "NZD",
     label: "Gift Voucher",
     winners: "10 Lucky Winners",
+    variant: "blue",
     featured: false,
+    termsTitle: "Redeemable on",
+    items: [
+      "IQN Training",
+      "OSCE Training",
+      "Flight Ticket Booking",
+      "CGFNS Documentation",
+    ],
   },
 ];
 
@@ -71,34 +82,89 @@ export default function MindtreeSpecialPage() {
         <div className="ms-prize-grid">
           {PRIZES.map((p, i) => (
             <div
-              className={`ms-prize-card${p.featured ? " ms-prize-card--featured" : ""}`}
+              className={`ms-gift ms-gift--${p.variant}`}
               key={p.label}
               data-anim="scale-up"
               data-anim-delay={i * 120}
             >
-              {p.featured && <span className="ms-prize-flag">Grand Prize</span>}
-              <div className="ms-prize-amount">
-                <span className="ms-prize-num">{p.amount}</span>
-                <span className="ms-prize-unit">{p.unit}</span>
+              <span className="ms-gift-shine" aria-hidden="true" />
+              {p.featured && <span className="ms-gift-flag">Grand Prize</span>}
+
+              <div className="ms-gift-top">
+                <span className="ms-gift-brand">
+                  Mindtree<span className="ms-gift-brand-sub">Nursing Solutions</span>
+                </span>
+                <span className="ms-gift-type">Gift Card</span>
               </div>
-              <span className="ms-prize-desc">{p.label}</span>
-              <div className="ms-prize-winners">
-                <span className="ms-prize-star" aria-hidden="true">★</span>
-                {p.winners}
+
+              <div className="ms-gift-mid">
+                <span className="ms-gift-chip" aria-hidden="true" />
+                <div className="ms-gift-value">
+                  <div className="ms-gift-amount">
+                    <span className="ms-gift-num">{p.amount}</span>
+                    <span className="ms-gift-unit">{p.unit}</span>
+                  </div>
+                  <span className="ms-gift-sub">{p.label}</span>
+                </div>
+              </div>
+
+              <div className="ms-gift-bottom">
+                <span className="ms-gift-winners">
+                  <span className="ms-gift-star" aria-hidden="true">★</span>
+                  {p.winners}
+                </span>
+                <span className="ms-gift-mark" aria-hidden="true">✦</span>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ── CREDIBILITY ── */}
-      <section className="ms-cred" data-anim="up">
-        <div className="ms-cred-inner">
-          <span className="ms-cred-num">5000+</span>
-          <p className="ms-cred-text">
-            Nurses helped to achieve their dream of becoming
-            <strong> New Zealand &amp; Australian Registered Nurses.</strong>
-          </p>
+      {/* ── REDEEM DETAILS ── */}
+      <section className="ms-redeem">
+        <div className="ms-section-head" data-anim="up">
+          <span className="ms-label">The Details</span>
+          <h2 className="ms-heading">What your gift card unlocks</h2>
+          <div className="ms-accent-bar" />
+        </div>
+
+        <div className="ms-redeem-grid">
+          {PRIZES.map((p, i) => (
+            <div
+              className={`ms-redeem-card ms-redeem-card--${p.variant}`}
+              key={p.label}
+              data-anim="up"
+              data-anim-delay={i * 110}
+            >
+              <div className="ms-redeem-head">
+                <span className="ms-redeem-amount">
+                  {p.amount} <span className="ms-redeem-unit">{p.unit}</span>
+                </span>
+                <span className="ms-redeem-title">{p.termsTitle}</span>
+              </div>
+              <ul className="ms-redeem-list">
+                {p.items.map((it) => (
+                  <li className="ms-redeem-item" key={it}>
+                    <span className="ms-redeem-check" aria-hidden="true">✓</span>
+                    {it}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="ms-redeem-cta" data-anim="up">
+          <a
+            className="ms-cta-btn ms-cta-btn--lg"
+            href={REGISTRATION_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Register Now
+            <span className="ms-cta-arrow" aria-hidden="true">→</span>
+          </a>
+          <span className="ms-redeem-note">Free to enter · Exclusively for EMNF members</span>
         </div>
       </section>
 
