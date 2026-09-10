@@ -131,7 +131,7 @@ export default function OffersButton({ offers = defaultOffers }) {
         {offers.length > 0 && (
           <span className="offers-fab__dot">{offers.length}</span>
         )}
-        <span className="offers-fab__tooltip">Onam offers</span>
+        <span className="offers-fab__tooltip"> offers</span>
       </button>
     </>
   );
