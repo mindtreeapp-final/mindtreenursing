@@ -280,8 +280,10 @@ export default function ContactPage() {
               </p>
               <div className="ct-loc-card__contacts">
                 <a href="tel:+64221230023" className="ct-loc-card__phone">
-                  <PhoneIcon /> +64 22 123 0023
+                  <PhoneIcon /> +64 22 123 0023 
+                  <PhoneIcon /> +64 22 367 8770
                 </a>
+               
                 <a href="mailto:info@mindtreenursing.com" className="ct-loc-card__email">
                   info@mindtreenursing.com
                 </a>
