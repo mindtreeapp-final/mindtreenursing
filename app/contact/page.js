@@ -276,7 +276,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <p className="ct-loc-card__address">
-                110 Sir John McKenzie Avenue,<br />Christchurch
+                63 Wrights Road, Middleton,<br />Christchurch 8024
               </p>
               <div className="ct-loc-card__contacts">
                 <a href="tel:+64221230023" className="ct-loc-card__phone">
