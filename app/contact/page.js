@@ -287,8 +287,8 @@ export default function ContactPage() {
                 <a href="mailto:info@mindtreenursing.com" className="ct-loc-card__email">
                   info@mindtreenursing.com
                 </a>
-              </div>
-              <a href="https://maps.google.com/?q=110+Sir+John+McKenzie+Avenue+Christchurch" target="_blank" rel="noopener noreferrer" className="ct-loc-card__map-btn">
+            </div>
+              <a href="https://maps.google.com/?q=63+Wrights+Road,+Middleton,+Christchurch+8024,+New+Zealand" target="_blank" rel="noopener noreferrer" className="ct-loc-card__map-btn">
                 <MapIcon /> View on Map
               </a>
             </div>
