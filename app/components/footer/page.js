@@ -111,6 +111,7 @@ export default function Footer(){
             <FaPhone className="footer-contact-icon" />
             <div>
               <a href="tel:+64212178770">+64 21 217 8770</a>
+              <a href="tel:+64212178770">+64 22 367 8770</a>
               <a href="tel:+919778286707">+91 9778 286 707</a>
             </div>
           </div>
