@@ -1,4 +1,5 @@
 import Link from "next/link";
+import OscePopup from "./OscePopup.js";
 import "./osce-kerala.css";
 
 export const metadata = {
@@ -21,6 +22,7 @@ export const metadata = {
 export default function OSCEPage() {
   return (
     <main className="osce-page">
+      <OscePopup />
 
       {/* ── HERO ── */}
       <section className="osce-hero">
