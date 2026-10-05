@@ -6,7 +6,7 @@ import "./osce-popup.css";
 // "Have Questions?" promo banner shown as a popup on first load of the OSCE
 // course page. Shows once per browser session. Clicking the banner goes to the
 // contact page (change POPUP_LINK below to point elsewhere, e.g. a form URL).
-const POPUP_LINK = "https://forms.zohopublic.in/mindtreenursingsolutions/form/ClientDetails1/formperma/76KIBTp9LCYH_lA6B0jGSwAH8FJ4nmjU8ovh7b6l-tQ";
+const POPUP_LINK = "https://zfrmz.in/YNJpcCxz7Qlk3nbaAK3b";
 
 export default function OscePopup() {
   const [open, setOpen] = useState(false);
