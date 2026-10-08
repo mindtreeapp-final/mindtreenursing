@@ -8,7 +8,6 @@ export const metadata = {
   keywords: [
     "Jijo John",
     "Mindtree Nursing Solutions CEO",
-    "New Zealand Registered Nurse",
     "OSCE instructor",
     "Nursing Council of New Zealand",
   ],
@@ -16,7 +15,6 @@ export const metadata = {
 
 const CREDENTIALS = [
   { label: "Founder & CEO", sub: "Mindtree Nursing Solutions" },
-  { label: "Registered Nurse", sub: "New Zealand" },
   { label: "OSCE Instructor", sub: "For internationally qualified nurses" },
   { label: "Former Board Member", sub: "Nursing Council of New Zealand" },
   { label: "BSc Nursing", sub: "NTR University, India" },
@@ -49,7 +47,7 @@ export default function JijoJohnPage() {
           <div className="jj-hero-text">
             <span className="jj-badge">Founder &amp; CEO</span>
             <h1 className="jj-title">Jijo John</h1>
-            <p className="jj-subtitle">Registered Nurse — New Zealand</p>
+       
             <div className="jj-divider">
               <span className="jj-divider-line" />
               <span className="jj-divider-star">✦</span>
@@ -105,15 +103,10 @@ export default function JijoJohnPage() {
           </div>
 
           <div className="jj-bio-body" data-anim="from-right" data-anim-delay="120">
-            <p className="jj-para">
-              Jijo John is a New Zealand Registered Nurse, healthcare
-              entrepreneur and clinical educator known for his leadership in
-              nursing workforce development, healthcare quality and professional
-              regulation. With more than 16 years of international clinical
-              experience across India, the UAE and New Zealand, he brings a rare
-              combination of frontline expertise, governance capability and a
-              strong commitment to public safety.
+           <p className="jj-para">
+              Jijo John is a healthcare entrepreneur and clinical educator known for his leadership in nursing workforce development, healthcare quality and professional regulation. With more than 16 years of international clinical experience across India, the UAE and New Zealand, he brings a rare combination of frontline expertise, governance capability and a strong commitment to public safety.
             </p>
+            
             <p className="jj-para">
               He holds a Bachelor of Science in Nursing from NTR University,
               India, and has practised extensively in critical care, surgical,
