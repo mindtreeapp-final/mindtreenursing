@@ -16,7 +16,6 @@ export const metadata = {
 const CREDENTIALS = [
   { label: "Founder & CEO", sub: "Mindtree Nursing Solutions" },
   { label: "OSCE Instructor", sub: "For internationally qualified nurses" },
-  { label: "Former Board Member", sub: "Nursing Council of New Zealand" },
   { label: "BSc Nursing", sub: "NTR University, India" },
 ];
 
@@ -127,12 +126,7 @@ export default function JijoJohnPage() {
               organisational growth — contributing to a safe and competent
               nursing workforce.
             </p>
-            <p className="jj-para">
-              Jijo has also served as a Board Member of the Nursing Council of
-              New Zealand, gaining valuable experience in professional
-              regulation, governance, cultural safety, public protection and
-              accountability.
-            </p>
+      
           </div>
         </div>
       </section>
