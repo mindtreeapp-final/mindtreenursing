@@ -1,7 +1,7 @@
 
 import Link from "next/link";
 import "./footer.css"
-import { FaPhone,FaInstagram, FaFacebook, FaYoutube, FaLocationDot } from "react-icons/fa6";
+import { FaPhone,FaInstagram, FaFacebook, FaYoutube, FaLocationDot, FaShieldHalved } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 
 // Google "Preferred sources" link for mindtreenursing.com.
@@ -141,12 +141,16 @@ export default function Footer(){
 
       {/* ── Bottom bar ── */}
       <div className="footer-bottom">
-     
-        <p>Mindtree Nursing Solution is an independent private consultancy and is not affiliated with the Nursing Council of New Zealand.</p>
-        <div>
-             <p>© 2026 Mindtree Nursing Solutions. All rights reserved.</p>
-        </div>
-      
+        <p className="footer-disclaimer">
+          <FaShieldHalved className="footer-disclaimer-icon" />
+          <span>
+            Mindtree Nursing Solutions is an independent private consultancy. We are{" "}
+            <strong>not affiliated with, endorsed by, or acting on behalf of the Nursing Council of New&nbsp;Zealand</strong>.
+          </span>
+        </p>
+        <p className="footer-copyright">
+          © 2026 Mindtree Nursing Solutions. All rights reserved.
+        </p>
       </div>
 
     </footer>

@@ -296,17 +296,48 @@
 .footer-bottom {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 18px 40px;
+  padding: 20px 40px;
   border-top: 1px solid rgba(255,255,255,0.08);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 28px;
 }
 
-.footer-bottom p {
-  font-size: 0.8rem;
-  color: #8fa3c8;
+/* Disclaimer chip */
+.footer-disclaimer {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
   margin: 0;
+  padding: 9px 18px;
+  max-width: 760px;
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 100px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: #8fa3c8;
+}
+
+.footer-disclaimer-icon {
+  flex-shrink: 0;
+  font-size: 1rem;
+  color: #5ec4ff;
+  opacity: 0.85;
+}
+
+.footer-disclaimer strong {
+  color: #cad8ee;
+  font-weight: 600;
+}
+
+.footer-copyright {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #6f84a8;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
 }
 
 .footer-bottom-links {
@@ -371,9 +402,16 @@
   }
 
   .footer-bottom {
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: column-reverse;
+    gap: 14px;
     text-align: center;
-    padding: 16px 20px;
+    padding: 20px 20px;
+  }
+
+  .footer-disclaimer {
+    align-items: flex-start;
+    text-align: left;
+    border-radius: 14px;
+    max-width: 100%;
   }
 }
