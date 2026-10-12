@@ -45,6 +45,7 @@ export default function Footer(){
             <a href="https://youtube.com/@mindtreenursingsolutions5958?si=kopEIDqFHiT3jcW4" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="footer-social-btn">
               <FaYoutube />
             </a>
+            
           </div>
 
           {/* ── Add as preferred source on Google ── */}
@@ -132,6 +133,7 @@ export default function Footer(){
             <FaLocationDot className="footer-contact-icon" />
             <p>30/167 Whitney Street,<br />Blockhouse Bay, Auckland, 0600</p>
           </div>
+          
         </div>
         
 
@@ -139,12 +141,12 @@ export default function Footer(){
 
       {/* ── Bottom bar ── */}
       <div className="footer-bottom">
-        <p>© 2026 Mindtree Nursing Solutions. All rights reserved.</p>
-        <div className="footer-bottom-links">
-          <Link href="#">Privacy Policy</Link>
-          <span>·</span>
-          <Link href="#">Terms of Service</Link>
+     
+        <p>Mindtree Nursing Solution is an independent private consultancy and is not affiliated with the Nursing Council of New Zealand.</p>
+        <div>
+             <p>© 2026 Mindtree Nursing Solutions. All rights reserved.</p>
         </div>
+      
       </div>
 
     </footer>
