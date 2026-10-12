@@ -138,12 +138,12 @@ export default function Footer(){
       </div>
 
       {/* ── Bottom bar ── */}
-      <div className="footer-bottom">
-        <p>© 2026 Mindtree Nursing Solutions. All rights reserved.</p>
+      <div className="footer-bottom">    
+        <p>Mindtree Nursing Solution is an independent private consultancy and is not affiliated with the Nursing Council of New Zealand.</p>
+
+     
         <div className="footer-bottom-links">
-          <Link href="#">Privacy Policy</Link>
-          <span>·</span>
-          <Link href="#">Terms of Service</Link>
+         <p>© 2026 Mindtree Nursing Solutions. All rights reserved.</p>
         </div>
       </div>
 
