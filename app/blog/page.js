@@ -40,7 +40,95 @@ export default function BlogPage() {
         <div className="blog-inner">
  
           <div className="blog-grid">
- 
+
+            {/* Card — OET guide (new) */}
+            <Link href="/blog/conquering-the-oet-landscape-a-nurse-s-guide-to-success" className="blog-card" data-anim="scale-up">
+              <div className="blog-card-img-wrap">
+                <img src="/blogimg/conquering-the-oet.jpeg" alt="Conquering the OET Landscape: A Nurse's Guide to Success" className="blog-card-img" />
+                <div className="blog-card-img-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="40" height="40">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+                  </svg>
+                </div>
+                <span className="blog-card-tag">OET Guide</span>
+              </div>
+              <div className="blog-card-body">
+                <h2 className="blog-card-title">
+                  Conquering the OET Landscape: A Nurse&apos;s Guide to Success
+                </h2>
+                <p className="blog-card-excerpt">
+                  Your one-stop guide to OET prep — how to craft a study schedule for your level, the best resources to use, and practical strategies to beat time management, medical vocabulary, and test-anxiety challenges.
+                </p>
+                <span className="blog-card-read">Read more →</span>
+              </div>
+            </Link>
+
+            {/* Card — Understanding CGFNS (new) */}
+            <Link href="/blog/understanding-cgfns-an-essential-guide-for-international-nurses" className="blog-card" data-anim="scale-up">
+              <div className="blog-card-img-wrap">
+                <img src="/blogimg/understanding-cgfns.jpeg" alt="Understanding CGFNS: An Essential Guide for International Nurses" className="blog-card-img" />
+                <div className="blog-card-img-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="40" height="40">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+                  </svg>
+                </div>
+                <span className="blog-card-tag">CGFNS Guide</span>
+              </div>
+              <div className="blog-card-body">
+                <h2 className="blog-card-title">
+                  Understanding CGFNS: An Essential Guide for International Nurses
+                </h2>
+                <p className="blog-card-excerpt">
+                  For nurses aspiring to practice abroad, CGFNS (Commission on Graduates of Foreign Nursing Schools) certification is a vital step. Here&apos;s what CGFNS is, its role in international nursing, and why it matters for licensure, immigration, and professional mobility.
+                </p>
+                <span className="blog-card-read">Read more →</span>
+              </div>
+            </Link>
+
+            {/* Card — Understanding OSCE (new) */}
+            <Link href="/blog/understanding-osce-a-comprehensive-guide-for-internationally-qualified-nurses" className="blog-card" data-anim="scale-up">
+              <div className="blog-card-img-wrap">
+                <img src="/blogimg/understanding-osce-a-comprehensive.jpeg" alt="Understanding OSCE: A Comprehensive Guide for Internationally Qualified Nurses" className="blog-card-img" />
+                <div className="blog-card-img-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="40" height="40">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+                  </svg>
+                </div>
+                <span className="blog-card-tag">OSCE Guide</span>
+              </div>
+              <div className="blog-card-body">
+                <h2 className="blog-card-title">
+                  Understanding OSCE: A Comprehensive Guide for Internationally Qualified Nurses
+                </h2>
+                <p className="blog-card-excerpt">
+                  Considering registration in New Zealand? The Nursing Council has introduced the Objective Structured Clinical Examination (OSCE). Here&apos;s what changed, how OSCE works, why it matters, and the first steps of the registration process.
+                </p>
+                <span className="blog-card-read">Read more →</span>
+              </div>
+            </Link>
+
+            {/* Card — Registration process (new) */}
+            <Link href="/blog/navigating-the-registration-process-for-internationally-qualified-nurses-in-new-zealand" className="blog-card" data-anim="scale-up">
+              <div className="blog-card-img-wrap">
+                <img src="/blogimg/navigating-the-registration.jpeg" alt="Navigating the Registration Process for Internationally Qualified Nurses in New Zealand" className="blog-card-img" />
+                <div className="blog-card-img-placeholder">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" width="40" height="40">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+                  </svg>
+                </div>
+                <span className="blog-card-tag">Registration Guide</span>
+              </div>
+              <div className="blog-card-body">
+                <h2 className="blog-card-title">
+                  Navigating the Registration Process for Internationally Qualified Nurses in New Zealand
+                </h2>
+                <p className="blog-card-excerpt">
+                  Continuing our journey through the New Zealand nursing registration process — we unravel the remaining steps including competence assessment, application and fees, criminal record checks and timelines, plus answers to frequently asked questions.
+                </p>
+                <span className="blog-card-read">Read more →</span>
+              </div>
+            </Link>
+
             {/* Card 1 */}
             <Link href="/blog/the-success-stories-of-nurses-who-have-chosen-mindtree-nursing-solution-for-their-careers" className="blog-card" data-anim="scale-up">
               <div className="blog-card-img-wrap">
