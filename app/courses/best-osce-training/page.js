@@ -452,7 +452,7 @@ export default function OSCEPage() {
               <h3>Christchurch, New Zealand</h3>
               <p>Our flagship residential campus in Addington — accommodation, training lab, and classrooms in one place, in the same city as your OPC and examination. This is where the final weeks of your journey happen.</p>
               <div className="osce-campus-addr">
-                <b>63 Wrights Road, Addington, Christchurch</b><br />
+                <b>63 Wrights Road, Middleton, Christchurch</b><br />
                 +64 21 217 8770 · info@mindtreenursing.com
               </div>
             </div>

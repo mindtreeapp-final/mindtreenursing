@@ -33,7 +33,7 @@ export default function Footer(){
           </p>
           <div className="footer-contact-item">
             <MdEmail className="footer-contact-icon" />
-            <a href="mailto:wilonpedbin@gmail.com">info@mindtreenursing.com</a>
+            <a href="mailto:info@mindtreenursing.com">info@mindtreenursing.com</a>
           </div>
           <div className="footer-socials">
             <a href="https://www.instagram.com/mindtreenursingsolutions?igsh=MWtibTF5YXN5dGR6MQ%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="footer-social-btn">
@@ -112,7 +112,7 @@ export default function Footer(){
             <FaPhone className="footer-contact-icon" />
             <div>
               <a href="tel:+64212178770">+64 21 217 8770</a>
-              <a href="tel:+64212178770">+64 22 367 8770</a>
+              <a href="tel:+64223678770">+64 22 367 8770</a>
               <a href="tel:+919778286707">+91 9778 286 707</a>
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function Footer(){
 
           <div className="footer-contact-item">
             <FaLocationDot className="footer-contact-icon" />
-            <p>110 Sir John McKenzie Avenue,<br />Christchurch</p>
+            <p>63 Wrights Road, Middleton,<br />Christchurch</p>
           </div>
 
           <div className="footer-contact-item">

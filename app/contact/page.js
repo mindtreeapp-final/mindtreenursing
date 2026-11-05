@@ -241,7 +241,7 @@ export default function ContactPage() {
                 30/167 Whitney Street, Blockhouse Bay,<br />Auckland, 0600
               </p>
               <div className="ct-loc-card__contacts">
-                <a href="tel:+6421217870" className="ct-loc-card__phone">
+                <a href="tel:+64212178770" className="ct-loc-card__phone">
                   <PhoneIcon /> +64 21 217 8770
                 </a>
                 <a href="mailto:info@mindtreenursing.com" className="ct-loc-card__email">
