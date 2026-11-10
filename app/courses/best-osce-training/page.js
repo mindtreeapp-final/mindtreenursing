@@ -1,5 +1,5 @@
 import Link from "next/link";
-import OscePopup from "./OscePopup.js";
+import ExploreOsceButton from "./ExploreOsceButton.js";
 import "./osce-kerala.css";
 
 export const metadata = {
@@ -22,7 +22,7 @@ export const metadata = {
 export default function OSCEPage() {
   return (
     <main className="osce-page">
-      <OscePopup />
+      {/* OscePopup removed for now */}
 
       {/* ── HERO ── */}
       <section className="osce-hero">
@@ -210,14 +210,7 @@ export default function OSCEPage() {
             </ul>
 
             <div className="osce-trial__actions">
-              <a href="https://apps.mindtreenursing.com/course/68a58b9715b72700125ec28f" target="_blank" rel="noopener noreferrer" className="osce-trial__btn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
-                  <circle cx="12" cy="12" r="10"/>
-                  <polyline points="12 8 16 12 12 16"/>
-                  <line x1="8" y1="12" x2="16" y2="12"/>
-                </svg>
-                <span>Explore OSCE Training</span>
-              </a>
+              <ExploreOsceButton />
               <div className="osce-trial__meta">
                 <span>Expert-led sessions</span>
                 <span className="osce-trial__dot" />

@@ -3,6 +3,7 @@ import { MetadataRoute } from "next";
 
 const BASE_URL = "https://www.mindtreenursing.com";
 const STATIC_LAST_MODIFIED = new Date("2026-07-31");
+const RECENT_LAST_MODIFIED = new Date("2026-11-10");
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -19,6 +20,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: `${BASE_URL}/blog/what-is-mindtree-nursing-solution-and-what-it-offers`,
       lastModified: STATIC_LAST_MODIFIED,
+    },
+    {
+      url: `${BASE_URL}/blog/osce-simulation-tools-resources`,
+      lastModified: RECENT_LAST_MODIFIED,
+    },
+    {
+      url: `${BASE_URL}/blog/understanding-osce-a-comprehensive-guide-for-internationally-qualified-nurses`,
+      lastModified: RECENT_LAST_MODIFIED,
+    },
+    {
+      url: `${BASE_URL}/blog/navigating-the-registration-process-for-internationally-qualified-nurses-in-new-zealand`,
+      lastModified: RECENT_LAST_MODIFIED,
+    },
+    {
+      url: `${BASE_URL}/blog/understanding-cgfns-an-essential-guide-for-international-nurses`,
+      lastModified: RECENT_LAST_MODIFIED,
+    },
+    {
+      url: `${BASE_URL}/blog/conquering-the-oet-landscape-a-nurse-s-guide-to-success`,
+      lastModified: RECENT_LAST_MODIFIED,
     },
     { url: `${BASE_URL}/courses`, lastModified: STATIC_LAST_MODIFIED },
     {
@@ -58,6 +79,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     { url: `${BASE_URL}/services/ahpra`, lastModified: STATIC_LAST_MODIFIED },
     { url: `${BASE_URL}/about`, lastModified: STATIC_LAST_MODIFIED },
+    {
+      url: `${BASE_URL}/about/jijo-john`,
+      lastModified: RECENT_LAST_MODIFIED,
+    },
     { url: `${BASE_URL}/career`, lastModified: STATIC_LAST_MODIFIED },
     { url: `${BASE_URL}/contact`, lastModified: STATIC_LAST_MODIFIED },
     { url: `${BASE_URL}/gallery`, lastModified: STATIC_LAST_MODIFIED },
