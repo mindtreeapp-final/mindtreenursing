@@ -105,7 +105,7 @@ export default function BestNursingConsultancyPage() {
             <div className="bnc-rating">
               <span className="bnc-stars" aria-hidden="true">★★★★★</span>
               <span className="bnc-rating-text">
-                Trusted by <strong>5000+ nurses</strong> across India &amp; New Zealand
+                Trusted by <strong>5000+ nurses </strong> across India &amp; New Zealand
               </span>
             </div>
           </div>
