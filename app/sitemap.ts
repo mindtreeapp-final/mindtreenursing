@@ -8,6 +8,10 @@ const RECENT_LAST_MODIFIED = new Date("2026-11-10");
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: BASE_URL, lastModified: STATIC_LAST_MODIFIED },
+    {
+      url: `${BASE_URL}/best-nursing-consultancy`,
+      lastModified: RECENT_LAST_MODIFIED,
+    },
     { url: `${BASE_URL}/blog`, lastModified: STATIC_LAST_MODIFIED },
     {
       url: `${BASE_URL}/blog/the-success-stories-of-nurses-who-have-chosen-mindtree-nursing-solution-for-their-careers`,

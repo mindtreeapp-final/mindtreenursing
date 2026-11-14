@@ -216,6 +216,19 @@
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
 }
 
+.bnc-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.bnc-ferr {
+  margin: 5px 2px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #d84a4a;
+}
+
 .bnc-form-heading {
   font-family: 'Manrope', sans-serif;
   font-size: 20px;
