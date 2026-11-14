@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+/* ─────────────────────────────
+   BRAND TOKENS
+───────────────────────────── */
+:root {
+  --c1: #E7F0FA;
+  --c2: #7BA4D0;
+  --c3: #2E5E99;
+  --c4: #0D2440;
+
+  --white: #ffffff;
+  --text-body: #2a3f57;
+  --text-muted: #5a7a9a;
+  --border: rgba(123, 164, 208, 0.22);
+
+  --ease: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 2px 12px rgba(13, 36, 64, 0.06);
+  --shadow-md: 0 16px 40px rgba(13, 36, 64, 0.14);
+}
+
+/* ─────────────────────────────
+   PAGE BASE
+───────────────────────────── */
+.bnc-page {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-body);
+  background: var(--white);
+  overflow-x: hidden;
+}
+
+.bnc-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--c3);
+  margin-bottom: 14px;
+}
+
+.bnc-heading {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: 700;
+  color: var(--c4);
+  line-height: 1.2;
+  margin: 0 0 20px;
+  letter-spacing: -0.02em;
+}
+
+.bnc-accent-bar {
+  width: 52px;
+  height: 4px;
+  border-radius: 2px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, var(--c3), var(--c2));
+}
+
+.bnc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(123, 164, 208, 0.15);
+  border: 1px solid rgba(123, 164, 208, 0.35);
+  color: var(--c2);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+
+.bnc-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(30px, 4.2vw, 46px);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.12;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+
+.bnc-title-em { color: var(--c2); font-style: italic; }
+
+/* ─────────────────────────────
+   LEAD HERO  (content + form | image)
+───────────────────────────── */
+.bnc-lead {
+  position: relative;
+  background: var(--white);
+  padding: 56px 48px 64px;
+  overflow: hidden;
+}
+
+.bnc-lead-shape {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.bnc-lead-shape-1 {
+  width: 460px; height: 460px;
+  background: radial-gradient(circle, rgba(46, 94, 153, 0.4) 0%, transparent 70%);
+  top: -170px; left: -130px;
+  animation: bncFloat1 11s ease-in-out infinite;
+}
+.bnc-lead-shape-2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(123, 164, 208, 0.16) 0%, transparent 70%);
+  bottom: -150px; right: -120px;
+  animation: bncFloat2 14s ease-in-out infinite;
+}
+
+.bnc-lead-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+  padding: 44px;
+  border: 1.5px solid transparent;
+  border-radius: 26px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 8%, #163a63 0%, var(--c4) 62%) padding-box,
+    linear-gradient(135deg, rgba(160, 196, 234, 0.85) 0%, rgba(123, 164, 208, 0.15) 45%, rgba(255, 255, 255, 0.35) 100%) border-box;
+  box-shadow: 0 30px 70px rgba(13, 36, 64, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.09);
+}
+
+/* Soft gradient accent along the top edge of the frame */
+.bnc-lead-inner::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 28px;
+  right: 28px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--c2), transparent);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.bnc-lead-text {
+  animation: bncHeroIn 0.7s cubic-bezier(0.4,0,0.2,1) both 0.1s;
+}
+
+.bnc-lead-intro {
+  font-size: clamp(15px, 1.7vw, 17px);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.75;
+  margin: 0 0 22px;
+  max-width: 560px;
+}
+
+/* Course tags */
+.bnc-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 26px;
+}
+
+.bnc-tag {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #cfe0f2;
+  background: rgba(123, 164, 208, 0.14);
+  border: 1px solid rgba(123, 164, 208, 0.3);
+  padding: 6px 13px;
+  border-radius: 100px;
+}
+
+/* Rating */
+.bnc-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+.bnc-stars { color: #FFC84A; font-size: 16px; letter-spacing: 2px; line-height: 1; }
+.bnc-rating-text { font-size: 13.5px; color: rgba(255, 255, 255, 0.78); }
+.bnc-rating-text strong { color: var(--white); font-weight: 700; }
+
+/* Media / image */
+.bnc-lead-media {
+  position: relative;
+  min-height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+  animation: bncHeroIn 0.8s cubic-bezier(0.34,1.56,0.64,1) both 0.25s;
+}
+.bnc-lead-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ─────────────────────────────
+   NATIVE FORM CARD
+───────────────────────────── */
+.bnc-form-card {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 26px 26px 22px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.32);
+}
+
+.bnc-form-heading {
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--c4);
+  margin: 0 0 18px;
+}
+
+.bnc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bnc-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.bnc-input {
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  color: var(--text-body);
+  background: #F4F7FB;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 13px 16px;
+  transition: border-color var(--ease), box-shadow var(--ease), background var(--ease);
+}
+
+.bnc-input::placeholder { color: #93a7c0; }
+
+.bnc-input:focus {
+  outline: none;
+  background: var(--white);
+  border-color: var(--c3);
+  box-shadow: 0 0 0 3px rgba(46, 94, 153, 0.14);
+}
+
+.bnc-select {
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%235a7a9a' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 42px;
+}
+
+.bnc-submit {
+  margin-top: 4px;
+  width: 100%;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--c3), #244e82);
+  border: none;
+  border-radius: 10px;
+  padding: 15px 20px;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  box-shadow: 0 10px 26px rgba(46, 94, 153, 0.35);
+  transition: transform var(--ease), box-shadow var(--ease), background var(--ease);
+}
+.bnc-submit:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #34689f, var(--c4));
+  box-shadow: 0 14px 32px rgba(46, 94, 153, 0.45);
+}
+.bnc-submit:active { transform: translateY(0); }
+
+/* Trust row */
+.bnc-form-trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  margin-top: 16px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.bnc-form-trust b { color: #18A558; }
+
+/* Thank-you state — compact card */
+.bnc-form-card--done {
+  text-align: center;
+  max-width: 380px;
+  margin: 0 auto;
+  padding: 28px 28px 30px;
+  border: 1px solid var(--border);
+  border-top: 3px solid #18A558;
+  box-shadow: 0 16px 40px rgba(13, 36, 64, 0.2);
+}
+.bnc-done-logo {
+  display: block;
+  width: 102px;
+  height: auto;
+  margin: 0 auto 10px;
+}
+.bnc-form-card--done .bnc-form-heading {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+.bnc-form-note {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+/* ─────────────────────────────
+   HOW IT WORKS  (white + blue dots)
+───────────────────────────── */
+.bnc-steps {
+  padding: 80px 48px;
+  background-color: var(--white);
+  background-image: radial-gradient(rgba(46, 94, 153, 0.055) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  text-align: center;
+}
+
+.bnc-section-head { max-width: 620px; margin: 0 auto 48px; }
+
+.bnc-steps-grid {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.bnc-step {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 34px 26px 30px;
+  box-shadow: var(--shadow-sm);
+}
+
+.bnc-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--c3), var(--c4));
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 20px rgba(46, 94, 153, 0.35);
+}
+
+.bnc-step-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--c4);
+  margin: 0 0 8px;
+}
+
+.bnc-step-body { font-size: 14.5px; line-height: 1.6; color: var(--text-muted); margin: 0; }
+
+.bnc-steps-cta { margin-top: 44px; }
+
+/* ─────────────────────────────
+   OFFERINGS  (pale blue)
+───────────────────────────── */
+.bnc-offer {
+  padding: 84px 48px;
+  background: var(--c1);
+  text-align: center;
+}
+
+.bnc-offer-grid {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.bnc-offer-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 32px 28px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+}
+
+.bnc-offer-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--c2);
+}
+
+.bnc-offer-icon { font-size: 26px; color: var(--c3); margin-bottom: 18px; line-height: 1; }
+
+.bnc-offer-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--c4);
+  margin: 0 0 10px;
+}
+
+.bnc-offer-body { font-size: 14.5px; line-height: 1.65; color: var(--text-muted); margin: 0 0 18px; flex: 1; }
+
+.bnc-offer-link { font-size: 13px; font-weight: 700; letter-spacing: 0.02em; color: var(--c3); }
+.bnc-offer-card:hover .bnc-offer-link { color: var(--c4); }
+
+.bnc-offer-cta { margin-top: 48px; }
+
+.bnc-cta-btn {
+  display: inline-block;
+  background: var(--c3);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 15px 40px;
+  border-radius: 10px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: background var(--ease), transform var(--ease), box-shadow var(--ease);
+}
+.bnc-cta-btn:hover {
+  background: var(--c4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(13, 36, 64, 0.3);
+}
+
+/* ─────────────────────────────
+   KEYFRAMES
+───────────────────────────── */
+@keyframes bncHeroIn {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes bncFloat1 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-20px) scale(1.05); }
+}
+@keyframes bncFloat2 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(14px) scale(0.97); }
+}
+
+/* ─────────────────────────────
+   RESPONSIVE
+───────────────────────────── */
+@media (max-width: 980px) {
+  .bnc-lead-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    max-width: 620px;
+    padding: 28px;
+  }
+  .bnc-lead-media { min-height: 280px; order: -1; }
+  .bnc-offer-grid { grid-template-columns: repeat(2, 1fr); }
+  .bnc-steps-grid { grid-template-columns: 1fr; max-width: 440px; }
+}
+
+@media (max-width: 860px) {
+  .bnc-lead { padding: 52px 24px 60px; }
+  .bnc-steps { padding: 56px 24px; }
+  .bnc-quote { padding: 52px 24px; }
+  .bnc-offer { padding: 60px 24px; }
+}
+
+@media (max-width: 520px) {
+  .bnc-offer-grid { grid-template-columns: 1fr; }
+  .bnc-form-row { grid-template-columns: 1fr; }
+  .bnc-lead-media { min-height: 220px; }
+  .bnc-lead-inner { padding: 18px; border-radius: 20px; }
+}

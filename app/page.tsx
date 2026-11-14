@@ -1,12 +1,11 @@
 import HomePage from "./home/page.js";
-import Image from "next/image";
+import HomePopup from "./home/pop-up.js";
 
 export default function Home() {
   return (
-    <div >
-       <HomePage/>
-     
-        </div>
-     
+    <div>
+      <HomePopup />
+      <HomePage/>
+    </div>
   );
 }
